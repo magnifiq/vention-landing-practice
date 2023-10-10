@@ -1,0 +1,40 @@
+//there are vars
+
+//theme colors
+$main: #F5F7FA;
+$headBack: white;
+
+//text colors
+$h3-text: #231F20;
+$description-text: #999;
+$btn-text:white;
+
+//button colors
+$btn-color:#2E1AAD;
+//text weigh
+$h3-text-w: 700;
+$description-text-w: #999;
+
+//line height
+$h3-text-height: 1.2;
+$description-text-height: 1.0;
+
+
+// borders
+$base-border: 1px solid #DDD;
+$base-border-radius: 8px;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+
+// font sizes
+$base-font-size: 16px;
+$h3-font-size:24px;
+$h4-font-size:18px;
+
+//font-sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;

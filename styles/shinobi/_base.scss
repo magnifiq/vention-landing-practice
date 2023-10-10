@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Manrope:wght@300&display=swap');
+
+*{
+    margin: 0 0;
+    padding: 0  0;
+    
+}
+
+body{
+    margin: 0 18px;
+    background-color: $headBack;
+    font-family: 'Manrope';
+}
+
+header{
+    display: grid;
+    padding: 18px 0;
+    grid-template-columns: 2fr 1fr;
+    background-color: $headBack !important;
+}
+
+.logo{
+    grid-area: 1/1/2/2;
+    
+}
+
+.user{
+    grid-area: 1/2/2/2;
+    padding-right: 40px;
+    justify-self: flex-end;
+}
+nav{
+    grid-area: 1/2/2/2;
+    justify-self: flex-end;
+}
+
+
+///first part of a website
+.firstPart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+    background-color: $main;
+    img{
+        padding: 24px 0;
+    }
+    h3 {
+        
+        color: $h3-text;
+        font-size: $h3-font-size;
+        font-weight: $h3-text-w;
+        line-height: $h3-text-height; 
+        padding-bottom: 10px;
+
+    }
+    .firstPart__card__description{
+        color: $description-text;
+        font-size: $base-font-size;
+        font-weight: $description-text-w;
+        line-height: $description-text-height; 
+        
+    }
+
+}
+
+.firstPart__card{
+    
+}
+
+.firstPart__inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    input, select {
+        border:$base-border;
+        border-radius: $base-border-radius;
+        padding: 15px ;
+    }
+    select option[disabled] {
+        color: $description-text; 
+    }
+}
+
+#job{
+    grid-area: 1/1/2/span 2;
+}
+
+#location{
+    grid-area: 2/1/2/1;
+}
+
+#distance{
+    grid-area: 2/2/2/2;
+}
+    
+#search{
+    grid-area: 3/1/3/span 2;
+    background-color: $btn-color;
+    color: $btn-text;
+}
+
+.secondPart{
+    background-color: $headBack;
+}
+
+.secondPart_info{
+    padding: 16px 20px;
+    background-color: $main;
+    h4{
+        font-size: $h4-font-size;
+        padding-bottom: 10px;
+        color: $h3-text;
+    }
+}
