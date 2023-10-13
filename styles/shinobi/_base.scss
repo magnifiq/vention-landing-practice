@@ -53,7 +53,7 @@ nav{
         font-size: $h3-font-size;
         font-weight: $h3-text-w;
         line-height: $h3-text-height; 
-        padding-bottom: 10px;
+        padding-bottom: 20px;
 
     }
     .firstPart__card__description{
@@ -61,6 +61,7 @@ nav{
         font-size: $base-font-size;
         font-weight: $description-text-w;
         line-height: $description-text-height; 
+        padding-bottom: 40px;
         
     }
 
@@ -103,7 +104,7 @@ nav{
     color: $btn-text;
 }
 
-.secondPart{
+.secondPart {
     background-color: $headBack;
 }
 
@@ -115,4 +116,41 @@ nav{
         padding-bottom: 10px;
         color: $h3-text;
     }
+}
+
+.slider{
+    width: 95vw;
+    padding-top: 20px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #007acc; 
+}
+
+.thirdPart{
+    
+    background-color: $headBack; 
+    .line{
+        width: 80%;
+        height: 1px; 
+        background-color: $main; 
+        margin-bottom: 40px;
+    }
+    
+}
+.thirdPart__btn{
+    margin: 20px 0;
+}
+.btnProp{
+    background-color: $btn-color;
+    color: $btn-text;
+    border:$base-border;
+    border-radius: $base-border-radius;
+    padding: 15px 10vw;
+
+}
+
+
+.fourthPart__line{
+    margin: 25px 0 -10px 0;
 }
