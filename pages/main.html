@@ -9,13 +9,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <div class="logo"> <img src="/assets/images/main/itapplogo_color.svg" alt="logo"></div>
         <div class="user"><img src="/assets/images/main/ic24-user.svg" alt="user_icon"></div>
-        <nav>Later</nav>
+        <div class="topnav">
+            <a href="#home" class="active"></a>
+            <div id="myLinks">
+              <a href="#home">Home</a>
+              <a href="#news">News</a>
+              <a href="#about">About</a>
+              <a href="#employers">For Employers</a>
+              <a href="#headhunters">For Headhunters</a>
+            </div>
+            
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <main>
         <div class="firstPart">
@@ -114,7 +128,192 @@
             </div>
             <div class="line fourthPart__line"></div>
         </div>
+
+        <div class="thirdPart firstPart fifthPart">
+        
+            <div class="thirdPart__card firstPart__card">
+                <img src="/assets/images/fifthPart/Group 1338.svg" alt="card_img">
+                <h3>Our clients speak</h3>
+                <div class="firstPart__card__description">
+                    <span>We have been working with clients around the world</span>
+                </div>
+                <div class="secondPart_info fourthPart_info fifthPart__info">
+
+                    <h4>Efficient Collaborating</h4>
+                    <div class="firstPart__card__description fifthPart__card__description">
+                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.</span>
+                    </div>
+                    <div class="fifthPart__avatar">
+                        <img src="/assets/images/fifthPart/Picture.jpg" alt="avatar_img">
+                        <div class="fifthPart__avatar__description">
+                            <div class="fifthPart_avatar_names">Jane Cooper</div>
+                            <div class="fifthPart_avatar_position">CEO at ABC Corporation</div>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+
+            
+            <div class="slider">
+               <div></div>
+               <div></div>
+               <div></div>
+            </div>
+        </div>
+
+
+
+        <div class="thirdPart firstPart sixthPart">
+            <h3>Some count that matters</h3>
+            <div class="firstPart__card__description">
+                <span>Our achievement in the journey depicted in numbers</span>
+            </div>
+
+            <div class="thirdPart__card firstPart__card">
+                
+                <div class="secondPart_info fourthPart_info">
+                    <img src="/assets/images/sixthPart/Group 1370.svg" alt="card_img">
+                    <h4>40+</h4>
+                    <div class="firstPart__card__description">
+                        <span>Happy Clients</span>
+                    </div>    
+                </div>     
+            </div>
+
+            <div class="thirdPart__card firstPart__card">
+                
+                <div class="secondPart_info fourthPart_info">
+                    <img src="/assets/images/sixthPart/Illustration (3).svg" alt="card_img">
+                    <h4>540+</h4>
+                    <div class="firstPart__card__description">
+                        <span>Projects Completed</span>
+                    </div>    
+                </div>     
+            </div>
+
+            <div class="thirdPart__card firstPart__card">
+                
+                <div class="secondPart_info fourthPart_info">
+                    <img src="/assets/images/sixthPart/Group 1371.svg" alt="card_img">
+                    <h4>300</h4>
+                    <div class="firstPart__card__description">
+                        <span>Dedicated Members</span>
+                    </div>    
+                </div>     
+            </div>
+
+            <div class="thirdPart__card firstPart__card">
+                <div class="secondPart_info fourthPart_info">
+                    <img src="/assets/images/sixthPart/Group 1369.svg" alt="card_img">
+                    <h4>25+</h4>
+                    <div class="firstPart__card__description">
+                        <span>Awards Won</span>
+                    </div>    
+                </div>     
+            </div>
+
+        </div>
+
+
+
+
+        <div class="thirdPart firstPart sixthPart seventhPart">
+            <h3>News</h3>
+
+            <div class="thirdPart__card firstPart__card">
+                
+                <div class="secondPart_info fourthPart_info">
+                    <img src="/assets/images/seventhPart/cov1.jpg" alt="card_img">
+                    <h4>Big Update - We launched!</h4>
+                    <div class="firstPart__card__description">
+                        <span>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                            Velit officia conse duis enim...
+                        </span>
+                    </div>    
+                </div>     
+            </div>
+
+            <div class="thirdPart__card firstPart__card">
+                
+                <div class="secondPart_info fourthPart_info">
+                    <img src="/assets/images/seventhPart/cov2.jpg" alt="card_img">
+                    <h4>Collaborations - together with CNN</h4>
+                    <div class="firstPart__card__description">
+                        <span>Amet minim mollit non deserunt ullamco est 
+                        sit aliqua dolor do amet sint. Velit officia conse duis enim...
+                    </span>
+                    </div>    
+                </div>     
+            </div>
+
+            <div class="thirdPart__card firstPart__card">
+                
+                <div class="secondPart_info fourthPart_info">
+                    <img src="/assets/images/seventhPart/cov3.jpg" alt="card_img">
+                    <h4>New platform - iOS application</h4>
+                    <div class="firstPart__card__description">
+                        <span>Amet minim mollit non deserunt ullamco 
+                            est sit aliqua dolor do amet sint. 
+                            Velit officia conse duis enim...
+                        </span>
+                    </div>    
+                </div>     
+            </div>
+
+            <div class="thirdPart__btn">
+                <button class="btnProp thirdPart__btn_light">See all news</button>
+            </div>
+        </div>
+
+
+        <div class="cookies firstPart">
+            <div class="cookies__content">
+                <h4 class="cookies__content__title">This website uses cookies</h4>
+                <div class="cookies__content__text"> We use cookies to personalise 
+                    content and ads, to provide social media features and to analyse 
+                    our traffic. We also share information about your use of our 
+                    site with our social media, advertising and analytics partners who 
+                    may combine it with other information that you’ve provided to them 
+                    or that they’ve collected from your use of their services
+                </div>
+                <button class="cookies__btn">OK</button>
+            </div>
+        </div>
+
     </main>
+
+
+    <footer>
+        <div class="content">
+            <div class="col">
+                <div class="col__header">Company</div>
+                <div class="col__content">
+                    <div class="col__item">Home</div>
+                    <div class="col__item">About I-TAPP</div>
+                    <div class="col__item">News</div>
+                    <div class="col__item">Terms and Conditions</div>
+                    <div class="col__item">Privacy Policy</div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col__header">Jobs</div>
+                <div class="col__content">
+                    <div class="col__item">For Candidates</div>
+                    <div class="col__item">For Employers</div>
+                    <div class="col__item">For Headhunters</div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="col__header extra">I-Tapp</div>
+                <div class="col__content">
+                    <div class="col__item">Copyright © 2021 I-TAPP</div>
+                    <div class="col__item">All rights reserved</div>
+                </div>
+            </div>
+        </div>
+    </footer>
     
 
     </div>
@@ -154,6 +353,22 @@
                 }
             ]
             });
+    </script>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex"
+                x.style.flexDirection="column"
+                x.style.width="97vw"
+                x.style.justifyItems="center"
+                x.style.alignItems="left"
+                x.style.textAlign="left"
+            }
+        }
     </script>
 </body>
 </html>

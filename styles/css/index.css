@@ -21,14 +21,59 @@ header {
   grid-area: 1/1/2/2;
 }
 
+.topnav {
+  grid-area: 1/2/2/2;
+  justify-self: flex-end;
+  overflow: hidden;
+  position: relative;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+.topnav #myLinks {
+  display: none;
+  color: #231F20;
+}
+
+.topnav #myLinks a {
+  color: #231F20;
+}
+
+.topnav a {
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  position: relative;
+}
+
+.topnav a:not(:first-child)::before {
+  content: "";
+  background-color: #999;
+  height: 1px;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.topnav a:first-child {
+  margin-top: 20px;
+}
+
+.topnav a.icon {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.topnav a:hover {
+  color: black;
+}
+
 .user {
   grid-area: 1/2/2/2;
   padding-right: 40px;
-  justify-self: flex-end;
-}
-
-nav {
-  grid-area: 1/2/2/2;
   justify-self: flex-end;
 }
 
@@ -40,6 +85,8 @@ nav {
   text-align: center;
   padding-bottom: 40px;
   background-color: #F5F7FA;
+  margin: 0 -18px;
+  padding: 20px 18px;
 }
 .firstPart img {
   padding: 24px 0;
@@ -95,6 +142,9 @@ nav {
 .secondPart {
   background-color: white;
 }
+.secondPart div {
+  border-radius: 16px;
+}
 
 .secondPart_info {
   padding: 16px 20px;
@@ -114,6 +164,9 @@ nav {
 .thirdPart {
   background-color: white;
 }
+.thirdPart div {
+  border-radius: 16px;
+}
 .thirdPart .line {
   width: 80%;
   height: 1px;
@@ -131,8 +184,107 @@ nav {
   border: 1px solid #DDD;
   border-radius: 8px;
   padding: 15px 10vw;
+  font-weight: 700;
 }
 
 .fourthPart__line {
   margin: 25px 0 -10px 0;
+}
+
+.fifthPart {
+  background-color: #F5F7FA;
+}
+.fifthPart div {
+  border-radius: 16px;
+}
+
+.fifthPart__info {
+  background-color: white;
+}
+
+.fifthPart__card__description {
+  color: #231F20 !important;
+  font-size: 18px !important;
+}
+
+.fifthPart__avatar {
+  margin: 30px 0;
+}
+
+.fifthPart_avatar_names {
+  color: #231F20;
+}
+
+.fifthPart_avatar_position {
+  color: #999;
+}
+
+.sixthPart {
+  margin-top: 40px;
+  display: grid;
+}
+.sixthPart > div:not(:first-child) {
+  margin: 10px 0;
+}
+.sixthPart div {
+  border-radius: 16px;
+}
+.sixthPart .thirdPart__card .fourthPart_info img {
+  padding: 5px 0 !important;
+}
+.sixthPart .thirdPart__card .fourthPart_info .firstPart__card__description {
+  padding-bottom: 10px !important;
+}
+
+.seventhPart .firstPart__card .fourthPart_info {
+  text-align: left;
+  background-color: white;
+}
+.seventhPart .firstPart__card .fourthPart_info img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.thirdPart__btn_light {
+  background-color: white;
+  color: #2E1AAD;
+  border: 1px solid #2E1AAD;
+}
+
+.cookies {
+  background: var(--Dark-Gray, #999);
+  padding: 20px 20px;
+  text-align: left;
+  margin-top: 40px;
+}
+
+.cookies__btn {
+  background-color: #231F20;
+  color: white;
+  border-radius: 100px;
+  padding: 10px 45px;
+  margin-top: 10px;
+}
+
+footer {
+  margin: 0 -18px;
+  padding: 40px 18px;
+  background-color: #0B0D17;
+  color: white;
+  text-align: center;
+}
+footer .col:not(:last-child) {
+  margin-bottom: 30px;
+}
+footer .col__header {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+footer .col .col__item:not(:last-child) {
+  padding-bottom: 10px;
+}
+footer .extra {
+  font-size: 30px;
+  font-weight: 900;
 }

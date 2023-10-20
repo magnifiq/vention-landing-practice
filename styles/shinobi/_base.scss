@@ -20,19 +20,71 @@ header{
 }
 
 .logo{
-    grid-area: 1/1/2/2;
-    
+    grid-area: 1/1/2/2;  
 }
+
+.topnav {
+    
+    grid-area: 1/2/2/2;
+    justify-self: flex-end;
+    overflow: hidden;
+    position: relative;
+    margin-top: -10px;
+    margin-left:10px;
+}
+  
+.topnav #myLinks {
+    display: none;
+    color: $h3-text;
+}
+
+.topnav #myLinks a{
+    
+    color: $h3-text;
+}
+
+
+.topnav a {
+    
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    position: relative;
+}
+
+.topnav a:not(:first-child)::before {
+    content: '';
+    background-color: $description-text-w;
+    height: 1px;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px; 
+}
+
+.topnav a:first-child{
+    margin-top: 20px;
+}
+.topnav a.icon {
+    
+    display: flex;
+    position: absolute;
+    top:0;
+    right:0;
+}
+
+.topnav a:hover {
+    color: black;
+}
+
+
 
 .user{
     grid-area: 1/2/2/2;
     padding-right: 40px;
     justify-self: flex-end;
 }
-nav{
-    grid-area: 1/2/2/2;
-    justify-self: flex-end;
-}
+
 
 
 ///first part of a website
@@ -44,6 +96,8 @@ nav{
     text-align: center;
     padding-bottom: 40px;
     background-color: $main;
+    margin: 0 -18px; 
+    padding: 20px 18px;
     img{
         padding: 24px 0;
     }
@@ -67,9 +121,7 @@ nav{
 
 }
 
-.firstPart__card{
-    
-}
+
 
 .firstPart__inputs{
     display: grid;
@@ -105,6 +157,10 @@ nav{
 }
 
 .secondPart {
+    div{
+        border-radius: $divs-border-radius;
+
+    }
     background-color: $headBack;
 }
 
@@ -123,12 +179,21 @@ nav{
     padding-top: 20px;
 }
 
-.slick-dots li.slick-active button {
-    background-color: #007acc; 
-}
 
+
+.slick-dots{
+    li.slick-active{
+            button{
+                border: 30px solid #007acc !important;
+            }
+        
+    }
+}
 .thirdPart{
-    
+    div{
+        border-radius: $divs-border-radius;
+
+    }
     background-color: $headBack; 
     .line{
         width: 80%;
@@ -147,10 +212,139 @@ nav{
     border:$base-border;
     border-radius: $base-border-radius;
     padding: 15px 10vw;
+    font-weight: $btn-font-weigh;
 
 }
 
 
 .fourthPart__line{
     margin: 25px 0 -10px 0;
+}
+
+.fifthPart{
+    div{
+        border-radius: $divs-border-radius;
+
+    }
+    background-color: $main;
+}
+.fifthPart__info{
+    background-color: $headBack;
+}
+.fifthPart__card__description{
+    
+    color: $h3-text !important;
+    font-size: $h4-font-size !important;
+}
+
+
+.fifthPart__avatar{
+    margin:30px 0;
+    
+}
+
+.fifthPart_avatar_names{
+    color:$h3-text
+}
+
+.fifthPart_avatar_position{
+    color:$description-text
+}
+
+
+.sixthPart{
+    margin-top: 40px;
+    display: grid;
+    >div:not(:first-child){
+        margin: 10px 0;
+    }
+
+    div{
+        border-radius: $divs-border-radius;
+
+    }
+    
+    .thirdPart__card {
+        .fourthPart_info{
+            img {
+                padding: 5px 0 !important;
+            }
+        } 
+    }
+
+    .thirdPart__card{
+        .fourthPart_info{
+            .firstPart__card__description{
+                padding-bottom: 10px !important;
+            }
+        }
+    }  
+}
+
+
+.seventhPart{
+    .firstPart__card{
+        
+        .fourthPart_info{
+            text-align:left;
+            background-color: $headBack ;
+
+            img{
+               width: 100%;
+               border-radius: $divs-border-radius;
+            }
+        }
+    }
+}
+
+
+.thirdPart__btn_light{
+    
+    background-color: $btn-color-light ;
+    color: $btn-text-light ;
+    border:$border-light;
+    
+}
+
+.cookies{
+    background: $cookies;
+    padding: 20px 20px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.cookies__btn{
+    background-color: $btn-color-dark ;
+    color: $btn-text ;
+    border-radius: $cookies-btn;
+    padding: 10px 45px;
+    margin-top: 10px;
+}
+
+footer{
+    margin: 0 -18px; 
+    padding:40px  18px;
+    background-color: $footer-bg;
+    color:$btn-text;
+    text-align: center;
+
+    .col:not(:last-child){
+        margin-bottom: 30px;
+    }
+    .col__header{
+        font-size: $h4-font-size;
+        font-weight: $btn-font-weigh;
+        padding-bottom: 20px;
+    }
+    
+    .col{
+        .col__item:not(:last-child){
+            padding-bottom: 10px;
+        }
+    }
+
+    .extra{
+        font-size: $extra-font-size;
+        font-weight: $extra-font-weight;
+    }
 }

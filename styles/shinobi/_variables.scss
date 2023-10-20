@@ -3,14 +3,19 @@
 //theme colors
 $main: #F5F7FA;
 $headBack: white;
+$cookies: var(--Dark-Gray, #999);
+$footer-bg: #0B0D17;
 
 //text colors
 $h3-text: #231F20;
 $description-text: #999;
 $btn-text:white;
+$btn-text-light: #2E1AAD;
 
 //button colors
-$btn-color:#2E1AAD;
+$btn-color: #2E1AAD;
+$btn-color-light: white;
+$btn-color-dark: #231F20;
 //text weigh
 $h3-text-w: 700;
 $description-text-w: #999;
@@ -22,8 +27,10 @@ $description-text-height: 1.0;
 
 // borders
 $base-border: 1px solid #DDD;
+$border-light: 1px solid #2E1AAD;
 $base-border-radius: 8px;
-
+$divs-border-radius: 16px;
+$cookies-btn:100px;
 // box-shadow
 $base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 
@@ -31,7 +38,12 @@ $base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 $base-font-size: 16px;
 $h3-font-size:24px;
 $h4-font-size:18px;
+$extra-font-size:30px;
 
+//font weigh
+$btn-font-weigh: 700;
+$h4-font-weight:800;
+$extra-font-weight:900;
 //font-sizes
 $base-font-size: 1rem;
 $font-size-sm: $base-font-size * 0.75;
