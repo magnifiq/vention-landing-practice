@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js_part/scripts.js" type="text/javascript"></script>
     <title>Document</title>
 </head>
 <body>
@@ -42,15 +43,15 @@
                
            </div>
            <div class="firstPart__inputs">
-                <input type="text" id="job" placeholder="Job title">
-                <input type="text" id="location" placeholder="Where">
-                <select name="distance" id="distance">
+                <input type="text" class="job" placeholder="Job title">
+                <input type="text" class="location" placeholder="Where">
+                <select name="distance" class="distance">
                     <option disabled selected hidden>Distance</option>
                     <option value="10">10km</option>
                     <option value="50">50km</option>
                     <option value="100">100km</option>
                 </select>
-                <input type="button" value="Search" id="search" class="btnProb">
+                <input type="button" value="Search" class="search" class="btnProb">
            </div>
         </div>
         <div class="secondPart firstPart">
@@ -283,7 +284,7 @@
     </main>
 
 
-    <footer>
+    <footer class="footer_rights">
         <div class="content">
             <div class="col">
                 <div class="col__header">Company</div>
@@ -317,9 +318,6 @@
     
 
     </div>
-
-
-
     <script type="text/javascript">
         $('.slider').slick({
             dots: true,
@@ -357,7 +355,7 @@
 
     <script>
         function myFunction() {
-            var x = document.getElementById("myLinks");
+            let x = document.getElementById("myLinks");
             if (x.style.display === "flex") {
                 x.style.display = "none";
             } else {
