@@ -1,0 +1,134 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js", integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css", integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css", integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(type="text/javascript", src="../js_part/scripts.js")
+    link(rel="stylesheet" href="../styles/css/index.css")
+    title Main
+  body
+    include ./includes/header.pug
+    include ./mixins/cardMain.pug
+    include ./mixins/searchButton.pug
+    include ./mixins/subCardAchievement.pug
+    include ./mixins/newsMain.pug
+    include ./mixins/lightButton.pug
+    main 
+      .firstPart
+        .firstPart__card
+          img(src="/assets/images/main/Asset 1 3.svg", alt="card_img")
+          h3 Get everything you need from a job
+          .firstPart__card__description
+            span Search for and be recommended to a new job that you'll love.
+        include ./includes/inputs.pug
+      .secondPart.firstPart
+        - const secondData={img:"/assets/images/secondPart/Illustration.svg", img_name:"card_img", h3_text:"For Candidates", h4_text:"Feedback on all applications", description:"Search for and be recommended to a new job that you'll love.", slider_num: 8}
+        +cardMain(secondData)
+      .thirdPart.firstPart
+        .line
+        - const thirdData={img:"/assets/images/thirdPart/Illustration (1).svg", img_name:"card_img", h3_text:"For Employers", h4_text:"Everything you need", description:"Manage recruitment process all in one place ", slider_num: 7}
+        +cardMain(thirdData)
+        +srchBtn("For Employers")
+      .thirdPart.firstPart
+        .line
+        - const fourthData={img:"/assets/images/fourthPart/Illustration (2).svg", img_name:"card_img", h3_text:"For Headhunters", h4_text:"Develop stronger client relationships", description:"No confusion who submitted candidates first", slider_num: 4}
+        +cardMain(fourthData)
+        +srchBtn("For HeadHunters")
+        .line.fourthPart__line 
+      .thirdPart.firstPart.fifthPart
+        - const fifthData={img:"/assets/images/fifthPart/Picture.jpg", img_2: "/assets/images/fifthPart/Group 1338.svg", img_name_2: "card_img", img_name:"avatar_img", h3_text:"Our clients speak", h4_text:"Efficient Collaborating", description:"We have been working with clients around the world", description_2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.", slider_num: 3, avatar_name: "Jane Cooper", avatar_position: "CEO at ABC Corporation", fifthPart_flag: true}
+        +cardMain(fifthData)
+      .thirdPart.firstPart.sixthPart
+        h3 Some count that matters
+        .firstPart__card__description
+          span Our achievement in the journey depicted in numbers
+        
+        -const first_subAch={img:"/assets/images/sixthPart/Group 1370.svg", img_name: "card_img", h4_text: "40+", description: "Happy Clients"}
+        +achievement(first_subAch)
+
+        -const second_subAch={img:"/assets/images/sixthPart/Illustration (3).svg", img_name: "card_img", h4_text: "540+", description: "Projects Completed"}
+        +achievement(second_subAch)
+
+        -const third_subAch={img:"/assets/images/sixthPart/Group 1371.svg", img_name: "card_img", h4_text: "300", description: "Dedicated Members"}
+        +achievement(third_subAch)
+
+        -const fourth_subAch={img:"/assets/images/sixthPart/Group 1369.svg", img_name: "card_img", h4_text: "25+", description: "Awards Won"}
+        +achievement(fourth_subAch)
+
+      .thirdPart.firstPart.sixthPart.seventhPart
+        h3 News
+        -const first_news={img:"/assets/images/seventhPart/cov1.jpg", img_name: "card_img", h4_text: "Big Update - We launched!", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim..."}
+        +newsMain(first_news)
+
+        -const second_news={img:"/assets/images/seventhPart/cov2.jpg", img_name: "card_img", h4_text: "Collaborations - together with CNN", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim..."}
+        +newsMain(second_news)
+
+        -const third_news={img:"/assets/images/seventhPart/cov3.jpg", img_name: "card_img", h4_text: "New platform - iOS application", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim..."}
+        +newsMain(third_news)
+
+        +lightBtn("See all news")
+      
+      include ./includes/cookies.pug
+
+    include ./includes/footer.pug
+
+    script(type="text/javascript").
+      $('.slider').slick({
+          dots: true,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          responsive: [
+              {
+              breakpoint: 1024,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: false,
+                  dots: true
+              }
+              },
+              {
+              breakpoint: 600,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+              }
+              },
+              {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+              }
+              }
+          ]
+      });
+
+    script.
+      function myFunction() {
+          let x = document.getElementById("myLinks");
+          if (x.style.display === "flex") {
+              x.style.display = "none";
+          } else {
+              x.style.display = "flex";
+              x.style.flexDirection = "column";
+              x.style.width = "97vw";
+              x.style.justifyItems = "center";
+              x.style.alignItems = "left";
+              x.style.textAlign = "left";
+          }
+      }
+
+
+        
+
+
+        

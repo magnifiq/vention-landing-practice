@@ -4,12 +4,15 @@
   "description": "��#\u0000 \u0000v\u0000e\u0000n\u0000t\u0000i\u0000o\u0000n\u0000-\u0000l\u0000a\u0000n\u0000d\u0000i\u0000n\u0000g\u0000-\u0000p\u0000r\u0000a\u0000c\u0000t\u0000i\u0000c\u0000e\u0000\r\u0000 \u0000",
   "main": "index.js",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "gulp": "^4.0.2",
-    "gulp-sass": "^5.1.0",
+    "gulp-pug": "^5.0.0",
     "gulp-purgecss": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "path": "^0.12.7",
+    "pug": "^3.0.2",
     "sass": "^1.69.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/magnifiq/vention-landing-practice/issues"
   },
-  "homepage": "https://github.com/magnifiq/vention-landing-practice#readme"
+  "homepage": "https://github.com/magnifiq/vention-landing-practice#readme",
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
 }

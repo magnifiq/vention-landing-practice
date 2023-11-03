@@ -154,6 +154,7 @@ header{
     grid-area: 3/1/3/span 2;
     background-color: $btn-color;
     color: $btn-text;
+    margin-bottom: 15px;
 }
 
 .secondPart {
@@ -228,6 +229,10 @@ header{
 
     }
     background-color: $main;
+
+    h3{
+        padding-top: 20px;
+    }
 }
 .fifthPart__info{
     background-color: $headBack;
