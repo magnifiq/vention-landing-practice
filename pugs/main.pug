@@ -10,6 +10,7 @@ html(lang="en")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css", integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==", crossorigin="anonymous", referrerpolicy="no-referrer")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     script(type="text/javascript", src="../js_part/scripts.js")
+    script(src="../js_part/searchResults.js")
     link(rel="stylesheet" href="../styles/css/index.css")
     title Main
   body
@@ -26,7 +27,8 @@ html(lang="en")
           h3 Get everything you need from a job
           .firstPart__card__description
             span Search for and be recommended to a new job that you'll love.
-        include ./includes/inputs.pug
+        include ./mixins/inputs.pug
+        +inputs({example_flag: false})
       .secondPart.firstPart
         - const secondData={img:"/assets/images/secondPart/Illustration.svg", img_name:"card_img", h3_text:"For Candidates", h4_text:"Feedback on all applications", description:"Search for and be recommended to a new job that you'll love.", slider_num: 8}
         +cardMain(secondData)
@@ -112,21 +114,7 @@ html(lang="en")
           ]
       });
 
-    script.
-      function myFunction() {
-          let x = document.getElementById("myLinks");
-          if (x.style.display === "flex") {
-              x.style.display = "none";
-          } else {
-              x.style.display = "flex";
-              x.style.flexDirection = "column";
-              x.style.width = "97vw";
-              x.style.justifyItems = "center";
-              x.style.alignItems = "left";
-              x.style.textAlign = "left";
-          }
-      }
-
+    
 
         
 

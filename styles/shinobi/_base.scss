@@ -110,18 +110,18 @@ header{
         padding-bottom: 20px;
 
     }
-    .firstPart__card__description{
-        color: $description-text;
-        font-size: $base-font-size;
-        font-weight: $description-text-w;
-        line-height: $description-text-height; 
-        padding-bottom: 40px;
-        
-    }
+    
 
 }
 
-
+.firstPart__card__description{
+    color: $description-text;
+    font-size: $base-font-size;
+    font-weight: $description-text-w;
+    line-height: $description-text-height; 
+    padding-bottom: 40px;
+    
+}
 
 .firstPart__inputs{
     display: grid;
@@ -132,6 +132,7 @@ header{
         border:$base-border;
         border-radius: $base-border-radius;
         padding: 15px ;
+        font-weight: $h3-text-w;
     }
     select option[disabled] {
         color: $description-text; 
@@ -207,6 +208,13 @@ header{
 }
 .thirdPart__btn{
     margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    button{
+        width: 100%;
+    }
 }
 .btnProp{
     background-color: $btn-color;
@@ -352,5 +360,204 @@ header{
     .extra{
         font-size: $extra-font-size;
         font-weight: $extra-font-weight;
+    }
+}
+
+//search results
+
+.btnSearchResults{
+    grid-area: 3/1/3/span 2;
+    button{
+        width: 100%;
+    }
+    margin: 0;
+}
+
+.inputSearch{
+    grid-area: 4/1/4/span 2;
+}
+
+.job__container{
+    padding: 15px 20px;
+}
+.job__card{
+    background-color: $main;
+    margin: 15px -15px;
+}
+.job__card_header{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    img{
+        grid-area: 1/2/1/2;
+        align-self: center;
+        justify-self: flex-end;
+    }
+    h4{
+        grid-area: 1/1/1/2;
+        font-size: $h4-font-size;
+        font-weight: $h4-font-weight;
+        padding-bottom: 5px;
+    }
+}
+.job__card_header__details{
+    grid-area: 2/1/2/2;
+    color: $details-text;
+    font-size: $extra-small-font-size;
+    font-weight: $extra-thin-font;
+}
+.job__card_header__details__company{
+    color: $btn-color;
+}
+.job__card__details{
+    padding-bottom: 10px;
+    .salary::before{
+        content: url('/assets/images/searchResults/clock.svg');
+        display: inline-flex;
+        margin-right: 5px;
+        align-self: center;
+        justify-self: center;
+    }
+    .time::before{
+        content: url('/assets/images/searchResults/clock\ \(1\).svg');
+        display: inline-flex;
+        margin-right: 5px;
+        align-self: center;
+        justify-self: center;
+    }
+    .location::before{
+        content: url('/assets/images/searchResults/map-pin.svg');
+        display: inline-flex;
+        margin-right: 5px;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 25px;
+}
+
+.slider-all {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide, .prevBtn, .nextBtn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    margin: 0 5px;
+    padding: 10px;
+    border: 1px solid $details-text;
+    border-radius: 5px;
+
+}
+
+
+.prevBtn,
+.nextBtn {
+    cursor: pointer;
+
+}
+
+.prevBtn:hover,
+.nextBtn:hover,
+.slide:hover {
+    border: 1px solid #05A660;
+    color:#05A660;
+}
+
+.back__section{
+    background-color: $main;
+    margin: 0 -15px 10px;
+    padding: 25px 15px;
+}
+
+.filters{
+    background-color: $main;
+    margin: 0 -15px;
+    padding: 15px;
+}
+.filters__container{
+    background-color: $headBack;
+    padding: 15px;
+    border-radius: $base-border-radius;
+    border:$base-border;
+    display: flex;
+    flex-direction: column;
+    
+   
+} 
+
+.filter__first{
+    
+    label{
+        display: block;
+        margin-bottom: 10px;
+    }
+    margin-bottom: 10px;
+}
+
+.selectFilter{
+    border:$base-border;
+    border-radius: $base-border-radius;
+    padding: 15px ;
+    font-weight: $basic-font-weight;
+    width: 100%;
+}
+
+.normal__filter{
+    margin-bottom: 5px !important;
+}
+
+.strong__filter{
+    font-weight: $h4-font-weight;
+}
+
+.filter_salary_header{
+    font-size: $base-font-size;
+    margin: 20px 0 10px;
+}
+
+.checkboxes__filters{
+
+}
+.checkbox__container {
+    margin: 25px 0;
+}
+.checkbox__header{
+    display: flex;
+    justify-content: space-between ;
+    label{
+        font-size: $base-font-size;
+        font-weight: $h4-font-weight;
+        margin-bottom: 10px;
+    }
+    span{
+        color: $details-text;
+        font-size: $extra-small-font-size;
+        font-weight: $extra-thin-font;
+    }
+
+}
+
+.checkbox__options{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox__option{
+    input{
+        margin-right: 10px;
     }
 }

@@ -1,0 +1,24 @@
+include ./lightButton.pug
+mixin inputs(data)
+  if !data.example_flag
+    .firstPart__inputs
+      input.job(type="text", placeholder="Job title")
+      input.location(type="text", placeholder="Where")
+      select.distance(name="distance")
+        option(disabled, selected, hidden) Distance
+        option(value="10") 10 km
+        option(value="50") 50 km
+        option(value="100") 100 km
+      input.search(type="button", value="Search", class="btnProb" onclick="redirectToOtherPage()")
+  else 
+    .firstPart__inputs
+        input.job(type="text", placeholder="Job title" value=data.job) 
+        input.location(type="text", placeholder="Where" value=data.location) 
+        select.distance(name="distance")
+          option(disabled, hidden) Distance
+          option(value="10", selected) 10 km
+          option(value="50") 50 km
+          option(value="100") 100 km
+
+        +lightBtn("Filters", true)
+        input.search(type="button", value="Search", class="btnProb inputSearch")

@@ -1,0 +1,14 @@
+mixin jobCard(data)
+    .job__card 
+        .job__container
+            .job__card_header 
+                img(src="../assets/images/searchResults/Vector (3).svg", alt="job_card_img")
+                h4 #{data.job} 
+                .job__card_header__details 
+                    span #{data.short} 
+                    span(class="job__card_header__details__company") #{data.company}
+            .job__card__details 
+                .salary #{data.salary} 
+                .time #{data.time} 
+                .location #{data.location} 
+            .job__card__description #{data.description} 

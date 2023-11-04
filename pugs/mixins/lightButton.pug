@@ -1,3 +1,7 @@
-mixin lightBtn(val)
-    .thirdPart__btn
-        button.btnProp.thirdPart__btn_light #{val}
+mixin lightBtn(val, flagSearchResults)
+    if flagSearchResults
+        .btnSearchResults.thirdPart__btn
+            button.btnProp.thirdPart__btn_light(onclick="redirectToFilters()") #{val}
+    else 
+        .thirdPart__btn
+            button.btnProp.thirdPart__btn_light #{val}
