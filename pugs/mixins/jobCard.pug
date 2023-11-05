@@ -1,5 +1,5 @@
 mixin jobCard(data)
-    .job__card 
+    .job__card(onclick="goToJobDetails()")  
         .job__container
             .job__card_header 
                 img(src="../assets/images/searchResults/Vector (3).svg", alt="job_card_img")
@@ -11,4 +11,7 @@ mixin jobCard(data)
                 .salary #{data.salary} 
                 .time #{data.time} 
                 .location #{data.location} 
-            .job__card__description #{data.description} 
+            .job__card__description #{data.description}
+
+            if data.similarJobs 
+                .similar__jobs__extra__info See More 

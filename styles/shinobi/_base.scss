@@ -382,7 +382,7 @@ header{
 }
 .job__card{
     background-color: $main;
-    margin: 15px -15px;
+    margin: 15px -18px;
 }
 .job__card_header{
     display: grid;
@@ -434,6 +434,14 @@ header{
     }
 }
 
+.job_icons{
+    display: flex;
+    img{
+        padding-right: 10px;
+    }
+    margin-bottom: 30px;
+} 
+
 .slider-container {
     display: flex;
     align-items: center;
@@ -479,13 +487,13 @@ header{
 
 .back__section{
     background-color: $main;
-    margin: 0 -15px 10px;
+    margin: 0 -18px 10px;
     padding: 25px 15px;
 }
 
 .filters{
     background-color: $main;
-    margin: 0 -15px;
+    margin: 0 -18px;
     padding: 15px;
 }
 .filters__container{
@@ -561,3 +569,59 @@ header{
         margin-right: 10px;
     }
 }
+
+.tab_button{
+    border:none;
+    border-bottom: $base-border;
+    background-color: $main;
+    padding: 15px;
+    font-size: $base-font-size;
+    font-weight: $btn-font-weigh;
+    color: $details-text;
+} 
+
+.tab_active{
+    border-bottom: 3px solid #2E1AAD !important;
+    color:$h3-text;
+}
+.highlight__header{
+    display: flex;
+    flex-direction: column;
+    div{
+        display: inline-flex;
+    }
+    margin: 10px 0;
+    h4{
+        font-weight: $h4-font-weight;
+        padding: 0 5px 5px 0;
+    }
+}
+
+.jobs__section{
+    margin: 0 -18px;
+    padding: 15px;
+    background-color: $main;
+}
+
+.similar__jobs__h4{
+    padding-top: 30px;
+}
+
+.similar__jobs__extra__info{
+    font-weight: $btn-font-weigh;
+    color: $btn-text-light;
+    font-size: $base-font-size;
+    padding-top: 10px;
+}
+.jobs__section__details, .jobs__section__company{
+    display: none;
+    
+    h4{
+        font-weight: $basic-font-weight;
+        padding-bottom: 10px;
+    }
+}
+.jobs__section__details__short__description{
+    padding-bottom: 20px;
+}
+

@@ -1,0 +1,26 @@
+mixin jobCardDetailsHeader(data)
+    .job__card  
+        .job__container
+            .job__card_header 
+                img(src="../assets/images/jobDetails/tesla.jpg", alt="job_card_img")
+                h4 #{data.job} 
+                .job__card_header__details 
+                    span #{data.short} 
+                    span(class="job__card_header__details__company") #{data.company}
+            .job__card__details 
+                .salary #{data.salary} 
+                .time #{data.time} 
+                .location #{data.location}
+            .job_icons 
+                img(src="../assets/images/jobDetails/share-2.svg", alt="job_card_img")
+                img(src="../assets/images/searchResults/Vector (3).svg", alt="job_card_img")
+        
+            .job_tabs 
+                button(class="tab_button tab_active", onclick="changeTab('highlights')") Highlights
+                button(class="tab_button", onclick="changeTab('details')") Details
+                button(class="tab_button", onclick="changeTab('company')") Company
+            
+            
+
+
+                
