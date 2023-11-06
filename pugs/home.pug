@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(src="../js_part/scripts.js")
+    script(src="../js_part/changeTab.js")
+    link(rel="stylesheet" href="../styles/css/index.css")
+    title Search results
+body
+    include ./includes/header.pug
+    main
+        .home__container 
+            .home__tabs__first 
+                button(class="tab_button__second tab_active__second", onclick="changeTab('candidate','.tab_button__second', 'tab_active__second')") Candidate
+                button(class="tab_button__second", onclick="changeTab('employers','.tab_button__second', 'tab_active__second')") Employers
+                button(class="tab_button__second", onclick="changeTab('headhunters','.tab_button__second', 'tab_active__second')") Headhunters 
+            .home__tabs__second 
+                button(class="tab_button tab_active", onclick="changeTab('login', '.tab_button', 'tab_active')") Login
+                button(class="tab_button", onclick="changeTab('signup', '.tab_button', 'tab_active')") Signup
+
+            .google_btn 
+                img(src="../../assets/images/signup/google.jpg", alt="google")
+                h4 Sign up using Google

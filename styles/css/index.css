@@ -511,9 +511,23 @@ header {
   color: #666;
 }
 
+.tab_button__second {
+  border: none;
+  background-color: #F5F7FA;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}
+
 .tab_active {
   border-bottom: 3px solid #2E1AAD !important;
   color: #231F20;
+}
+
+.tab_active__second {
+  font-weight: 550;
+  color: black;
 }
 
 .highlight__header {
@@ -556,4 +570,37 @@ header {
 
 .jobs__section__details__short__description {
   padding-bottom: 20px;
+}
+
+.home__container {
+  background-color: #F5F7FA;
+  margin: 0 -15px;
+  padding: 15px;
+}
+
+.home__tabs__first {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.home__tabs__second {
+  display: flex;
+}
+.home__tabs__second button {
+  width: 100%;
+}
+
+.google_btn {
+  display: flex;
+  margin-top: 40px;
+  padding: 15px 20px;
+  border: 1px solid #DDD;
+  justify-content: center;
+  border-radius: 8px;
+}
+.google_btn h4 {
+  padding-left: 10px;
+  font-weight: 700;
+  color: #2E1AAD;
 }

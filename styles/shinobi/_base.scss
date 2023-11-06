@@ -580,9 +580,22 @@ header{
     color: $details-text;
 } 
 
+.tab_button__second{
+    border:none;
+    background-color: $main;
+    padding: 15px;
+    font-size: $extra-small-font-size;
+    font-weight: $basic-font-weight;
+    color: $details-text;
+}
 .tab_active{
     border-bottom: 3px solid #2E1AAD !important;
     color:$h3-text;
+}
+
+.tab_active__second{
+    font-weight: $extra-thin-font;
+    color: black;
 }
 .highlight__header{
     display: flex;
@@ -623,5 +636,38 @@ header{
 }
 .jobs__section__details__short__description{
     padding-bottom: 20px;
+}
+
+.home__container{
+    background-color: $main;
+    margin: 0 -15px ;
+    padding: 15px;
+} 
+
+.home__tabs__first{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.home__tabs__second{
+    display: flex;
+    button{
+        width: 100%;
+    }
+}
+
+.google_btn{
+    display: flex;
+    margin-top: 40px;
+    padding: 15px 20px;
+    border:$base-border;
+    justify-content: center;
+    border-radius: $base-border-radius;
+    h4{
+        padding-left: 10px;
+        font-weight: $btn-font-weigh;
+        color: $btn-text-light;
+    }
 }
 

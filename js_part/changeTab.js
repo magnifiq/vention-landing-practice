@@ -1,11 +1,11 @@
-const changeTab = (val) => {
-  let tabs = document.querySelectorAll(".tab_button");
+const changeTab = (val, selectedClasses, activeClass) => {
+  let tabs = document.querySelectorAll(selectedClasses);
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       tabs.forEach((el) => {
-        el.classList.remove("tab_active");
+        el.classList.remove(activeClass);
       });
-       tab.classList.add("tab_active");
+       tab.classList.add(activeClass);
     });
   });
   let sections = document.getElementsByClassName("jobs__section");
