@@ -671,3 +671,39 @@ header{
     }
 }
 
+.text__home{
+    font-weight: $h4-font-weight;
+    color: $details-text;
+}
+
+.input__home{
+    label{
+        display: block;
+        font-size: $extra-small-font-size;
+        margin: 10px 0 5px;
+    }
+    input{
+        font-size: $h4-font-size;
+        font-weight: $btn-font-weigh;
+        padding: 10px;
+        border: $base-border;
+        border-radius: $base-border-radius;
+        width: 100%;
+    }
+}
+.text__home__option{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.home_inputs{
+    margin: 0 15px 0 0;
+}
+
+.home_check_rights{
+    span{
+        padding-left: 10px;
+    }
+    margin: 20px 0 40px;
+}

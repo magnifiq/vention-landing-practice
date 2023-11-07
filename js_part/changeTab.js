@@ -1,4 +1,4 @@
-const changeTab = (val, selectedClasses, activeClass) => {
+const changeTab = (val, selectedClasses, activeClass, classesToHide) => {
   let tabs = document.querySelectorAll(selectedClasses);
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
@@ -8,7 +8,7 @@ const changeTab = (val, selectedClasses, activeClass) => {
        tab.classList.add(activeClass);
     });
   });
-  let sections = document.getElementsByClassName("jobs__section");
+  let sections = document.getElementsByClassName(classesToHide);
   let sections_num = sections.length;
   for (let i = 0; i < sections_num; i++) {
     sections[i].style.display = "none";

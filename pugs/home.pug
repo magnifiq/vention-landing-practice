@@ -12,6 +12,8 @@ head
     title Search results
 body
     include ./includes/header.pug
+    include ./mixins/inputHome.pug
+    include ./mixins/searchButton.pug
     main
         .home__container 
             .home__tabs__first 
@@ -19,9 +21,30 @@ body
                 button(class="tab_button__second", onclick="changeTab('employers','.tab_button__second', 'tab_active__second')") Employers
                 button(class="tab_button__second", onclick="changeTab('headhunters','.tab_button__second', 'tab_active__second')") Headhunters 
             .home__tabs__second 
-                button(class="tab_button tab_active", onclick="changeTab('login', '.tab_button', 'tab_active')") Login
-                button(class="tab_button", onclick="changeTab('signup', '.tab_button', 'tab_active')") Signup
+                button(class="tab_button tab_active", onclick="changeTab('login', '.tab_button', 'tab_active', 'enter_modes')") Login
+                button(class="tab_button", onclick="changeTab('signup', '.tab_button', 'tab_active', 'enter_modes')") Signup
 
-            .google_btn 
-                img(src="../../assets/images/signup/google.jpg", alt="google")
-                h4 Sign up using Google
+            .enter_modes#signup
+                .google_btn 
+                    img(src="../../assets/images/signup/google.jpg", alt="google")
+                    h4 Sign up using Google
+
+                .text__home.text__home__option or
+
+                .home_inputs
+                    +inputHome("Email", "", "text")
+                    +inputHome("Password", "", "password")
+                    +inputHome("Confirm Password", "", "password")
+
+                .home_check_rights 
+                    input(type="checkbox") 
+                    span By creating an account you agree to the terms and conditions 
+                    |applicable to our service and acknowledge that your personal data will 
+                    |be used in accordance with our privacy policy and you will receive emails 
+                    |and communications about jobs, industry news, new products and related topics.
+
+                +srchBtn("Sign Up")
+
+
+            .enter_modes#login
+    include ./includes/footer.pug

@@ -604,3 +604,39 @@ header {
   font-weight: 700;
   color: #2E1AAD;
 }
+
+.text__home {
+  font-weight: 800;
+  color: #666;
+}
+
+.input__home label {
+  display: block;
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+.input__home input {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 10px;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.text__home__option {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.home_inputs {
+  margin: 0 15px 0 0;
+}
+
+.home_check_rights {
+  margin: 20px 0 40px;
+}
+.home_check_rights span {
+  padding-left: 10px;
+}
