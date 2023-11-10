@@ -11,20 +11,32 @@ body{
     background-color: $headBack;
     font-family: 'Manrope';
 }
+.border_top_bottom{
+    border-top: $base-border;
+    border-bottom: $base-border;
+}
+//reusable classes
 
+.colorMainAndMargins{
+    background-color: $main;
+    margin: 10px -15px;
+    padding: 15px;
+}
 header{
     display: grid;
     padding: 18px 0;
     grid-template-columns: 2fr 1fr;
     background-color: $headBack !important;
+    box-sizing: border-box;
 }
-
+.logged__img{
+    padding: 3px 5px 0 0;
+}
 .logo{
     grid-area: 1/1/2/2;  
 }
 
 .topnav {
-    
     grid-area: 1/2/2/2;
     justify-self: flex-end;
     overflow: hidden;
@@ -77,7 +89,16 @@ header{
     color: black;
 }
 
+.header__line{
+    border-bottom: $base-border;
+    width: 99.5vw;
+    margin: 0 -15px;
+}
 
+.question__container{
+    display: flex;
+    flex-direction: column;
+} 
 
 .user{
     grid-area: 1/2/2/2;
@@ -221,7 +242,7 @@ header{
     color: $btn-text;
     border:$base-border;
     border-radius: $base-border-radius;
-    padding: 15px 10vw;
+    padding: 15px 15vw;
     font-weight: $btn-font-weigh;
 
 }
@@ -336,8 +357,9 @@ header{
 }
 
 .footer_rights{
+    box-sizing: border-box;
     margin: 0 -18px; 
-    padding:40px  18px;
+    padding:40px  15px;
     background-color: $footer-bg;
     color:$btn-text;
     text-align: center;
@@ -639,6 +661,7 @@ header{
 }
 
 .home__container{
+    
     background-color: $main;
     margin: 0 -15px ;
     padding: 15px;
@@ -673,7 +696,7 @@ header{
 
 .text__home{
     font-weight: $h4-font-weight;
-    color: $details-text;
+    color: $description-text;
 }
 
 .input__home{
@@ -683,6 +706,7 @@ header{
         margin: 10px 0 5px;
     }
     input{
+        box-sizing: border-box;
         font-size: $h4-font-size;
         font-weight: $btn-font-weigh;
         padding: 10px;
@@ -706,4 +730,232 @@ header{
         padding-left: 10px;
     }
     margin: 20px 0 40px;
+}
+
+.registration__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 90px;
+}
+
+.registration__info{
+    text-align: center;
+    h4{
+        margin-bottom: 15px;
+    }
+    img{
+        margin: 22px 0;
+    }
+}
+
+.apply__header{
+    padding: 20px 0;
+} 
+.apply__header__details{
+    h2{
+        padding-bottom: 5px;
+    }
+} 
+.apply__header__details__company{
+    color: $btn-text-light;
+}
+
+.application__container{
+    background-color: $main;
+    margin: 0 -15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+}
+.application__arrow{
+    color: $description-text; 
+    font-size: $h3-font-size;   
+    font-weight: $h4-font-weight;
+    padding-right: 20px;
+}
+.application__header{
+    padding:20px 0 20px 10px;
+}
+.apply__insert__file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $main;
+    margin: 0 -15px;
+    padding: 30px 15px 20px 15px;
+    margin-top: 15px;
+}
+.insert__file__header{
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    h3{
+        padding: 15px 0 10px;
+    }
+    h4{
+        font-size: $h4-font-size;
+        color: $description-text;
+        font-weight: $extra-thin-font;
+        line-height: 150%;
+        text-align: center;
+    }
+} 
+
+.edit_text a{
+    font-size: $base-font-size;
+    text-decoration: none;
+    color: $btn-color;
+    font-weight: $font-weight-600;
+    
+}
+
+.edit_text{
+    
+    padding: 10px 0 15px;
+}
+
+.apply__allow{
+    padding: 25px 0 40px;
+    span{
+        padding-left: 10px;
+        font-size: $h4-font-size;
+    }
+}
+
+.apply__content{
+    button{
+        margin-top: 30px;
+    }
+    margin-bottom: 70px;
+}
+
+.skip__option{
+    color: $btn-color;
+}
+
+.cv__container{
+    
+    @extend .colorMainAndMargins;
+
+    textarea{
+        box-sizing: border-box;
+        width: 100%;
+        border: $base-border;
+        border-radius: $base-border-radius;
+        padding: 15px;
+        color: $description-text;
+        font-size: $base-font-size;
+    }
+} 
+
+.cv__buttons{
+    display: flex;
+    flex-direction: column;
+    .skip__link{
+        align-self: center;
+        padding-top: 20px;
+        a{
+            text-decoration: none;
+            color: $btn-color;
+        } 
+    }
+}
+.question__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 0 20px;
+    h4{
+        padding-bottom: 20px
+    }
+   
+}
+
+.question__input{
+    padding-bottom:15px;
+    label{
+        padding-left: 10px;
+    }
+}
+
+.questionnaire__container, .review__container, .cv__review__container, .questionnaire__review__container{
+    @extend .colorMainAndMargins;
+    @extend .border_top_bottom;
+}
+.questionnaire__instruction{
+    color: $details-text;
+    padding-bottom: 25px;
+}
+.review__container{
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    margin-bottom: 15px;
+}
+.review__img {
+    padding: 15px 0;
+    img{
+        width: 50%;
+        height: auto;
+    }
+}
+.cv__review__container{
+    @extend .colorMainAndMargins;
+    @extend .border_top_bottom; 
+    h3{
+        padding-bottom: 15px;
+    }
+    margin-bottom: 15px;
+}
+.questionnaire__review__container{
+    h3{
+        padding-bottom: 25px;
+    }
+    p{
+        padding-bottom: 5px;
+    }
+    padding-bottom: 25px;
+}
+.questionnaire__review__part:not(:last-child){
+    padding-bottom: 35px;
+}
+
+.job__success__text {
+    margin-bottom: 5px !important;
+}
+.job__success{
+    padding-bottom: 30px !important;
+}
+
+.edit__container{
+    @extend .colorMainAndMargins;
+    padding-right: 15px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    button{
+        margin-top: 20px;
+    }
+}
+.photo__upload {
+    button{
+        width: 100%;
+        border: none;
+        border-radius: $base-border-radius;
+        background-color: $headBack;
+        color:$description-text;
+        min-height: 200px;
+    }    
+}
+.edit__inputs{
+    box-sizing: border-box;
+    padding-top: 20px;
+} 
+.optional__fields__text{
+    padding: 40px 0 15px 0;
 }

@@ -7,7 +7,6 @@ html(lang="en")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     script(src="../js_part/scripts.js")
-    script(src="../js_part/applyFilters.js")
     link(rel="stylesheet" href="../styles/css/index.css")
     title Search results
   body
@@ -15,8 +14,9 @@ html(lang="en")
     include ./mixins/sectionFilter.pug
     include ./mixins/checkboxFilter.pug
     include ./mixins/searchButton.pug
+    include ./mixins/backToResults.pug
     main 
-      include ./includes/backToResults.pug
+      +backResults("Back to search results")
       .filters 
           .filters__container 
               .filter__first

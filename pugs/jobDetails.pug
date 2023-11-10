@@ -8,12 +8,14 @@ head
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     script(src="../js_part/scripts.js")
     script(src="../js_part/changeTab.js")
+    script(src="../js_part/changePage.js")
     link(rel="stylesheet" href="../styles/css/index.css")
     title Search results
 body
     include ./includes/header.pug
+    include ./mixins/backToResults.pug
     main 
-        include ./includes/backToResults.pug
+        +backResults("Back to search results")
         include ./mixins/jobCardDetailsHeader.pug
         include ./mixins/searchButton.pug
         -const first_data={job: "Construction Manager", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London"}

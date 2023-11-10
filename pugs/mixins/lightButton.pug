@@ -1,7 +1,7 @@
 mixin lightBtn(val, flagSearchResults)
     if flagSearchResults
         .btnSearchResults.thirdPart__btn
-            button.btnProp.thirdPart__btn_light(onclick="redirectToFilters()") #{val}
+            button.btnProp.thirdPart__btn_light(onclick="changePage('filters')") #{val}
     else 
         .thirdPart__btn
             button.btnProp.thirdPart__btn_light #{val}

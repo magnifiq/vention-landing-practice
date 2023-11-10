@@ -8,8 +8,9 @@ head
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     script(src="../js_part/scripts.js")
     script(src="../js_part/changeTab.js")
+    script(src="../js_part/changePage.js")
     link(rel="stylesheet" href="../styles/css/index.css")
-    title Search results
+    title Sign Up
 body
     include ./includes/header.pug
     include ./mixins/inputHome.pug
@@ -21,8 +22,8 @@ body
                 button(class="tab_button__second", onclick="changeTab('employers','.tab_button__second', 'tab_active__second')") Employers
                 button(class="tab_button__second", onclick="changeTab('headhunters','.tab_button__second', 'tab_active__second')") Headhunters 
             .home__tabs__second 
-                button(class="tab_button tab_active", onclick="changeTab('login', '.tab_button', 'tab_active', 'enter_modes')") Login
-                button(class="tab_button", onclick="changeTab('signup', '.tab_button', 'tab_active', 'enter_modes')") Signup
+                button(class="tab_button ", onclick="changeTab('login', '.tab_button', 'tab_active', 'enter_modes')") Login
+                button(class="tab_button tab_active", onclick="changeTab('signup', '.tab_button', 'tab_active', 'enter_modes')") Signup
 
             .enter_modes#signup
                 .google_btn 

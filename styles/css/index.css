@@ -10,11 +10,27 @@ body {
   font-family: "Manrope";
 }
 
+.border_top_bottom, .questionnaire__container, .review__container, .cv__review__container, .questionnaire__review__container {
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+}
+
+ .edit__container, .questionnaire__container, .review__container, .cv__review__container, .questionnaire__review__container, .cv__container {
+  background-color: #F5F7FA;
+  margin: 10px -15px;
+  padding: 15px;
+}
+
 header {
   display: grid;
   padding: 18px 0;
   grid-template-columns: 2fr 1fr;
   background-color: white !important;
+  box-sizing: border-box;
+}
+
+.logged__img {
+  padding: 3px 5px 0 0;
 }
 
 .logo {
@@ -69,6 +85,17 @@ header {
 
 .topnav a:hover {
   color: black;
+}
+
+.header__line {
+  border-bottom: 1px solid #DDD;
+  width: 99.5vw;
+  margin: 0 -15px;
+}
+
+.question__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .user {
@@ -192,7 +219,7 @@ header {
   color: white;
   border: 1px solid #DDD;
   border-radius: 8px;
-  padding: 15px 10vw;
+  padding: 15px 15vw;
   font-weight: 700;
 }
 
@@ -279,8 +306,9 @@ header {
 }
 
 .footer_rights {
+  box-sizing: border-box;
   margin: 0 -18px;
-  padding: 40px 18px;
+  padding: 40px 15px;
   background-color: #0B0D17;
   color: white;
   text-align: center;
@@ -607,7 +635,7 @@ header {
 
 .text__home {
   font-weight: 800;
-  color: #666;
+  color: #999;
 }
 
 .input__home label {
@@ -616,6 +644,7 @@ header {
   margin: 10px 0 5px;
 }
 .input__home input {
+  box-sizing: border-box;
   font-size: 18px;
   font-weight: 700;
   padding: 10px;
@@ -639,4 +668,229 @@ header {
 }
 .home_check_rights span {
   padding-left: 10px;
+}
+
+.registration__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 90px;
+}
+
+.registration__info {
+  text-align: center;
+}
+.registration__info h4 {
+  margin-bottom: 15px;
+}
+.registration__info img {
+  margin: 22px 0;
+}
+
+.apply__header {
+  padding: 20px 0;
+}
+
+.apply__header__details h2 {
+  padding-bottom: 5px;
+}
+
+.apply__header__details__company {
+  color: #2E1AAD;
+}
+
+.application__container {
+  background-color: #F5F7FA;
+  margin: 0 -15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+}
+
+.application__arrow {
+  color: #999;
+  font-size: 24px;
+  font-weight: 800;
+  padding-right: 20px;
+}
+
+.application__header {
+  padding: 20px 0 20px 10px;
+}
+
+.apply__insert__file {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F7FA;
+  margin: 0 -15px;
+  padding: 30px 15px 20px 15px;
+  margin-top: 15px;
+}
+
+.insert__file__header {
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.insert__file__header h3 {
+  padding: 15px 0 10px;
+}
+.insert__file__header h4 {
+  font-size: 18px;
+  color: #999;
+  font-weight: 550;
+  line-height: 150%;
+  text-align: center;
+}
+
+.edit_text a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #2E1AAD;
+  font-weight: 600;
+}
+
+.edit_text {
+  padding: 10px 0 15px;
+}
+
+.apply__allow {
+  padding: 25px 0 40px;
+}
+.apply__allow span {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.apply__content {
+  margin-bottom: 70px;
+}
+.apply__content button {
+  margin-top: 30px;
+}
+
+.skip__option {
+  color: #2E1AAD;
+}
+
+.cv__container textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  padding: 15px;
+  color: #999;
+  font-size: 1rem;
+}
+
+.cv__buttons {
+  display: flex;
+  flex-direction: column;
+}
+.cv__buttons .skip__link {
+  align-self: center;
+  padding-top: 20px;
+}
+.cv__buttons .skip__link a {
+  text-decoration: none;
+  color: #2E1AAD;
+}
+
+.question__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 0 20px;
+}
+.question__container h4 {
+  padding-bottom: 20px;
+}
+
+.question__input {
+  padding-bottom: 15px;
+}
+.question__input label {
+  padding-left: 10px;
+}
+
+.questionnaire__instruction {
+  color: #666;
+  padding-bottom: 25px;
+}
+
+.review__container {
+  box-sizing: border-box;
+  padding-bottom: 50px;
+  margin-bottom: 15px;
+}
+
+.review__img {
+  padding: 15px 0;
+}
+.review__img img {
+  width: 50%;
+  height: auto;
+}
+
+.cv__review__container {
+  margin-bottom: 15px;
+}
+.cv__review__container h3 {
+  padding-bottom: 15px;
+}
+
+.questionnaire__review__container {
+  padding-bottom: 25px;
+}
+.questionnaire__review__container h3 {
+  padding-bottom: 25px;
+}
+.questionnaire__review__container p {
+  padding-bottom: 5px;
+}
+
+.questionnaire__review__part:not(:last-child) {
+  padding-bottom: 35px;
+}
+
+.job__success__text {
+  margin-bottom: 5px !important;
+}
+
+.job__success {
+  padding-bottom: 30px !important;
+}
+
+.edit__container {
+  padding-right: 15px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.edit__container button {
+  margin-top: 20px;
+}
+
+.photo__upload button {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+  color: #999;
+  min-height: 200px;
+}
+
+.edit__inputs {
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.optional__fields__text {
+  padding: 40px 0 15px 0;
 }

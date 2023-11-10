@@ -1,4 +1,20 @@
-mixin srchBtn(val)
+mixin srchBtn(val, flag__skip__apply__jobs)
     .thirdPart__btn
-        button(class="btnProp") #{val}
+        if val==="Sign Up" 
+            button(class="btnProp", onclick="changePage('confirmRegistration')") #{val}
+        else if val==="Apply Filters"
+            button(class="btnProp", onclick="changePage('filters')") #{val}
+        else if val==="Apply Now"
+            button(class="btnProp", onclick="changePage('applyJobs')") #{val}
+        else if val==="Continue"
+            if flag__skip__apply__jobs 
+                button(class="btnProp", onclick="changePage('thirdStepApplyJobs')") #{val}
+            else 
+                button(class="btnProp", onclick="changePage('secondStepApplyJobs')") #{val}
+        else if val==="Save & Review"
+            button(class="btnProp", onclick="changePage('fourthStepApplyJobs')") #{val}
+        else if val==="Send application"
+            button(class="btnProp", onclick="changePage('applyJobSuccess')") #{val}
+        else
+            button(class="btnProp") #{val}
     
