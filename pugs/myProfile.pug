@@ -15,8 +15,8 @@ body
     main 
         .profile__container 
             .profile__select
-                 select.distance(name="distance")
-                    option(disabled, selected) My profile
+                 select.distance(name="distance", onchange="changePage(this.value)")
+                    option(disabled, selected, value='myProfile') My profile
                     option(value="Applications") Applications
                     option(value="Recommended Roles") Recommended Roles
                     option(value="Employer Invitations") Employer Invitations
@@ -115,10 +115,24 @@ body
             .notifications__profile
                 .profile_selections__header 
                     h4 Notifications
-                    span.recommendation__edit Add/Edit
+                    span.recommendation__edit Edit
                 .notifications__switchers 
-                    .notifications__switcher
+                    .notifications__switcher.notifications__switcher__first
                         span Receive notification on application updates
                         label.switch
                             input(type="checkbox")
                             span.slider__switch.round
+                    .notifications__switcher
+                        span Weekly Summary of applications
+                        label.switch
+                            input(type="checkbox")
+                            span.slider__switch.round
+            .delete_profile 
+                .profile_selections__header 
+                    h4 Deleting your I-Tapp account
+                .delete__awarning__profile 
+                    |When you delete your I-Tapp account, you 
+                    |won't be able to retrieve the content or information that you've shared on I-Tapp
+                .delete__confirmation__profile
+                    |Remove my account
+    include ./includes/footer.pug

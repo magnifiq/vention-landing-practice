@@ -903,10 +903,12 @@ header {
   padding: 40px 0 15px 0;
 }
 
+.profile__container {
+  margin-bottom: 0;
+}
 .profile__container > div:not(:last-child) {
   margin-bottom: 15px;
 }
-
 .profile__select {
   margin: 20px 0;
 }
@@ -1066,6 +1068,8 @@ header {
   display: inline-block;
   width: 40px;
   height: 18px;
+  grid-area: 1/2/1/2;
+  justify-self: end;
 }
 
 .switch input {
@@ -1118,4 +1122,27 @@ input:checked + .slider__switch:before {
 
 .slider__switch.round:before {
   border-radius: 50%;
+}
+
+.notifications__switcher__first {
+  border-bottom: 1px solid #DDD;
+}
+
+.notifications__switcher {
+  padding: 15px 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 1fr;
+}
+.notifications__switcher span {
+  grid-area: 1/1/1/1;
+}
+
+.delete__awarning__profile {
+  padding-top: 10px;
+}
+
+.delete__confirmation__profile {
+  color: red;
+  padding: 20px 0 15px;
 }

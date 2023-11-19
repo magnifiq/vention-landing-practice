@@ -923,12 +923,13 @@ header {
 
 .profile__container {
   @extend .colorMainAndMargins;
+  margin-bottom: 0;
   @extend .border_top_bottom;
+  > div:not(:last-child){
+    margin-bottom: 15px;
+  }
   > div {
     @extend .colorWhitePaddingsRadius;
-  }
-  > div:not(:last-child) {
-    margin-bottom: 15px;
   }
 }
 
@@ -1091,6 +1092,8 @@ header {
   display: inline-block;
   width: 40px;
   height: 18px;
+  grid-area: 1/2/1/2;
+  justify-self: end;
 }
 
 .switch input {
@@ -1136,10 +1139,31 @@ input:checked + .slider__switch:before {
   -ms-transform: translateX(20px);
   transform: translateX(20px);
 }
+
 .slider__switch.round {
   border-radius: 34px;
 }
 
 .slider__switch.round:before {
   border-radius: 50%;
+}
+.notifications__switcher__first{
+  border-bottom: $base-border;
+}
+.notifications__switcher{
+  padding: 15px 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 1fr;
+
+  span{
+    grid-area: 1/1/1/1;
+  }
+}
+.delete__awarning__profile {
+  padding-top: 10px;
+}
+.delete__confirmation__profile{
+  color: $warning-text;
+  padding: 20px 0 15px;
 }
