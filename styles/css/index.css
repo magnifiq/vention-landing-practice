@@ -18,7 +18,7 @@ body {
   border-bottom: 1px solid #DDD;
 }
 
- .profile__container, .edit__container, .questionnaire__container,
+ .applications__content, .profile__container, .edit__container, .questionnaire__container,
 .review__container,
 .cv__review__container,
 .questionnaire__review__container, .cv__container {
@@ -27,7 +27,7 @@ body {
   padding: 15px;
 }
 
- .profile__container > div:not(:first-child) {
+ .applications__container, .profile__container > div:not(:first-child) {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -1189,4 +1189,80 @@ input:checked + .slider__switch:before {
 }
 .office__profile__modal .office__location__profile__container {
   padding: 25px 0;
+}
+
+.applications__content {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+}
+
+.tab_button_application {
+  border: none;
+  background-color: white;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #666;
+}
+
+.tab_active_application {
+  border-bottom: 3px solid #2e1aad !important;
+}
+
+#closed__applications h4 {
+  padding-top: 15px;
+}
+
+.application_tabs {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 5px;
+}
+
+.application__active__card {
+  padding: 15px 0;
+}
+
+.application__active__card:not(:last-child) {
+  border-bottom: 1px solid #DDD;
+}
+
+.application__active__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.application__active__header__input label {
+  padding-left: 5px;
+}
+
+.application__active__header__status {
+  display: flex;
+}
+.application__active__header__status span {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.application__active__header__status__num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--Dark-Gray, #999);
+  text-align: center;
+}
+
+.application__active__salary {
+  padding: 10px 0;
+}
+
+.application__active__company {
+  display: flex;
+  align-items: center;
+}
+.application__active__company img {
+  max-width: 25px;
+  height: auto;
+  padding-right: 5px;
 }

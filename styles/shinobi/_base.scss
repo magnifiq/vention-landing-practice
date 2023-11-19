@@ -1214,3 +1214,80 @@ input:checked + .slider__switch:before {
     padding: 25px 0;
   }
 }
+
+////////////////////////////////////////////////////////////////////Profile section.Applications
+
+.applications__container{
+  @extend .colorWhitePaddingsRadius;
+}
+.applications__content{
+  margin-top:0;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+  @extend .colorMainAndMargins;
+}
+.tab_button_application{
+  border: none;
+  background-color: $headBack;
+  padding: 15px;
+  font-size: $base-font-size;
+  font-weight: $btn-font-weigh;
+  color: $details-text;
+}
+
+.tab_active_application {
+  border-bottom: 3px solid #2e1aad !important;
+}
+#closed__applications{
+  h4{
+    padding-top: 15px;
+  }
+}
+
+.application_tabs{
+  padding-bottom: 15px;
+  border-bottom: $base-border;
+  margin-bottom: 5px;
+} 
+
+.application__active__card{
+  padding: 15px 0;
+}
+.application__active__card:not(:last-child){
+  border-bottom: $base-border;
+}
+.application__active__header{
+  display: flex;
+  justify-content: space-between;
+}
+.application__active__header__input{
+  label{
+    padding-left: 5px;
+  }
+}
+.application__active__header__status{
+  display: flex;
+  span{
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+}
+.application__active__header__status__num{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $cookies;
+  text-align: center;
+}
+.application__active__salary{
+  padding: 10px 0;
+}
+.application__active__company{
+  img{
+    max-width: 25px;
+    height: auto;
+    padding-right: 5px;
+  }
+  display: flex;
+  align-items: center;
+}
