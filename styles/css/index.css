@@ -27,7 +27,7 @@ body {
   padding: 15px;
 }
 
- .profile__container > div {
+ .profile__container > div:not(:first-child) {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -1145,4 +1145,48 @@ input:checked + .slider__switch:before {
 .delete__confirmation__profile {
   color: red;
   padding: 20px 0 15px;
+}
+
+.workplace__profile__modal, .office__profile__modal {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.workplace__profile__modal h4, .office__profile__modal h4 {
+  padding-bottom: 15px;
+}
+
+.workplace__profile__modal__option label {
+  padding-left: 10px;
+}
+
+.workplace__profile__modal__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overlay__for__modal {
+  position: relative;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.office__profile__modal select {
+  padding: 10px;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+}
+.office__profile__modal .office__location__profile__container {
+  padding: 25px 0;
 }

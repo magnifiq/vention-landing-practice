@@ -8,16 +8,19 @@ head
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     script(src="../js_part/scripts.js")
     script(src="../js_part/changePage.js")
+    script(src="../js_part/openModal.js")
     link(rel="stylesheet" href="../styles/css/index.css")
     title my profile
 body
     include ./includes/headerLogged.pug
+    include ./mixins/searchButton.pug 
     main 
+        .overlay__for__modal
         .profile__container 
             .profile__select
-                 select.distance(name="distance", onchange="changePage(this.value)")
-                    option(disabled, selected, value='myProfile') My profile
-                    option(value="Applications") Applications
+                select.distance(name="distance", onchange="changePage(this.value)")
+                    option(selected, value='myProfile') My profile
+                    option(value="applicationsProfile") Applications
                     option(value="Recommended Roles") Recommended Roles
                     option(value="Employer Invitations") Employer Invitations
                     option(value="Saved Roles") Saved Roles
@@ -85,18 +88,50 @@ body
             .workplace__profile 
                 .profile_selections__header 
                     h4 Workplace
-                    span.recommendation__edit Add/Edit
+                    span.recommendation__edit.workplace__open__modal(onclick='openModal("workplace__profile__modal", "workplace__open__modal", "close__btn")') Add/Edit
                 .workplace__profile__container 
                     .setting__option Office
                     .setting__option Partial Remote
             
+            .workplace__profile__modal 
+                .workplace__profile__modal__header
+                    h4 Workplace 
+                    span.close__btn x
+                .workplace__profile__modal__option
+                    input(type="checkbox" value="Office", checked)
+                    label(for="Office") Office
+                .workplace__profile__modal__option
+                    input(type="checkbox" value="Partial Remote", checked)
+                    label(for="Partial Remote") Partial Remote
+                .workplace__profile__modal__option
+                    input(type="checkbox" value="Fully Remote")
+                    label(for="Fully Remote") Fully Remote
+                .workplace__profile__modal__option
+                    input(type="checkbox" value="Part Time")
+                    label(for="Part Time") Part Time
+                +srchBtn("Save")
+
             .office__location__profile 
                 .profile_selections__header 
                     h4 Office location
-                    span.recommendation__edit Add/Edit
+                    span.recommendation__edit.office__open__modal(onclick='openModal("office__profile__modal", "office__open__modal", "close__btn__office")') Add/Edit
                 .office__location__profile__container 
                     .office__location__option London
                     .office__location__option Birmingham
+
+            .office__profile__modal 
+                .workplace__profile__modal__header
+                    h4 Office location 
+                    span.close__btn__office x
+                select(name="office")
+                    option(disabled, selected) Select the location
+                    option(value="One") One
+                    option(value="Two") Two
+                    option(value="Three") Three
+                .office__location__profile__container 
+                    .office__location__option London x
+                    .office__location__option Birmingham   x
+                +srchBtn("Save")
 
             .open__opportunities__profile
                 .profile_selections__header 
