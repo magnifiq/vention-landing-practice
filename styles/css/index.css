@@ -18,7 +18,7 @@ body {
   border-bottom: 1px solid #DDD;
 }
 
- .recommended__roles__content, .applications__content, .profile__container, .edit__container, .questionnaire__container,
+ .employer__invitations__content, .recommended__roles__content, .applications__content, .profile__container, .edit__container, .questionnaire__container,
 .review__container,
 .cv__review__container,
 .questionnaire__review__container, .cv__container {
@@ -27,7 +27,7 @@ body {
   padding: 18px;
 }
 
- .applications__container, .profile__container > div:not(:first-child) {
+ .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -223,7 +223,7 @@ header {
   color: white;
   border: 1px solid #DDD;
   border-radius: 8px;
-  padding: 15px 15vw;
+  padding: 10px 10vw;
   font-weight: 700;
 }
 
@@ -1300,4 +1300,30 @@ input:checked + .slider__switch:before {
 }
 .recommended__role__exception div:last-child {
   padding-bottom: 5px;
+}
+
+.employer__invitations__content {
+  margin: 0 -18px;
+  padding-bottom: 30px;
+}
+
+.employer__invitations__header {
+  padding: 15px 0;
+  border-bottom: 1px solid #DDD;
+}
+
+.employer__invitation__btn button {
+  background-color: red;
+  padding: 10px 10vw;
+}
+
+.employer__card__header {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employer__invitations__cards > div:not(:last-child) {
+  border-bottom: 1px solid #DDD;
 }

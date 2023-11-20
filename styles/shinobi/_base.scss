@@ -221,7 +221,7 @@ header {
   color: $btn-text;
   border: $base-border;
   border-radius: $base-border-radius;
-  padding: 15px 15vw;
+  padding: 10px 10vw;
   font-weight: $btn-font-weigh;
 }
 
@@ -1330,5 +1330,35 @@ input:checked + .slider__switch:before {
   }
   div:last-child{
     padding-bottom: 5px;
+  }
+}
+///////////////////////////////////////////////////////////////////myProfile.Employer Invitations
+.employer__invitations__content{
+  @extend .colorMainAndMargins; 
+  margin: 0 -18px; 
+  padding-bottom: 30px;
+}
+.employer__invitations__container{
+  @extend .colorWhitePaddingsRadius;
+}
+.employer__invitations__header{
+  padding: 15px 0;
+  border-bottom: $base-border;
+}
+.employer__invitation__btn{
+  button{
+    background-color: red;
+    padding: 10px 10vw;
+  }
+}
+.employer__card__header{
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.employer__invitations__cards{
+  >div:not(:last-child){
+    border-bottom: $base-border;
   }
 }
