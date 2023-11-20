@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(src="../js_part/scripts.js")
+    script(src="../js_part/changePage.js")
+    script(src="../js_part/openModal.js")
+    link(rel="stylesheet" href="../styles/css/index.css")
+    title Recommended roles
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/jobCard.pug
+    main 
+        .overlay__for__modal
+        .profile__container 
+            .profile__select
+                select.distance(name="distance", onchange="changePage(this.value)")
+                    option(value='myProfile') My profile
+                    option(value="applicationsProfile") Applications
+                    option(value="recommendedRoles", selected) Recommended Roles
+                    option(value="employerInvitations") Employer Invitations
+                    option(value="savedRoles") Saved Roles
+            .recommended__roles__content
+                .recommended__roles__container 
+                    .recommended__roles__header 
+                        h4 Recommended roles
+                    .recommended__roles__cards
+                        -const first_data={job: "Construction Manager", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London", description: "Would you like to work from home part time with no experience and an immediate start? Research Tribe is looking for people across the UK to work from home by taking part in research. You could become a mystery shopper, product tester or simply share your...", recommended_roles:true}
+                        +jobCard(first_data)
+                        .recommended__role__exception
+                            -const second_data={job: "Financial Services Representative", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London", description: "Would you like to work from home part time with no experience and an immediate start? Research Tribe is looking for people across the UK to work from home by taking part in research. You could become a mystery shopper, product tester or simply share your...", recommended_roles:true}
+                            +jobCard(second_data)
+    include ./includes/footer.pug

@@ -18,13 +18,13 @@ body {
   border-bottom: 1px solid #DDD;
 }
 
- .applications__content, .profile__container, .edit__container, .questionnaire__container,
+ .recommended__roles__content, .applications__content, .profile__container, .edit__container, .questionnaire__container,
 .review__container,
 .cv__review__container,
 .questionnaire__review__container, .cv__container {
   background-color: #F5F7FA;
-  margin: 10px -15px;
-  padding: 15px;
+  margin: 10px -18px;
+  padding: 18px;
 }
 
  .applications__container, .profile__container > div:not(:first-child) {
@@ -1265,4 +1265,39 @@ input:checked + .slider__switch:before {
   max-width: 25px;
   height: auto;
   padding-right: 5px;
+}
+
+.recommended__roles__content {
+  margin: 0 0 35px;
+}
+
+.recommended__roles__container div {
+  background-color: white;
+}
+
+.recommended__roles__header {
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 15px;
+}
+
+.recommended__roles__cards > div {
+  margin: 0 -15px;
+}
+
+.recommended__roles__extra__info {
+  font-weight: 700;
+  color: #2E1AAD;
+  font-size: 1rem;
+  padding: 20px 0;
+  border-bottom: 1px solid #DDD;
+}
+
+.recommended__role__exception div {
+  border-bottom: none;
+}
+.recommended__role__exception > div {
+  margin: 0;
+}
+.recommended__role__exception div:last-child {
+  padding-bottom: 5px;
 }

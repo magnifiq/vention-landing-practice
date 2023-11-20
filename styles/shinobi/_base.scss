@@ -18,8 +18,8 @@ body {
 
 .colorMainAndMargins {
   background-color: $main;
-  margin: 10px -15px;
-  padding: 15px;
+  margin: 10px -18px;
+  padding: 18px;
 }
 
 .colorWhitePaddingsRadius {
@@ -1290,4 +1290,45 @@ input:checked + .slider__switch:before {
   }
   display: flex;
   align-items: center;
+}
+
+/////////////////////////////////////////////////////////myProfile.Recommended roles
+.recommended__roles__content{
+  @extend .colorMainAndMargins;
+  margin: 0 0 35px;
+}
+.recommended__roles__container{
+  
+  div{
+    background-color: $headBack;
+  }
+}
+.recommended__roles__header {
+  border-bottom: $base-border;  
+  padding-bottom: 15px;
+}
+
+.recommended__roles__cards{
+  >div{
+    margin:0 -15px;
+  }
+}
+
+.recommended__roles__extra__info{
+  font-weight: $btn-font-weigh;
+  color: $btn-text-light;
+  font-size: $base-font-size;
+  padding: 20px 0;
+  border-bottom: $base-border;
+}
+.recommended__role__exception{
+  div{
+    border-bottom: none;
+  }
+  >div{
+    margin:0;
+  }
+  div:last-child{
+    padding-bottom: 5px;
+  }
 }
