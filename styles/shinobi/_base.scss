@@ -1470,3 +1470,28 @@ input:checked + .slider__switch:before {
 .message__profile__content{
   margin-bottom: 20px;
 }
+
+.messages__input__profile{
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  input{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    border-radius: $base-border-radius;
+    border:none;
+  }
+  button{
+    position: relative;
+    color: $btn-color-light;
+    background-color: $btn-color;
+    border: none;
+    border-radius: $base-border-radius;
+    padding: 6px 20px;
+    height: max-content;
+    margin-left: -90px;
+  }
+}

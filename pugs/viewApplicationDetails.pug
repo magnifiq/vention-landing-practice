@@ -88,6 +88,9 @@ body
                     +message(first_message)
                     -const second_message={imgUrl: "../assets/images/viewApplications/john.jpg", role: "John", details: "Feb 02, 2021 (18:40)", first_line: "Thanks!", second_line: "See you soon."}
                     +message(second_message)
+                    .messages__input__profile 
+                        input(type="text", name="messages", placeholder="Message here")
+                        button(class="messages__btn") Send
     
     include ./includes/footer.pug
 

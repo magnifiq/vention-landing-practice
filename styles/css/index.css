@@ -1435,3 +1435,28 @@ input:checked + .slider__switch:before {
 .message__profile__content {
   margin-bottom: 20px;
 }
+
+.messages__input__profile {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+.messages__input__profile input {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+}
+.messages__input__profile button {
+  position: relative;
+  color: white;
+  background-color: #2E1AAD;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 20px;
+  height: max-content;
+  margin-left: -90px;
+}
