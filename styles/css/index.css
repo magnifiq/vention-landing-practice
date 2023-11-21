@@ -1328,6 +1328,10 @@ input:checked + .slider__switch:before {
   border-bottom: 1px solid #DDD;
 }
 
+.view__appplication__content {
+  margin-bottom: 0px;
+}
+
 .view__application__header {
   display: flex;
   justify-content: space-between;
@@ -1379,4 +1383,22 @@ input:checked + .slider__switch:before {
 
 .position__description__stage__text {
   padding: 10px 0;
+}
+
+.position__description__cl {
+  padding: 15px 9px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #DDD;
+}
+
+.position__description__btn button {
+  background-color: red;
+  width: 50% max-content;
+  padding: 10px 13px;
+}
+
+.position__description__btn {
+  display: flex;
+  justify-content: flex-start;
 }

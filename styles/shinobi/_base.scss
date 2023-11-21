@@ -1366,6 +1366,7 @@ input:checked + .slider__switch:before {
 ///////////////////////////////////////////////////////////////myProfile.view Details
 .view__appplication__content{
   @extend .colorMainAndMargins;
+  margin-bottom: 0px;
 }
 .view__application__container {
   @extend .colorWhitePaddingsRadius;
@@ -1422,4 +1423,19 @@ input:checked + .slider__switch:before {
 }
 .position__description__stage__text{
   padding: 10px 0;
+}
+.position__description__cl{
+  padding: 15px 9px;
+  border-radius: $divs-border-radius;
+  margin-bottom: 20px;
+  border: $base-border;
+}
+.position__description__btn button{
+  background-color: red;
+  width: 50% max-content;
+  padding: 10px 13px;
+}
+.position__description__btn{
+  display: flex;
+  justify-content: flex-start;
 }
