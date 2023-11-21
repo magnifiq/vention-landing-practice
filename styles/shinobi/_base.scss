@@ -1377,7 +1377,7 @@ input:checked + .slider__switch:before {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  h3{
+  h4{
     padding-bottom: 5px;
   }
   span{
@@ -1438,4 +1438,35 @@ input:checked + .slider__switch:before {
 .position__description__btn{
   display: flex;
   justify-content: flex-start;
+}
+
+.messages__container{
+  border-radius: $divs-border-radius;
+  padding: 15px;
+  background-color: $main;
+  margin: 17px 0;
+}
+
+.message__header{
+  img{
+    max-width: 24px;
+    height: auto;
+    border-radius: 50%;
+  }
+  display: flex;
+  h4{
+    margin-left: 12px;
+  }
+  margin-bottom: 20px;
+}
+
+.message__details{
+  margin-bottom: 10px;
+  color: $description-text;
+}
+.message__text__first{
+  margin-bottom: 10px;
+}
+.message__profile__content{
+  margin-bottom: 20px;
 }

@@ -15,6 +15,7 @@ body
     include ./includes/headerLogged.pug
     include ./mixins/searchButton.pug
     include ./mixins/backToResults.pug 
+    include ./mixins/messageProfile.pug 
     main 
     .view__appplication__content 
         +backResults("Back to applications list")
@@ -25,7 +26,7 @@ body
 
                 .view__application__header 
                     .view__application__info 
-                        h3 Construction Manager
+                        h4 Construction Manager
                         span £50,000-£60,000
                     img(src="../assets/images/applicationsProfile/tesla.jpg", alt="tesla")
             
@@ -82,6 +83,11 @@ body
                 .position__description__btn
                     +srchBtn("Withdraw application")
             .view__details#messages
+                .messages__container 
+                    -const first_message={imgUrl: "../assets/images/myProfile/avatar.jpg", role: "Me", details: "Feb 02, 2021 (18:20)", first_line: "Hello.", second_line: "Thanks for feedback! See you tomorrow."}
+                    +message(first_message)
+                    -const second_message={imgUrl: "../assets/images/viewApplications/john.jpg", role: "John", details: "Feb 02, 2021 (18:40)", first_line: "Thanks!", second_line: "See you soon."}
+                    +message(second_message)
     
     include ./includes/footer.pug
 

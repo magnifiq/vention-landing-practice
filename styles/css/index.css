@@ -1338,7 +1338,7 @@ input:checked + .slider__switch:before {
   align-items: center;
   padding: 20px 0;
 }
-.view__application__header h3 {
+.view__application__header h4 {
   padding-bottom: 5px;
 }
 .view__application__header span {
@@ -1401,4 +1401,37 @@ input:checked + .slider__switch:before {
 .position__description__btn {
   display: flex;
   justify-content: flex-start;
+}
+
+.messages__container {
+  border-radius: 16px;
+  padding: 15px;
+  background-color: #F5F7FA;
+  margin: 17px 0;
+}
+
+.message__header {
+  display: flex;
+  margin-bottom: 20px;
+}
+.message__header img {
+  max-width: 24px;
+  height: auto;
+  border-radius: 50%;
+}
+.message__header h4 {
+  margin-left: 12px;
+}
+
+.message__details {
+  margin-bottom: 10px;
+  color: #999;
+}
+
+.message__text__first {
+  margin-bottom: 10px;
+}
+
+.message__profile__content {
+  margin-bottom: 20px;
 }
