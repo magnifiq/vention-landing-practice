@@ -18,7 +18,7 @@ body {
   border-bottom: 1px solid #DDD;
 }
 
- .employer__invitations__content, .recommended__roles__content, .applications__content, .profile__container, .edit__container, .questionnaire__container,
+ .view__appplication__content, .employer__invitations__content, .recommended__roles__content, .applications__content, .profile__container, .edit__container, .questionnaire__container,
 .review__container,
 .cv__review__container,
 .questionnaire__review__container, .cv__container {
@@ -27,7 +27,7 @@ body {
   padding: 18px;
 }
 
- .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
+ .view__application__container, .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -1326,4 +1326,57 @@ input:checked + .slider__switch:before {
 
 .employer__invitations__cards > div:not(:last-child) {
   border-bottom: 1px solid #DDD;
+}
+
+.view__application__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.view__application__header h3 {
+  padding-bottom: 5px;
+}
+.view__application__header span {
+  color: #999;
+}
+
+.view__details__steps {
+  background-color: #F5F7FA;
+  padding: 15px;
+  border-radius: 16px;
+  margin: 20px 0;
+}
+
+.view__details__step span {
+  margin-left: 10px;
+}
+
+.position__description__info {
+  margin-bottom: 20px;
+}
+
+.position__description__cv h4 {
+  color: #999;
+  font-weight: 500;
+}
+
+.position__description__cv__info {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 25px;
+}
+.position__description__cv__info span {
+  padding-left: 10px;
+}
+
+.position__description__stage {
+  padding: 15px 9px;
+  background-color: #F5F7FA;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.position__description__stage__text {
+  padding: 10px 0;
 }

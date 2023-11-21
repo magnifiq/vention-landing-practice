@@ -1362,3 +1362,64 @@ input:checked + .slider__switch:before {
     border-bottom: $base-border;
   }
 }
+
+///////////////////////////////////////////////////////////////myProfile.view Details
+.view__appplication__content{
+  @extend .colorMainAndMargins;
+}
+.view__application__container {
+  @extend .colorWhitePaddingsRadius;
+}
+
+.view__application__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  h3{
+    padding-bottom: 5px;
+  }
+  span{
+    color: $description-text;
+  }
+}
+
+.view__details__steps{
+  background-color: $main;
+  padding: 15px;
+  border-radius: $divs-border-radius;
+  margin: 20px 0;
+}
+
+.view__details__step{
+  span{
+    margin-left: 10px;
+  }
+}
+.position__description__info{
+  margin-bottom: 20px;
+}
+.position__description__cv{
+  h4{
+    color: $description-text;
+    font-weight: $basic-font-weight;
+  }
+}
+.position__description__cv__info{
+  display: flex;
+  align-items: center;
+  padding: 10px 0 25px;
+  span{
+    padding-left: 10px;
+  }
+}
+
+.position__description__stage{
+  padding: 15px 9px;
+  background-color: $main;
+  border-radius: $divs-border-radius;
+  margin-bottom: 20px;
+}
+.position__description__stage__text{
+  padding: 10px 0;
+}

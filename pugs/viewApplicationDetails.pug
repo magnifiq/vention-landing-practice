@@ -1,0 +1,79 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(src="../js_part/scripts.js")
+    script(src="../js_part/changePage.js")
+    script(src="../js_part/changeTab.js")
+    link(rel="stylesheet" href="../styles/css/index.css")
+    title Applications details
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/searchButton.pug
+    include ./mixins/backToResults.pug 
+    main 
+    .view__appplication__content 
+        +backResults("Back to applications list")
+        .view__application__container 
+            .application_tabs 
+                button(class="tab_button_application tab_active_application", onclick="changeTab('position__description', '.tab_button_application', 'tab_active_application', 'view__details')") Position Description
+                button(class="tab_button_application", onclick="changeTab('messages', '.tab_button_application', 'tab_active_application', 'view__details')") Messages
+
+                .view__application__header 
+                    .view__application__info 
+                        h3 Construction Manager
+                        span £50,000-£60,000
+                    img(src="../assets/images/applicationsProfile/tesla.jpg", alt="tesla")
+            
+            .view__details#position__description
+                .view__details__steps 
+                    .view__details__step
+                        img(src="../assets/images/viewApplications/checked.svg", alt="point")
+                        span Ex. Shortlisted
+                    .view__details__step
+                        img(src="../assets/images/viewApplications/checked.svg", alt="point")
+                        span Tel interview
+                    .view__details__step
+                        img(src="../assets/images/viewApplications/unchecked.svg", alt="point")
+                        span Offline assessment
+                    .view__details__step
+                        img(src="../assets/images/viewApplications/unchecked.svg", alt="point")
+                        span On site interview
+                    .view__details__step
+                        img(src="../assets/images/viewApplications/unchecked.svg", alt="point")
+                        span Accepted
+                
+                .position__description__info 
+                    |Eight Inc. is looking for both Mid Level to Senior Designers of Environments to work 
+                    |in our Beijing office on a full time basis. This person will be responsible for working 
+                    |directly with Principals and Studio Directors, developing project designs across our 
+                    |global offices. Senior Designers will coordinate the work of project teams and consultants, 
+                    |and interface with regulatory agencies as required. In addition, a Senior Designer 
+                    |must be able to evaluate both standard and innovative solutions to design issues, 
+                    |confirm code compliance, and make recommendations to the Studio Director and Principals.
+                    
+                .position__description__cv 
+                    h4 CV sent 
+                    .position__description__cv__info
+                        img(src="../assets/images/viewApplications/file.svg", alt="file")
+                        span auto-generated cv.pdf
+                
+                .position__description__stage 
+                    h5 Stage Details
+                    .position__description__stage__text Hello.
+                    span 
+                    | Senior Designers will coordinate the work of project teams and consultants, 
+                    | and interface with regulatory agencies as required. In addition, a Senior Designer must 
+                    |be able to evaluate both standard and innovative solutions to design issues, confirm code compliance, 
+                    |and make recommendations to the Studio Director and Principals.
+                .position__description__cl
+            
+
+            .view__details#messages
+
+
+                

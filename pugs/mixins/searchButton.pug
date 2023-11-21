@@ -6,6 +6,8 @@ mixin srchBtn(val, flag__skip__apply__jobs)
             button(class="btnProp", onclick="changePage('filters')") #{val}
         else if val==="Apply Now"
             button(class="btnProp", onclick="changePage('applyJobs')") #{val}
+        else if val==="View"
+            button(class="btnProp", onclick="changePage('viewApplicationDetails')") #{val}
         else if val==="Continue"
             if flag__skip__apply__jobs 
                 button(class="btnProp", onclick="changePage('thirdStepApplyJobs')") #{val}
