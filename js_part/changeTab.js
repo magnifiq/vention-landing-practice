@@ -12,8 +12,9 @@ const changeTab = (val, selectedClasses, activeClass, classesToHide) => {
   };
 
   tabs.forEach((tab) => {
-    tab.removeEventListener("click", () => clickHandler(tab));
+    
     tab.addEventListener("click", () => clickHandler(tab));
+    tab.removeEventListener("click", () => clickHandler(tab));
   });
   if (classesToHide !== "homes") {
     let sections = document.getElementsByClassName(classesToHide);
@@ -23,6 +24,7 @@ const changeTab = (val, selectedClasses, activeClass, classesToHide) => {
     }
     document.getElementById(val).style.display = "block";
   } else {
-    return currRole;
+    console.log(currRole);
   }
+  return tabs
 };
