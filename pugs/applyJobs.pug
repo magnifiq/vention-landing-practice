@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(src="../js_part/scripts.js")
+    script(src="../js_part/changePage.js")
+    link(rel="stylesheet" href="../styles/css/index.css")
+    title Apply for a job st1
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/application.pug
+    include ./mixins/searchButton.pug
+    main 
+        .apply__content
+            include ./includes/applyHeader.pug
+            +applyStep("CV Upload", "first")
+            .header__line
+            .apply__insert__file.border_top_bottom
+                .apply__img
+                    img(src="../../assets/images/applyJobs/auto.svg", alt="auto cv")
+                .insert__file__header 
+                    h3 auto-generated cv.pdf
+                    .edit_text 
+                        a(href="../pages/profileEdit.html") Edit data 
+                    h4 
+                        | Choose  Another File
+                        | (.pdf, .doc or .docx files)
+
+            .apply__allow 
+                input(type="checkbox")
+                span Allow Employer to contact you for other positions available
+            +srchBtn("Continue")
+    include ./includes/footer.pug

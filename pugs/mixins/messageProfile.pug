@@ -1,0 +1,10 @@
+mixin message(data)
+    .message__profile__content 
+        .message__header 
+            img(src=data.imgUrl, alt="avatar")
+            h4  #{data.role}
+        .message__details 
+            |#{data.details}
+        .message__text 
+            .message__text__first #{data.first_line}
+            .message__text__second #{data.second_line}

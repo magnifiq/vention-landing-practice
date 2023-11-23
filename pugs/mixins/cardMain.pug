@@ -1,0 +1,31 @@
+mixin cardMain(data)
+    if !data.fifthPart_flag
+        .secondPart__card.firstPart__card
+            img(src=data.img, alt=data.img_name)
+            h3 #{ data.h3_text}
+            .secondPart_info
+                h4 #{ data.h4_text}
+                .firstPart__card__description
+                    span #{ data.description}
+
+        
+    else
+        h3 #{ data.h3_text}
+        .firstPart__card__description
+            span #{ data.description}
+        .secondPart_info.fourthPart_info.fifthPart__info
+            img(src=data.img_2, alt=data.img_name_2)
+            h4 #{ data.h4_text}
+            .firstPart__card__description.fifthPart__card__description
+            span  #{ data.description_2}
+            .fifthPart__avatar
+                img(src=data.img, alt=data.img_name)
+                .fifthPart__avatar__description
+                    .fifthPart_avatar_names #{ data.avatar_name}
+                    .fifthPart_avatar_position #{ data.avatar_position}
+
+    .slider
+            - for (let i = 0; i < data.slider_num; i++)
+                div
+
+

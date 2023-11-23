@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(src="../js_part/scripts.js")
+    script(src="../js_part/changePage.js")
+    link(rel="stylesheet" href="../styles/css/index.css")
+    title Apply for a job st4
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/application.pug
+    include ./mixins/searchButton.pug
+    main 
+        .apply__content
+            include ./includes/applyHeader.pug
+            +applyStep("Review before submit")
+            .header__line
+
+            .review__container 
+                h3 CV 
+                .review__img
+                    img(src="../../assets/images/reviewApplication/cvExample.jpg", alt="cv")
+
+            .cv__review__container
+                h3 Cover Letter
+                .cv__review__description 
+                    |Opening Paragraph (Introduction) 
+                    br
+                    |Your cover letter opening should contain a self introduction. 
+                    |Write about who you are, where your expertise lies, where you found 
+                    |the job posting, and why you want to apply for the job.
+                    br
+                    |You can include a bulleted list of your accomplishments
+                    br
+                    |Make sure to use numbers or percentages to emphasize your 
+                    |bullet points (e.g. Increased online revenue by 13%)
+                    br
+                    |Do some research about the company and find out what their current 
+                    |activities and goals are. Explain how you can help them achieve those goals.
+            
+            .questionnaire__review__container
+                h3 Questionnaire
+                .questionnaire__review__part
+                    p 1. Which answers are correct?
+                    p This is the third of three correct
+                .questionnaire__review__part
+                    p 2. Which answers are correct?
+                    p This is the third of three correct
+                .questionnaire__review__part
+                    p 3. Which answers are correct?
+                    p This is the third of three correct
+            +srchBtn("Send application")
+    include ./includes/footer.pug
+                
+            

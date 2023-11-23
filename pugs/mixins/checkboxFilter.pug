@@ -1,0 +1,11 @@
+mixin checkboxFilter(data)
+    .checkbox__container 
+        .checkbox__header
+            label(for=data.label) #{data.label}
+            span.clear Clear All
+        .checkbox__options 
+            -let val_len=data.vals.length
+            -for(let i=0; i<val_len; i++)
+                .checkbox__option
+                    input(type="checkbox", name=data.vals[i], value=data.vals[i])
+                    label(for=data.vals[i]) #{data.vals[i]}

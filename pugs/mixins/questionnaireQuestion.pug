@@ -1,0 +1,8 @@
+mixin question(data)
+    .question__container 
+        h4 #{data.header}
+        each val in data.vals
+            .question__input
+                input(type="radio", name=data.header, value=val)
+                label(for=val) #{val}
+            

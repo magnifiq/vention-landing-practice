@@ -1,0 +1,12 @@
+include ./searchButton.pug 
+mixin employerInvitation(data)
+    .employer__card__header
+        span #{data.position}
+        .employer__invitation__btn
+            button.btnProp Reject
+
+    .application__active__salary #{data.salary} 
+    .application__active__company 
+        img(src=data.img, alt="company")
+        span #{data.company}
+    +srchBtn("View")

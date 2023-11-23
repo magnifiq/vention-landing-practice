@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    script(src="../js_part/scripts.js")
+    script(src="../js_part/changePage.js")
+    link(rel="stylesheet" href="../styles/css/index.css")
+    title Apply for a job st3
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/application.pug
+    include ./mixins/searchButton.pug
+    include ./mixins/questionnaireQuestion.pug
+    main 
+        .apply__content
+            include ./includes/applyHeader.pug
+            +applyStep("Questionnaire", "third")
+            .header__line
+            .questionnaire__container 
+                .questionnaire__instruction 
+                    |Answer questionnaire
+                -const first_data={header: "1. Which answers are correct?", vals:["This is the third of three correct", "This is the second of three", "This answer is incorrect.", "This is the first of three correct "]}
+                +question(first_data)
+                -const second_data={header: "2. Which answers are correct?", vals:["This is the third of three correct", "This is the second of three", "This answer is incorrect.", "This is the first of three correct "]}
+                +question(second_data)
+                -const third_data={header: "3. Which answers are correct?", vals:["This is the third of three correct", "This is the second of three", "This answer is incorrect.", "This is the first of three correct "]}
+                +question(third_data)
+            +srchBtn("Save & Review")
+    include ./includes/footer.pug
+                
