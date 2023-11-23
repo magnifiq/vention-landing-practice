@@ -1,15 +1,19 @@
 const changeTab = (val, selectedClasses, activeClass, classesToHide) => {
   let tabs = document.querySelectorAll(selectedClasses);
   let currRole;
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      tabs.forEach((el) => {
-        el.classList.remove(activeClass);
-      });
-      tab.classList.add(activeClass);
-      currRole = tab.innerHTML.trim();
-      console.log(currRole);
+
+  const clickHandler = (tab) => {
+    tabs.forEach((el) => {
+      el.classList.remove(activeClass);
     });
+    tab.classList.add(activeClass);
+    currRole = tab.innerHTML.trim();
+    console.log(currRole);
+  };
+
+  tabs.forEach((tab) => {
+    tab.removeEventListener("click", () => clickHandler(tab));
+    tab.addEventListener("click", () => clickHandler(tab));
   });
   if (classesToHide !== "homes") {
     let sections = document.getElementsByClassName(classesToHide);
