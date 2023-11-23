@@ -12,9 +12,8 @@ const changeTab = (val, selectedClasses, activeClass, classesToHide) => {
   };
 
   tabs.forEach((tab) => {
-    
-    tab.addEventListener("click", () => clickHandler(tab));
     tab.removeEventListener("click", () => clickHandler(tab));
+    tab.addEventListener("click", () => clickHandler(tab));
   });
   if (classesToHide !== "homes") {
     let sections = document.getElementsByClassName(classesToHide);
