@@ -1,7 +1,7 @@
 const changeTab = (val, selectedClasses, activeClass, classesToHide) => {
   let tabs = document.querySelectorAll(selectedClasses);
   let currRole;
-
+///there is a problem
   const clickHandler = (tab) => {
     tabs.forEach((el) => {
       el.classList.remove(activeClass);
