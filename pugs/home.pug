@@ -9,6 +9,7 @@ head
     script(src="../js_part/scripts.js")
     script(src="../js_part/changeTab.js")
     script(src="../js_part/changePage.js")
+    script(src="../js_part/chooseRole.js")
     link(rel="stylesheet" href="../styles/css/index.css")
     title Sign Up
 body
@@ -17,35 +18,42 @@ body
     include ./mixins/searchButton.pug
     main
         .home__container 
+            -let valRole
             .home__tabs__first 
-                button(class="tab_button__second tab_active__second", onclick="changeTab('candidate','.tab_button__second', 'tab_active__second')") Candidate
-                button(class="tab_button__second", onclick="changeTab('employers','.tab_button__second', 'tab_active__second')") Employers
-                button(class="tab_button__second", onclick="changeTab('headhunters','.tab_button__second', 'tab_active__second')") Headhunters 
+                button(class="tab_button__second tab_active__second", onclick="valRole=changeTab('candidate','.tab_button__second', 'tab_active__second', 'homes')") Candidate
+                button(class="tab_button__second", onclick="valRole=changeTab('employers','.tab_button__second', 'tab_active__second', 'homes')") Employers
+                button(class="tab_button__second", onclick="valRole=changeTab('headhunters','.tab_button__second', 'tab_active__second', 'homes')") Headhunters 
             .home__tabs__second 
-                button(class="tab_button ", onclick="changeTab('login', '.tab_button', 'tab_active', 'enter_modes')") Login
+                button(class="tab_button", onclick="changeTab('login', '.tab_button', 'tab_active', 'enter_modes')") Login
                 button(class="tab_button tab_active", onclick="changeTab('signup', '.tab_button', 'tab_active', 'enter_modes')") Signup
+ 
+            .homes
+                .enter_modes#signup
+                    .google_btn 
+                        img(src="../../assets/images/signup/google.jpg", alt="google")
+                        h4 Sign up using Google
 
-            .enter_modes#signup
-                .google_btn 
-                    img(src="../../assets/images/signup/google.jpg", alt="google")
-                    h4 Sign up using Google
+                    .text__home.text__home__option or
 
-                .text__home.text__home__option or
+                    .home_inputs
+                        +inputHome("Email", "", "text")
+                        +inputHome("Password", "", "password")
+                        +inputHome("Confirm Password", "", "password")
 
-                .home_inputs
-                    +inputHome("Email", "", "text")
-                    +inputHome("Password", "", "password")
-                    +inputHome("Confirm Password", "", "password")
-
-                .home_check_rights 
-                    input(type="checkbox") 
-                    span By creating an account you agree to the terms and conditions 
-                    |applicable to our service and acknowledge that your personal data will 
-                    |be used in accordance with our privacy policy and you will receive emails 
-                    |and communications about jobs, industry news, new products and related topics.
-
-                +srchBtn("Sign Up")
+                    .home_check_rights 
+                        input(type="checkbox") 
+                        span By creating an account you agree to the terms and conditions 
+                        |applicable to our service and acknowledge that your personal data will 
+                        |be used in accordance with our privacy policy and you will receive emails 
+                        |and communications about jobs, industry news, new products and related topics.
+                   
+           
+                    +srchBtn("Sign Up")
 
 
-            .enter_modes#login
+                .enter_modes#login
+                    .home_inputs
+                        +inputHome("Email", "", "text")
+                        +inputHome("Password", "", "password")
+                    +srchBtn("Log in")
     include ./includes/footer.pug
