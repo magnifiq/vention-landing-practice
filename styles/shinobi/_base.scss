@@ -1522,3 +1522,14 @@ input:checked + .slider__switch:before {
     color:$description-text;
   }
 }
+.paymentHH__point__text::before{
+  content: url(../../assets/images/paymentHH/jam_check.svg);
+}
+
+.paymentHH__point{
+  display: flex;
+  align-items: center;
+  .paymentHH__point__text{
+    align-self: center;
+  }
+}

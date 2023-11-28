@@ -1482,3 +1482,15 @@ input:checked + .slider__switch:before {
 .paymentHH__subscription__header__plan__price span {
   color: #999;
 }
+
+.paymentHH__point__text::before {
+  content: url(../../assets/images/paymentHH/jam_check.svg);
+}
+
+.paymentHH__point {
+  display: flex;
+  align-items: center;
+}
+.paymentHH__point .paymentHH__point__text {
+  align-self: center;
+}
