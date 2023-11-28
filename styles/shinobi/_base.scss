@@ -1495,3 +1495,30 @@ input:checked + .slider__switch:before {
     margin-left: -90px;
   }
 }
+
+.paymentHH__container{
+  @extend .colorMainAndMargins;
+}
+
+.paymentHH__subscription{
+  @extend .colorWhitePaddingsRadius;
+  border:$base-border;
+}
+.paymentHH__subscription__header{
+  h5{
+    color:$btn-text-light;
+    padding-bottom: 10px;
+  }
+  padding-bottom: 15px;
+  border-bottom: $base-border;
+}
+.paymentHH__subscription__header__plan, .paymentHH__subscription__header__plan__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymentHH__subscription__header__plan__price{
+  span{
+    color:$description-text;
+  }
+}

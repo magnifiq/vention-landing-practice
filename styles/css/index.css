@@ -18,7 +18,7 @@ body {
   border-bottom: 1px solid #DDD;
 }
 
- .view__appplication__content, .employer__invitations__content, .recommended__roles__content, .applications__content, .profile__container, .edit__container, .questionnaire__container,
+ .paymentHH__container, .view__appplication__content, .employer__invitations__content, .recommended__roles__content, .applications__content, .profile__container, .edit__container, .questionnaire__container,
 .review__container,
 .cv__review__container,
 .questionnaire__review__container, .cv__container {
@@ -27,7 +27,7 @@ body {
   padding: 18px;
 }
 
- .view__application__container, .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
+ .paymentHH__subscription, .view__application__container, .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -1459,4 +1459,26 @@ input:checked + .slider__switch:before {
   padding: 6px 20px;
   height: max-content;
   margin-left: -90px;
+}
+
+.paymentHH__subscription {
+  border: 1px solid #DDD;
+}
+
+.paymentHH__subscription__header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #DDD;
+}
+.paymentHH__subscription__header h5 {
+  color: #2E1AAD;
+  padding-bottom: 10px;
+}
+
+.paymentHH__subscription__header__plan, .paymentHH__subscription__header__plan__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymentHH__subscription__header__plan__price span {
+  color: #999;
 }
