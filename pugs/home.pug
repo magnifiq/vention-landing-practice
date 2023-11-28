@@ -10,6 +10,7 @@ head
     script(src="../js_part/changeTab.js")
     script(src="../js_part/changePage.js")
     script(src="../js_part/chooseRole.js")
+    script(src="../js_part/checkCurrBtn.js")
     link(rel="stylesheet" href="../styles/css/index.css")
     title Sign Up
 body
@@ -18,15 +19,15 @@ body
     include ./mixins/searchButton.pug
     main
         .home__container 
-            -let valRole
+           
             .home__tabs__first 
-                button(class="tab_button__second tab_active__second", onclick="valRole=changeTab('candidate','.tab_button__second', 'tab_active__second', 'homes')") Candidate
-                button(class="tab_button__second", onclick="valRole=changeTab('employers','.tab_button__second', 'tab_active__second', 'homes')") Employers
-                button(class="tab_button__second", onclick="valRole=changeTab('headhunters','.tab_button__second', 'tab_active__second', 'homes')") Headhunters 
+                button(class="tab_button__second tab_active__second", onclick="changeTab(event,'candidate','.tab_button__second', 'tab_active__second', 'homes'), checkCurrBtn(event)") Candidate
+                button(class="tab_button__second", onclick="changeTab(event,'employers','.tab_button__second', 'tab_active__second', 'homes'), checkCurrBtn(event)") Employers
+                button(class="tab_button__second", onclick="changeTab(event,'headhunters','.tab_button__second', 'tab_active__second', 'homes'), checkCurrBtn(event)") Headhunters 
             .home__tabs__second 
-                button(class="tab_button", onclick="changeTab('login', '.tab_button', 'tab_active', 'enter_modes')") Login 
-                button(class="tab_button tab_active", onclick="changeTab('signup', '.tab_button', 'tab_active', 'enter_modes')") Signup
- 
+                button(class="tab_button", onclick="changeTab(event,'login', '.tab_button', 'tab_active', 'enter_modes')") Login 
+                button(class="tab_button tab_active", onclick="changeTab(event,'signup', '.tab_button', 'tab_active', 'enter_modes')") Signup
+            
             .homes
                 .enter_modes#signup
                     .google_btn 
