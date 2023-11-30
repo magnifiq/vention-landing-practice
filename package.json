@@ -14,7 +14,9 @@
     "sass": "^1.69.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,18 @@
   },
   "homepage": "https://github.com/magnifiq/vention-landing-practice#readme",
   "devDependencies": {
-    "pug-cli": "^1.0.0-alpha6"
+    "browser-sync": "^2.29.3",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "prettier": "^3.1.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-selector-bem-pattern": "^3.0.1"
   }
 }

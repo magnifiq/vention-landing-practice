@@ -1,4 +1,4 @@
-const openModal = (modalName, btnName,closeBtnName) => {
+const openModal = (modalName, btnName, closeBtnName) => {
   const modal = document.getElementsByClassName(modalName)[0];
   const btn = document.getElementsByClassName(btnName)[0];
   const closeBtn = document.getElementsByClassName(closeBtnName)[0];

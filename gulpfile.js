@@ -2,6 +2,7 @@ const { src, dest, watch, series } = require("gulp"); //we import here methods t
 const sass = require("gulp-sass")(require("sass")); //we set here sass
 const purgecss = require("gulp-purgecss");
 const pug = require("gulp-pug");
+const browserSync = require("browser-sync");
 
 function pugCompile() {
   return src("src/pugs/**/*.pug").pipe(pug()).pipe(dest("dist/pages"));
@@ -14,9 +15,21 @@ function buildStyles() {
     .pipe(dest("dist/styles/css"));
 }
 
+function createBrowserSyncInstance() {
+  const bs = browserSync.create();
+  bs.init({
+    server: {
+      baseDir: "./",
+    },
+  });
+
+  return bs;
+}
+
 function watchTask() {
   watch(["src/pugs/**/*.pug"], pugCompile);
   watch(["src/styles/**/*.scss", "*.html"], buildStyles);
+  watch(["dist/pages/*.html", "css/*.css"]).on("change", createBrowserSyncInstance);
 }
 
 exports.default = series(pugCompile, buildStyles, watchTask);

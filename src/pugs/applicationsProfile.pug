@@ -1,15 +1,8 @@
 doctype html
 html(lang="en")
 head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-    script(src="../js_part/scripts.js")
-    script(src="../js_part/changePage.js")
-    script(src="../js_part/changeTab.js")
-    link(rel="stylesheet" href="../styles/css/index.css")
+    include ./includes/baseInfo.pug
+    script(src="../js/changeTab.js")
     title Applications
 body
     include ./includes/headerLogged.pug
@@ -29,10 +22,10 @@ body
                     button(class="tab_button_application tab_active_application", onclick="changeTab('active__applications', '.tab_button_application', 'tab_active_application', 'applications')") Active
                     button(class="tab_button_application", onclick="changeTab('closed__applications', '.tab_button_application', 'tab_active_application', 'applications')") Closed
                 .applications#active__applications
-                    -const first_data={position: "Lead Manager", status: "In review", status_num: 2, salary: "£50,000-£60,000", img: "../assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
+                    -const first_data={position: "Lead Manager", status: "In review", status_num: 2, salary: "£50,000-£60,000", img: "../../dist/assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
                     .application__active__card
                         +applicationActive(first_data)
-                    -const second_data={position: "Lead Manager", status: "Submitted", status_num: 0, salary: "£50,000-£60,000", img: "../assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
+                    -const second_data={position: "Lead Manager", status: "Submitted", status_num: 0, salary: "£50,000-£60,000", img: "../../dist/assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
                     .application__active__card
                         +applicationActive(second_data)
                 .applications#closed__applications
