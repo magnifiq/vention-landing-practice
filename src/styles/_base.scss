@@ -306,6 +306,30 @@ header {
   color: $btn-text-light;
   border: $border-light;
 }
+.newsMain__content{
+  margin: 0 15px;
+  text-align: left;
+  .newsMain__container{
+    h4{
+      padding-bottom: 10px;
+    }
+    .newsMain_img{
+      display: flex;
+      justify-content: center;
+      img{
+        max-width: 280px;
+        height: auto;
+        border-radius: $base-border-radius;
+        padding: 0;
+        margin-bottom: 15px;
+      } 
+    }
+  }
+  .newsMain__text{
+    color: $description-text;
+    padding-bottom: 35px;
+  }
+}
 
 .cookies {
   background: $cookies;

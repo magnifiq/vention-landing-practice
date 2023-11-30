@@ -1,14 +1,7 @@
 doctype html
 html(lang="en")
 head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-    script(src="../js_part/scripts.js")
-    script(src="../js_part/changePage.js")
-    link(rel="stylesheet" href="../styles/css/index.css")
+    include ./includes/baseInfo.pug
     title Apply for a job success
 body
     include ./includes/headerLogged.pug
@@ -16,11 +9,11 @@ body
     main 
         .home__container.registration__content.job__success
             .registration__img
-                img(src="../../assets/images/applyJobSuccess/check.svg", alt="check")
+                img(src="../../dist/assets/images/applyJobSuccess/check.svg", alt="check")
             .registration__info
                 h4.job__success__text You’ve successfully applied
                 .registration__description
                     |Construction Manager, Tesla
-                img(src="../assets/images/jobDetails/tesla.jpg", alt="company")
+                img(src="../../dist/assets/images/jobDetails/tesla.jpg", alt="company")
             +srchBtn("Applications")
     include ./includes/footer.pug

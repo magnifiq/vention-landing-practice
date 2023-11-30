@@ -1,15 +1,8 @@
 doctype html
 html(lang="en")
 head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-    script(src="../js_part/scripts.js")
-    script(src="../js_part/changePage.js")
-    script(src="../js_part/openModal.js")
-    link(rel="stylesheet" href="../styles/css/index.css")
+    include ./includes/baseInfo.pug
+    script(src="../../dist/js/openModal.js")
     title my profile
 body
     include ./includes/headerLogged.pug
@@ -29,10 +22,10 @@ body
                 .profile__about__header
                     h4 About you
                     .profile__about__header__edit 
-                        img(src="/assets/images/myProfile/edit.svg", alt="edit")
+                        img(src="../../dist/assets/images/myProfile/edit.svg", alt="edit")
                         span Edit
                 .profile__about__content 
-                    img(src="/assets/images/myProfile/avatar.jpg", alt="user_icon")
+                    img(src="../../dist/assets/images/myProfile/avatar.jpg", alt="user_icon")
                     .profile__about__description 
                         h4 Anne-Marie Daniels
                         .profile__about__description__gmail
@@ -41,11 +34,11 @@ body
             .profile__cv
                 .profile__cv__header  
                     h4 CV
-                    img(src="/assets/images/myProfile/upload.svg", alt="upload")
+                    img(src="../../dist/assets/images/myProfile/upload.svg", alt="upload")
                 .profile__cv__current 
                     .profile__cv__current__text Your current CV:
                     .profile__cv__current__included
-                        img(src="/assets/images/myProfile/doc.svg", alt="upload")
+                        img(src="../../dist/assets/images/myProfile/doc.svg", alt="upload")
                         span Anne_Marie_CV.pdf
                 .profile__cv__prev  
                     .profile__cv__prev__text Previous CV:
@@ -141,10 +134,10 @@ body
                     | These companies can reach out to you for future roles
                 .open__opportunities__companies 
                     .open__opportunities__comp 
-                        img(src="/assets/images/myProfile/tesla.png", alt="company")
+                        img(src="../../dist/assets/images/myProfile/tesla.png", alt="company")
                         span Tesla Inc.
                     .open__opportunities__comp 
-                        img(src="/assets/images/myProfile/ford.png", alt="company")
+                        img(src="../../dist/assets/images/myProfile/ford.png", alt="company")
                         span Ford
             
             .notifications__profile

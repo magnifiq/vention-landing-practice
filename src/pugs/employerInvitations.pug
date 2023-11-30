@@ -1,14 +1,7 @@
 doctype html
 html(lang="en")
 head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js")
-    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-    script(src="../js_part/scripts.js")
-    script(src="../js_part/changePage.js")
-    link(rel="stylesheet" href="../styles/css/index.css")
+    include ./includes/baseInfo.pug
     title Employer invitations
 body
     include ./includes/headerLogged.pug
@@ -28,10 +21,10 @@ body
                 .employer__invitations__header 
                     h4 Employer invitations
                 .employer__invitations__cards
-                    -const first_data={position: "Lead Manager", salary: "£50,000-£60,000", img: "../assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
+                    -const first_data={position: "Lead Manager", salary: "£50,000-£60,000", img: "../../dist/assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
                     .employer__invitations__card
                         +employerInvitation(first_data)
-                    -const second_data={position: "Lead Manager", salary: "£50,000-£60,000", img: "../assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
+                    -const second_data={position: "Lead Manager", salary: "£50,000-£60,000", img: "../../dist/assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
                     .employer__invitations__card
                         +employerInvitation(second_data)
     include ./includes/footer.pug
