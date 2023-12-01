@@ -1522,38 +1522,47 @@ input:checked + .slider__switch:before {
 
 .paymentHH__container{
   @extend .colorMainAndMargins;
+
+  .paymentHH__subscription{
+    @extend .colorWhitePaddingsRadius;
+    border:$base-border;
+    .paymentHH__subscription__header{
+      h5{
+        color:$btn-text-light;
+        padding-bottom: 10px;
+      }
+      padding-bottom: 15px;
+      border-bottom: $base-border;
+  
+      .paymentHH__subscription__header__plan, .paymentHH__subscription__header__plan__price {
+        display: flex;
+        justify-content: space-between;
+      }
+  
+      .paymentHH__subscription__header__plan__price{
+        span{
+          color:$description-text;
+        }
+      }
+    }
+    .paymentHH__points{
+      margin-top: 20px;
+      .paymentHH__point{
+        display: flex;
+        align-items: center;
+        .paymentHH__point__text{
+          display: flex;
+          align-self: center;
+  
+          &::before{
+            content: url(../../assets/images/paymentHH/jam_check.svg);
+            padding-right: 10px;
+          }
+          
+        }
+        
+      }
+    }
+  }
 }
 
-.paymentHH__subscription{
-  @extend .colorWhitePaddingsRadius;
-  border:$base-border;
-}
-.paymentHH__subscription__header{
-  h5{
-    color:$btn-text-light;
-    padding-bottom: 10px;
-  }
-  padding-bottom: 15px;
-  border-bottom: $base-border;
-}
-.paymentHH__subscription__header__plan, .paymentHH__subscription__header__plan__price {
-  display: flex;
-  justify-content: space-between;
-}
-
-.paymentHH__subscription__header__plan__price{
-  span{
-    color:$description-text;
-  }
-}
-.paymentHH__point__text::before{
-  content: url(../../assets/images/paymentHH/jam_check.svg);
-}
-
-.paymentHH__point{
-  display: flex;
-  align-items: center;
-  .paymentHH__point__text{
-    align-self: center;
-  }
-}

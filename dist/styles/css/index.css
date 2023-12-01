@@ -27,7 +27,7 @@ body {
   padding: 18px;
 }
 
- .paymentHH__subscription, .view__application__container, .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
+ .paymentHH__container .paymentHH__subscription, .view__application__container, .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -1484,36 +1484,36 @@ input:checked + .slider__switch:before {
   margin-left: -90px;
 }
 
-.paymentHH__subscription {
+.paymentHH__container .paymentHH__subscription {
   border: 1px solid #DDD;
 }
-
-.paymentHH__subscription__header {
+.paymentHH__container .paymentHH__subscription .paymentHH__subscription__header {
   padding-bottom: 15px;
   border-bottom: 1px solid #DDD;
 }
-.paymentHH__subscription__header h5 {
+.paymentHH__container .paymentHH__subscription .paymentHH__subscription__header h5 {
   color: #2E1AAD;
   padding-bottom: 10px;
 }
-
-.paymentHH__subscription__header__plan, .paymentHH__subscription__header__plan__price {
+.paymentHH__container .paymentHH__subscription .paymentHH__subscription__header .paymentHH__subscription__header__plan, .paymentHH__container .paymentHH__subscription .paymentHH__subscription__header .paymentHH__subscription__header__plan__price {
   display: flex;
   justify-content: space-between;
 }
-
-.paymentHH__subscription__header__plan__price span {
+.paymentHH__container .paymentHH__subscription .paymentHH__subscription__header .paymentHH__subscription__header__plan__price span {
   color: #999;
 }
-
-.paymentHH__point__text::before {
-  content: url(../../assets/images/paymentHH/jam_check.svg);
+.paymentHH__container .paymentHH__subscription .paymentHH__points {
+  margin-top: 20px;
 }
-
-.paymentHH__point {
+.paymentHH__container .paymentHH__subscription .paymentHH__points .paymentHH__point {
   display: flex;
   align-items: center;
 }
-.paymentHH__point .paymentHH__point__text {
+.paymentHH__container .paymentHH__subscription .paymentHH__points .paymentHH__point .paymentHH__point__text {
+  display: flex;
   align-self: center;
+}
+.paymentHH__container .paymentHH__subscription .paymentHH__points .paymentHH__point .paymentHH__point__text::before {
+  content: url(../../assets/images/paymentHH/jam_check.svg);
+  padding-right: 10px;
 }
