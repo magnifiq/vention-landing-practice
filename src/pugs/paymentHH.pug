@@ -34,7 +34,13 @@ body
             .paymentHH__details
                 h5 Enter your credit card details
                 .paymentHH__details__inputs
-                    +inputHome('Card number', '', 'text', true)
-                    +inputHome('Cardholder name', '', 'text', true)
-                    +inputHome('Expiry date', '', 'text', true)
-                    +inputHome('CVV', '', 'text', true)
+                    .paymentHH__details__input
+                        +inputHome('Card number', '', 'text', true)
+                    .paymentHH__details__input
+                        +inputHome('Cardholder name', '', 'text', true)
+                    .paymentHH__details__input
+                        +inputHome('Expiry date', '', 'text', true)
+                    .paymentHH__details__input
+                        +inputHome('CVV', '', 'text', true)
+                +srchBtn('Pay Now')
+    include ./includes/footer.pug
