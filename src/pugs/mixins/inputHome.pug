@@ -1,4 +1,8 @@
-mixin inputHome(label, inputValue,type)
-    .input__home.text__home 
-        label(for=inputValue) #{label}
-        input(type=type, value=inputValue, placeholder=label) 
+mixin inputHome(label, inputValue,type, flagHH)
+    if flagHH 
+        .input__home.text__home 
+            input(type=type, value=inputValue, placeholder=label)
+    else
+        .input__home.text__home 
+            label(for=inputValue) #{label}
+            input(type=type, value=inputValue, placeholder=label)

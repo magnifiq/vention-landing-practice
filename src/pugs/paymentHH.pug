@@ -6,6 +6,7 @@ head
 body
     include ./includes/headerLogged.pug
     include ./mixins/searchButton.pug
+    include ./mixins/inputHome.pug
     main 
         .paymentHH__container 
             .paymentHH__subscription 
@@ -16,7 +17,7 @@ body
                             h4 Monthly
                         .paymentHH__subscription__header__plan__price 
                             h4  £12 
-                            span(class="paymentHH__subscription__header__plan__price_time") / month
+                            span(class="paymentHH__subscription__header__plan__price_time")  / month
                 .paymentHH__points 
                     .paymentHH__point
                         .paymentHH__point__text 
@@ -30,3 +31,10 @@ body
                     .paymentHH__point
                         .paymentHH__point__text 
                             |Works on All Devices
+            .paymentHH__details
+                h5 Enter your credit card details
+                .paymentHH__details__inputs
+                    +inputHome('Card number', '', 'text', true)
+                    +inputHome('Cardholder name', '', 'text', true)
+                    +inputHome('Expiry date', '', 'text', true)
+                    +inputHome('CVV', '', 'text', true)
