@@ -14,7 +14,8 @@ body
             .photo__upload 
                 button(class="btnUpload") Upload your photo
             .edit__inputs 
-               
+                +inputHome("Full Name", "", "text")
+                +inputHome("Email", "", "text")
                 .optional__fields__text 
                     |The below information is optional and will not be shown with your profile
                 +inputHome("Age (optional)", "", "text")

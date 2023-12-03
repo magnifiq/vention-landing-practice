@@ -1396,18 +1396,6 @@ input:checked + .slider__switch:before {
   @extend .colorWhitePaddingsRadius;
 }
 
-.view__application__header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  h4{
-    padding-bottom: 5px;
-  }
-  span{
-    color: $description-text;
-  }
-}
 
 .view__details__steps{
   background-color: $main;
