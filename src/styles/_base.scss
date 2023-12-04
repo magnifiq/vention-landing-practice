@@ -1120,23 +1120,7 @@ header {
   justify-self: end;
 }
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
 
-.slider__switch {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
 
 .slider__switch:before {
   position: absolute;
@@ -1277,7 +1261,18 @@ input:checked + .slider__switch:before {
 .application__active__card{
   padding: 15px 0;
 }
-
+.application__active__card:not(:last-child){
+  border-bottom: $base-border;
+}
+.application__active__header{
+  display: flex;
+  justify-content: space-between;
+}
+.application__active__header__input{
+  label{
+    padding-left: 5px;
+  }
+}
 .application__active__header__status{
   display: flex;
   span{
