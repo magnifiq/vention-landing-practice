@@ -7,6 +7,7 @@ body
     include ./includes/headerLogged.pug
     include ./mixins/searchButton.pug
     include ./mixins/inputHome.pug
+    include ./mixins/completeProfHHOptions.pug
     main 
         .completeHH__container 
             .completeHH__details
@@ -20,4 +21,7 @@ body
                         +inputHome('Email', '', 'text', true)
                     .completeHH__inputs
                         +inputHome('Phone number', '', 'text', true)
-            .completeHH
+            .completeHH__options 
+                .completeHH__option
+                    -const data1={h5: "Specialities", choice1: "Senior Front End Developer (JavaScript)", choice2: "Senior Front End Developer (JavaScript)"}
+                    +optioner(data1)

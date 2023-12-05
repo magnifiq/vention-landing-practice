@@ -1,0 +1,18 @@
+@import "../../variables";
+@import "../../base";
+
+.completeHH__option__container{
+    @extend .colorWhitePaddingsRadius;
+    .completeHH__option__header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5px;
+        border-bottom: $base-border;
+        .completeHH__option__header__add{
+            color: $btn-text-light;
+            font-weight: $extra-thin-font;
+        }
+    }
+}
