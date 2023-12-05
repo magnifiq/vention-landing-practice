@@ -5,8 +5,12 @@ mixin optioner(data)
             .completeHH__option__header__add 
                 span + Add
         .completeHH__option__choice 
-            span #{data.choice1}
-            span x
+            .completeHH__option__choice_info 
+                | #{data.choice1}
+            .completeHH__option__choice_cancel
+                | x
         .completeHH__option__choice 
-            span #{data.choice2}
-            span x
+            .completeHH__option__choice_info 
+                | #{data.choice1}
+            .completeHH__option__choice_cancel
+                | x

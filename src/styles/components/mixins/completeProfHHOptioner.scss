@@ -14,5 +14,16 @@
             color: $btn-text-light;
             font-weight: $extra-thin-font;
         }
+    .completeHH__option__choice{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        &:not(:last-child){
+            border-bottom: $base-border;
+        }
     }
+    }
+    
 }

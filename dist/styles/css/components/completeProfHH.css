@@ -1493,3 +1493,6 @@ input:checked + .slider__switch:before {
 .completeHH__container .completeHH__details .completeHH__inputs {
   padding: 5px 0;
 }
+.completeHH__container .completeHH__options .completeHH__option {
+  margin-bottom: 20px;
+}

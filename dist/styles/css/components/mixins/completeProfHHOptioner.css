@@ -1496,3 +1496,13 @@ input:checked + .slider__switch:before {
   color: #2E1AAD;
   font-weight: 550;
 }
+.completeHH__option__container .completeHH__option__header .completeHH__option__choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.completeHH__option__container .completeHH__option__header .completeHH__option__choice:not(:last-child) {
+  border-bottom: 1px solid #DDD;
+}
