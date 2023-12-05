@@ -1,0 +1,13 @@
+@import "../variables";
+@import "../base";
+
+.completeHH__container{
+    @extend .colorMainAndMargins;
+    margin-bottom: 0;
+    .completeHH__details{
+        margin: 20px 0;
+        .completeHH__inputs{
+            padding: 5px 0;
+        }
+    }
+}

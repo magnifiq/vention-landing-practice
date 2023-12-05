@@ -945,6 +945,27 @@ header {
 
 /////////////////////////////////////////////////////////// Profile section
 
+.profile__container {
+  @extend .colorMainAndMargins;
+  margin-bottom: 0;
+  @extend .border_top_bottom;
+  > div:not(:last-child){
+    margin-bottom: 15px;
+  }
+  > div:not(:first-child) {
+    @extend .colorWhitePaddingsRadius;
+  }
+}
+
+.profile__select {
+  select {
+    padding: 10px;
+    border: $base-border;
+    border-radius: $base-border-radius;
+    width: 100%;
+  }
+  margin: 20px 0;
+}
 
 .profile__about {
   margin-bottom: 15px;
