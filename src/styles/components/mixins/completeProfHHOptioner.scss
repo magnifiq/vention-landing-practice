@@ -1,5 +1,6 @@
 @import "../../variables";
 @import "../../base";
+
 @mixin completeHH_opt{
     .completeHH__option__container{
         @extend .colorWhitePaddingsRadius;
@@ -14,6 +15,7 @@
                 color: $btn-text-light;
                 font-weight: $extra-thin-font;
             }
+        }
         .completeHH__option__choice{
             display: flex;
             flex-direction: row;
@@ -23,7 +25,6 @@
             &:not(:last-child){
                 border-bottom: $base-border;
             }
-        }
         }
         
     }
