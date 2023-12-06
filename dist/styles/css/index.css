@@ -31,7 +31,7 @@ body {
   padding: 18px;
 }
 
- .completeHH__container .completeHH__options .completeHH__option__container, .paymentHH__container .paymentHH__subscription, .view__application__container, .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
+ .completeHH__container .completeHH__options .completeHH__option .completeHH__option__container, .paymentHH__container .paymentHH__subscription, .view__application__container, .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -1516,7 +1516,7 @@ body {
   padding: 18px;
 }
 
- .completeHH__container .completeHH__options .completeHH__option__container, .paymentHH__container .paymentHH__subscription, .profile__container > div:not(:first-child), .applications__container, .employer__invitations__container, .view__application__container {
+ .completeHH__container .completeHH__options .completeHH__option .completeHH__option__container, .paymentHH__container .paymentHH__subscription, .profile__container > div:not(:first-child), .applications__container, .employer__invitations__container, .view__application__container {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -3001,7 +3001,7 @@ body {
   padding: 18px;
 }
 
- .completeHH__container .completeHH__options .completeHH__option__container, .paymentHH__container .paymentHH__subscription, .profile__container > div:not(:first-child), .applications__container, .employer__invitations__container, .view__application__container {
+ .completeHH__container .completeHH__options .completeHH__option .completeHH__option__container, .paymentHH__container .paymentHH__subscription, .profile__container > div:not(:first-child), .applications__container, .employer__invitations__container, .view__application__container {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -4533,7 +4533,7 @@ body {
   padding: 18px;
 }
 
- .completeHH__container .completeHH__options .completeHH__option__container, .profile__container > div:not(:first-child), .applications__container, .employer__invitations__container, .view__application__container, .paymentHH__container .paymentHH__subscription {
+ .completeHH__container .completeHH__options .completeHH__option .completeHH__option__container, .profile__container > div:not(:first-child), .applications__container, .employer__invitations__container, .view__application__container, .paymentHH__container .paymentHH__subscription {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -6018,7 +6018,7 @@ body {
   padding: 18px;
 }
 
- .completeHH__container .completeHH__options .completeHH__option__container, .profile__container > div:not(:first-child), .applications__container, .employer__invitations__container, .view__application__container, .paymentHH__container .paymentHH__subscription {
+ .completeHH__container .completeHH__options .completeHH__option .completeHH__option__container, .profile__container > div:not(:first-child), .applications__container, .employer__invitations__container, .view__application__container, .paymentHH__container .paymentHH__subscription {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -7487,7 +7487,7 @@ input:checked + .slider__switch:before {
 .completeHH__container .completeHH__options .completeHH__option {
   margin-bottom: 20px;
 }
-.completeHH__container .completeHH__options .completeHH__option__container .completeHH__option__header {
+.completeHH__container .completeHH__options .completeHH__option .completeHH__option__container .completeHH__option__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7495,17 +7495,17 @@ input:checked + .slider__switch:before {
   padding-bottom: 5px;
   border-bottom: 1px solid #DDD;
 }
-.completeHH__container .completeHH__options .completeHH__option__container .completeHH__option__header .completeHH__option__header__add {
+.completeHH__container .completeHH__options .completeHH__option .completeHH__option__container .completeHH__option__header .completeHH__option__header__add {
   color: #2E1AAD;
   font-weight: 550;
 }
-.completeHH__container .completeHH__options .completeHH__option__container .completeHH__option__header .completeHH__option__choice {
+.completeHH__container .completeHH__options .completeHH__option .completeHH__option__container .completeHH__option__header .completeHH__option__choice {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
 }
-.completeHH__container .completeHH__options .completeHH__option__container .completeHH__option__header .completeHH__option__choice:not(:last-child) {
+.completeHH__container .completeHH__options .completeHH__option .completeHH__option__container .completeHH__option__header .completeHH__option__choice:not(:last-child) {
   border-bottom: 1px solid #DDD;
 }

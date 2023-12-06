@@ -14,8 +14,9 @@
     .completeHH__options{
         .completeHH__option{
             margin-bottom: 20px;
+            @include completeHH_opt;
         }
-        @include completeHH_opt;
+        
     }
 
 }
