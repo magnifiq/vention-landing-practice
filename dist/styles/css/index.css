@@ -6023,3 +6023,10 @@ input:checked + .slider__switch:before {
 .completeHH__container .completeHH__options .completeHH__option .completeHH__option__container .completeHH__option__choice:not(:last-child) {
   border-bottom: 1px solid #DDD;
 }
+.completeHH__container .complete__upload {
+  background-color: white;
+  color: #999;
+  padding: 100px 90px;
+  text-align: center;
+  border-radius: 16px;
+}

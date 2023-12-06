@@ -18,5 +18,12 @@
         }
         
     }
+    .complete__upload{
+        background-color: $headBack;
+        color: $description-text;
+        padding: 100px 90px;
+        text-align: center;
+        border-radius: $divs-border-radius;
+    }
 
 }
