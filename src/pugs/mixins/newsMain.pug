@@ -1,0 +1,8 @@
+mixin newsMain(data)
+    .newsMain__content
+        .newsMain__container 
+            .newsMain_img
+                img(src=data.img, alt=data.img_name)
+            h4 #{data.h4_text}
+        .newsMain__text
+            span #{data.description}

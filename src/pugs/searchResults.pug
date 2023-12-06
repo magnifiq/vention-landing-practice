@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    include ./includes/baseInfo.pug
+    title Search results
+  body
+    include ./includes/header.pug
+    include ./mixins/inputs.pug
+    include ./mixins/jobCard.pug
+    main 
+      .firstPart
+        -const data={job: "Construction Manager", location: "London", example_flag: true}
+        +inputs(data)
+    
+      .job__cards 
+        -const first_data={job: "Construction Manager", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London", description: "Would you like to work from home part time with no experience and an immediate start? Research Tribe is looking for people across the UK to work from home by taking part in research. You could become a mystery shopper, product tester or simply share your..."}
+        +jobCard(first_data)
+
+        -const second_data={job: "Financial Services Representative", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London", description: "Would you like to work from home part time with no experience and an immediate start? Research Tribe is looking for people across the UK to work from home by taking part in research. You could become a mystery shopper, product tester or simply share your..."}
+        +jobCard(second_data)
+    
+      .slider-container 
+        .slider-all
+            .prevBtn="<" 
+            -for(let i=0; i<7; i++)
+                .slide=i
+            .nextBtn=">" 
+    
+    include ./includes/footer.pug
+            
+            

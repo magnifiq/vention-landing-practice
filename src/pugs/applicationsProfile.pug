@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+head
+    include ./includes/baseInfo.pug
+    script(src="../js/changeTab.js")
+    title Applications
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/applicationActive.pug
+    main 
+        .profile__container 
+            .profile__select
+                 select.distance(name="distance", onchange="changePage(this.value)")
+                    option(value='myProfile') My profile
+                    option(value="applicationsProfile", selected) Applications
+                    option(value="recommendedRoles") Recommended Roles
+                    option(value="employerInvitations") Employer Invitations
+                    option(value="savedRoles") Saved Roles
+        .applications__content
+            .applications__container 
+                .application_tabs 
+                    button(class="tab_button_application tab_active_application", onclick="changeTab('active__applications', '.tab_button_application', 'tab_active_application', 'applications')") Active
+                    button(class="tab_button_application", onclick="changeTab('closed__applications', '.tab_button_application', 'tab_active_application', 'applications')") Closed
+                .applications#active__applications
+                    -const first_data={position: "Lead Manager", status: "In review", status_num: 2, salary: "£50,000-£60,000", img: "../../dist/assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
+                    .application__active__card
+                        +applicationActive(first_data)
+                    -const second_data={position: "Lead Manager", status: "Submitted", status_num: 0, salary: "£50,000-£60,000", img: "../../dist/assets/images/applicationsProfile/tesla.jpg", company: "Tesla"}
+                    .application__active__card
+                        +applicationActive(second_data)
+                .applications#closed__applications
+                    h4 There aren't any closed applications
+    include ./includes/footer.pug

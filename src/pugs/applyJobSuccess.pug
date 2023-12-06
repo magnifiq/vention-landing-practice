@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+head
+    include ./includes/baseInfo.pug
+    title Apply for a job success
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/searchButton.pug
+    main 
+        .home__container.registration__content.job__success
+            .registration__img
+                img(src="../../dist/assets/images/applyJobSuccess/check.svg", alt="check")
+            .registration__info
+                h4.job__success__text You’ve successfully applied
+                .registration__description
+                    |Construction Manager, Tesla
+                img(src="../../dist/assets/images/jobDetails/tesla.jpg", alt="company")
+            +srchBtn("Applications")
+    include ./includes/footer.pug

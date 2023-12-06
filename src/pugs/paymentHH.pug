@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+head
+    include ./includes/baseInfo.pug
+    title payment
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/searchButton.pug
+    include ./mixins/inputHome.pug
+    main 
+        .paymentHH__container 
+            .paymentHH__subscription 
+                .paymentHH__subscription__header 
+                    h5 Subscription 
+                    .paymentHH__subscription__header__plan 
+                        .paymentHH__subscription__header__plan__time
+                            h4 Monthly
+                        .paymentHH__subscription__header__plan__price 
+                            h4  £12 
+                            span(class="paymentHH__subscription__header__plan__price_time")  / month
+                .paymentHH__points 
+                    .paymentHH__point
+                        .paymentHH__point__text 
+                            |Unlimited Bandwitch
+                    .paymentHH__point
+                        .paymentHH__point__text 
+                            |Encrypted Connection
+                    .paymentHH__point
+                        .paymentHH__point__text 
+                            |Connect Anyware
+                    .paymentHH__point
+                        .paymentHH__point__text 
+                            |Works on All Devices
+            .paymentHH__details
+                h5 Enter your credit card details
+                .paymentHH__details__inputs
+                    .paymentHH__details__input
+                        +inputHome('Card number', '', 'text', true)
+                    .paymentHH__details__input
+                        +inputHome('Cardholder name', '', 'text', true)
+                    .paymentHH__details__input
+                        +inputHome('Expiry date', '', 'text', true)
+                    .paymentHH__details__input
+                        +inputHome('CVV', '', 'text', true)
+                +srchBtn('Pay Now')
+    include ./includes/footer.pug

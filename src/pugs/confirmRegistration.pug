@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    include ./includes/baseInfo.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js", integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css", integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css", integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    title Confirm Registration
+  body
+    include ./includes/header.pug
+    include ./mixins/searchButton.pug
+    main 
+        .home__container.registration__content
+            .registration__img
+                img(src="../../dist/assets/images/confirmRegistration/checkmark-circle-2.svg", alt="check")
+            .registration__info
+                h4 Thank you for registering
+                .registration__description 
+                    | Please check your email to confirm your account
+            +srchBtn("Resend Email Confirmation")
+    include ./includes/footer.pug
+            

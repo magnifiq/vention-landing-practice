@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+head
+    include ./includes/baseInfo.pug
+    title Apply for a job st2
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/application.pug
+    include ./mixins/searchButton.pug
+    main 
+        .apply__content
+            include ./includes/applyHeader.pug
+            +applyStep("Cover Letter", "second", true)
+            .header__line
+
+            .cv__container.border_top_bottom 
+                textarea(name="cv", rows="20", cols="10", placeholder="Write your cover letter here...")
+            .cv__buttons 
+                +srchBtn("Continue", true)
+                .skip__link 
+                    a(href="#") Skip 
+    include ./includes/footer.pug
