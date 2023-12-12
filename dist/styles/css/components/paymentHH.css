@@ -216,6 +216,7 @@ header {
 }
 .thirdPart__btn button {
   width: 100%;
+  min-width: fit-content;
 }
 
 .btnProp {
@@ -1013,7 +1014,7 @@ header {
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
-.profile_selections__header span {
+.profile_selections__header .recommendation__edit {
   color: #2E1AAD;
 }
 .profile_selections__header .profile_selections__header__begin {

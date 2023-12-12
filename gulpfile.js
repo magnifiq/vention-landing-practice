@@ -26,7 +26,7 @@ function createBrowserSyncInstance() {
   const bs = browserSync.create();
   bs.init({
     server: {
-      baseDir: "./",
+      baseDir: "./dist/pages",
     },
   });
 
@@ -37,7 +37,7 @@ function watchTask() {
   watch(["src/pugs/**/*.pug"], pugCompile);
   watch(["src/styles/**/*.scss", "*.html"], buildStyles);
   watch(["src/assets/**/*"], optimizeImages);
-  watch(["dist/pages/*.html", "css/*.css"]).on("change", createBrowserSyncInstance);
+  //watch(["dist/pages/*.html", "css/*.css"]).on("change", createBrowserSyncInstance);
 }
-
-exports.default = series(pugCompile, buildStyles, optimizeImages, createBrowserSyncInstance, watchTask);
+exports.default = series(pugCompile, buildStyles, optimizeImages, watchTask);
+//exports.default = series(pugCompile, buildStyles, optimizeImages, createBrowserSyncInstance, watchTask);

@@ -220,6 +220,7 @@ header {
 }
 .thirdPart__btn button {
   width: 100%;
+  min-width: fit-content;
 }
 
 .btnProp {
@@ -1017,7 +1018,7 @@ header {
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
-.profile_selections__header span {
+.profile_selections__header .recommendation__edit {
   color: #2E1AAD;
 }
 .profile_selections__header .profile_selections__header__begin {
@@ -1717,6 +1718,7 @@ header {
 }
 .thirdPart__btn button {
   width: 100%;
+  min-width: fit-content;
 }
 
 .btnProp {
@@ -2514,7 +2516,7 @@ header {
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
-.profile_selections__header span {
+.profile_selections__header .recommendation__edit {
   color: #2E1AAD;
 }
 .profile_selections__header .profile_selections__header__begin {
@@ -3261,6 +3263,7 @@ header {
 }
 .thirdPart__btn button {
   width: 100%;
+  min-width: fit-content;
 }
 
 .btnProp {
@@ -4058,7 +4061,7 @@ header {
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
-.profile_selections__header span {
+.profile_selections__header .recommendation__edit {
   color: #2E1AAD;
 }
 .profile_selections__header .profile_selections__header__begin {
@@ -4758,6 +4761,7 @@ header {
 }
 .thirdPart__btn button {
   width: 100%;
+  min-width: fit-content;
 }
 
 .btnProp {
@@ -5555,7 +5559,7 @@ header {
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
-.profile_selections__header span {
+.profile_selections__header .recommendation__edit {
   color: #2E1AAD;
 }
 .profile_selections__header .profile_selections__header__begin {
@@ -6297,6 +6301,7 @@ header {
 }
 .thirdPart__btn button {
   width: 100%;
+  min-width: fit-content;
 }
 
 .btnProp {
@@ -7094,7 +7099,7 @@ header {
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
-.profile_selections__header span {
+.profile_selections__header .recommendation__edit {
   color: #2E1AAD;
 }
 .profile_selections__header .profile_selections__header__begin {
@@ -7585,4 +7590,12 @@ input:checked + .slider__switch:before {
 }
 .profileHH__specialties .profileHH__specialties__options .profileHH__specialties__option:not(:last-child) {
   border-bottom: 1px solid #DDD;
+}
+
+.profileHH__subscription .profileHH__subscription__container {
+  padding: 30px 65px 20px;
+}
+.profileHH__subscription .profileHH__subscription__container .profileHH__subscription__container__h2 {
+  text-align: center;
+  padding-bottom: 20px;
 }
