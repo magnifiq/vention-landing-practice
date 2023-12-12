@@ -52,4 +52,35 @@ body
                         | Active (£12 / month) 
                     .profileHH__subscription__container__btn
                         +lightBtn("Cancel Subscription ")
-                
+            
+            .profileHH__invoices 
+                .profile_selections__header 
+                    .profile_selections__header__begin
+                        h4 Invoices
+                        span.profile_selections__header__HH View All
+                .profileHH__invoices__options 
+                    .profileHH__invoices__option
+                        .profileHH__invoices__option__text
+                            | Subscription  £12
+                        .profileHH__invoices__option__details
+                            | 13/01/2021
+                    .profileHH__invoices__option
+                        .profileHH__invoices__option__text
+                            | Subscription  £12
+                        .profileHH__invoices__option__details
+                            | 02/03/2020
+            
+            .profileHH__notifications
+                .profile_selections__header 
+                    h4 Notifications
+                .profileHH__notifications__switchers 
+                    .profileHH__notifications__switcher
+                        span.profileHH__notifications__switcher__text Receive notification on application updates
+                        label.switch
+                            input(type="checkbox")
+                            span.slider__switch.round
+                    .profileHH__notifications__switcher
+                        span.profileHH__notifications__switcher__text Weekly Summary of applications
+                        label.switch
+                            input(type="checkbox")
+                            span.slider__switch.round
