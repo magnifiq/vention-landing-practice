@@ -3,6 +3,7 @@ const sass = require("gulp-sass")(require("sass")); //we set here sass
 const purgecss = require("gulp-purgecss");
 const pug = require("gulp-pug");
 const browserSync = require("browser-sync");
+const imagemin = require("gulp-imagemin");
 
 function pugCompile() {
   return src("src/pugs/**/*.pug").pipe(pug()).pipe(dest("dist/pages"));
@@ -13,6 +14,12 @@ function buildStyles() {
     .pipe(sass())
     .pipe(purgecss({ content: ["dist/pages/**/*.html"] }))
     .pipe(dest("dist/styles/css"));
+}
+
+function optimizeImages() {
+  return src("src/assets/**/*")
+    .pipe(imagemin())
+    .pipe(dest("dist/assets"));
 }
 
 function createBrowserSyncInstance() {
@@ -29,7 +36,8 @@ function createBrowserSyncInstance() {
 function watchTask() {
   watch(["src/pugs/**/*.pug"], pugCompile);
   watch(["src/styles/**/*.scss", "*.html"], buildStyles);
+  watch(["src/assets/**/*"], optimizeImages);
   watch(["dist/pages/*.html", "css/*.css"]).on("change", createBrowserSyncInstance);
 }
 
-exports.default = series(pugCompile, buildStyles, watchTask);
+exports.default = series(pugCompile, buildStyles, optimizeImages, createBrowserSyncInstance, watchTask);

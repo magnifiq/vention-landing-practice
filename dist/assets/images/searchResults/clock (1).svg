@@ -1,6 +1,1 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="clock">
-<path id="Vector" d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8Z" stroke="#2E1AAD" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M8 4V8L10.6667 9.33333" stroke="#2E1AAD" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-</svg>
+<svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="#2E1AAD" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 8a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"/><path d="M8 4v4l2.667 1.333"/></g></svg>

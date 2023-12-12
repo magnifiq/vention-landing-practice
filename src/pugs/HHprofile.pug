@@ -1,0 +1,51 @@
+doctype html
+html(lang="en")
+head
+    include ./includes/baseInfo.pug
+    script(src="../../dist/js/openModal.js")
+    title HH profile
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/searchButton.pug 
+    main 
+        .profile__container 
+            .profile__select
+                select.distance(name="distance", onchange="changePage(this.value)")
+                    option(selected, value='HHprofile') My profile
+                    option(value="requestedSupportHH") Requsted support
+                    option(value="rolesHH") Roles
+
+            .profile__about 
+                .profile__about__header
+                    h4 About you
+                    .profile__about__header__edit 
+                        img(src="../../dist/assets/images/myProfile/edit.svg", alt="edit")
+                        span Edit
+                .profile__about__content 
+                    img(src="../../dist/assets/images/myProfile/avatar.jpg", alt="user_icon")
+                    .profile__about__description 
+                        h4 Anne-Marie Daniels
+                        .profile__about__description__role 
+                            |Top Headhunters
+                .profile__about__description__gmail
+                    |Email: anne.marie93@gmail.com
+            
+            .profileHH__specialties 
+                .profile_selections__header 
+                    .profile_selections__header__begin
+                        h4 Specialities
+                        span.profile_selections__header__HH View All
+                    span.recommendation__edit Add/Edit
+                .profileHH__specialties__options 
+                    .profileHH__specialties__option
+                        | Senior Front End Developer (JavaScript)
+                    .profileHH__specialties__option
+                        | Lead sodtware engineer / Developer Prod...
+
+            .profileHH__subscription 
+                .profile_selections__header 
+                    .profile_selections__header__begin
+                        h4 Specialities
+                        span.profile_selections__header__HH View All
+                    span.recommendation__edit Add/Edit
+                
