@@ -74,13 +74,18 @@ body
                 .profile_selections__header 
                     h4 Notifications
                 .profileHH__notifications__switchers 
-                    .profileHH__notifications__switcher
+                    .profileHH__notifications__switcher.profileHH__switch__first
                         span.profileHH__notifications__switcher__text Receive notification on application updates
                         label.switch
                             input(type="checkbox")
                             span.slider__switch.round
-                    .profileHH__notifications__switcher
+                    .profileHH__notifications__switcher.profileHH__switch__first
                         span.profileHH__notifications__switcher__text Weekly Summary of applications
+                        label.switch
+                            input(type="checkbox")
+                            span.slider__switch.round
+                    .profileHH__notifications__switcher
+                        span.profileHH__notifications__switcher__text Invitations
                         label.switch
                             input(type="checkbox")
                             span.slider__switch.round
