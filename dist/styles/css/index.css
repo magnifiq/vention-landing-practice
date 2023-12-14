@@ -19,7 +19,7 @@ body {
   border-bottom: 1px solid #DDD;
 }
 
- .paymentHH__container, .view__appplication__content, .employer__invitations__content, .recommended__roles__content, .applications__content, .edit__container, .questionnaire__container,
+ .paymentHH__container, .view__appplication__content, .employer__invitations__content, .recommended__roles__content, .edit__container, .questionnaire__container,
 .review__container,
 .cv__review__container,
 .questionnaire__review__container, .cv__container {
@@ -28,7 +28,7 @@ body {
   padding: 18px;
 }
 
- .paymentHH__container .paymentHH__subscription, .view__application__container, .employer__invitations__container, .applications__container {
+ .paymentHH__container .paymentHH__subscription, .view__application__container, .employer__invitations__container {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -1199,12 +1199,6 @@ input:checked + .slider__switch:before {
   padding: 25px 0;
 }
 
-.applications__content {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 40px;
-}
-
 .tab_button_application {
   border: none;
   background-color: white;
@@ -1218,47 +1212,10 @@ input:checked + .slider__switch:before {
   border-bottom: 3px solid #2e1aad !important;
 }
 
-#closed__applications h4 {
-  padding-top: 15px;
-}
-
 .application_tabs {
   padding-bottom: 15px;
   border-bottom: 1px solid #DDD;
   margin-bottom: 5px;
-}
-
-.application__active__card {
-  padding: 15px 0;
-}
-
-.application__active__card:not(:last-child) {
-  border-bottom: 1px solid #DDD;
-}
-
-.application__active__header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.application__active__header__input label {
-  padding-left: 5px;
-}
-
-.application__active__header__status {
-  display: flex;
-}
-.application__active__header__status span {
-  margin-right: 10px;
-  white-space: nowrap;
-}
-
-.application__active__header__status__num {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--Dark-Gray, #999);
-  text-align: center;
 }
 
 .application__active__salary {
@@ -1491,13 +1448,13 @@ body {
  .paymentHH__container, .cv__container, .questionnaire__container,
 .review__container,
 .cv__review__container,
-.questionnaire__review__container, .edit__container, .applications__content, .recommended__roles__content, .employer__invitations__content, .view__appplication__content {
+.questionnaire__review__container, .edit__container, .recommended__roles__content, .employer__invitations__content, .view__appplication__content {
   background-color: #F5F7FA;
   margin: 10px -18px;
   padding: 18px;
 }
 
- .paymentHH__container .paymentHH__subscription, .applications__container, .employer__invitations__container, .view__application__container {
+ .paymentHH__container .paymentHH__subscription, .employer__invitations__container, .view__application__container {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -2668,12 +2625,6 @@ input:checked + .slider__switch:before {
   padding: 25px 0;
 }
 
-.applications__content {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 40px;
-}
-
 .tab_button_application {
   border: none;
   background-color: white;
@@ -2687,47 +2638,10 @@ input:checked + .slider__switch:before {
   border-bottom: 3px solid #2e1aad !important;
 }
 
-#closed__applications h4 {
-  padding-top: 15px;
-}
-
 .application_tabs {
   padding-bottom: 15px;
   border-bottom: 1px solid #DDD;
   margin-bottom: 5px;
-}
-
-.application__active__card {
-  padding: 15px 0;
-}
-
-.application__active__card:not(:last-child) {
-  border-bottom: 1px solid #DDD;
-}
-
-.application__active__header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.application__active__header__input label {
-  padding-left: 5px;
-}
-
-.application__active__header__status {
-  display: flex;
-}
-.application__active__header__status span {
-  margin-right: 10px;
-  white-space: nowrap;
-}
-
-.application__active__header__status__num {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: var(--Dark-Gray, #999);
-  text-align: center;
 }
 
 .application__active__salary {
