@@ -10,7 +10,7 @@ body {
   font-family: "Manrope";
 }
 
-.border_top_bottom, .profile__cv__current, .questionnaire__container,
+.border_top_bottom, .profile__cv__current, .profile__container, .questionnaire__container,
 .review__container,
 .cv__review__container,
 .questionnaire__review__container {
@@ -18,7 +18,7 @@ body {
   border-bottom: 1px solid #DDD;
 }
 
- .paymentHH__container, .view__appplication__content, .employer__invitations__content, .recommended__roles__content, .applications__content, .edit__container, .questionnaire__container,
+ .view__appplication__content, .employer__invitations__content, .recommended__roles__content, .applications__content, .profile__container, .edit__container, .questionnaire__container,
 .review__container,
 .cv__review__container,
 .questionnaire__review__container, .cv__container {
@@ -27,7 +27,7 @@ body {
   padding: 18px;
 }
 
- .paymentHH__container .paymentHH__subscription, .view__application__container, .employer__invitations__container, .applications__container {
+ .view__application__container, .employer__invitations__container, .applications__container, .profile__container > div:not(:first-child) {
   background-color: white;
   border-radius: 16px;
   padding: 15px;
@@ -216,6 +216,7 @@ header {
 }
 .thirdPart__btn button {
   width: 100%;
+  min-width: fit-content;
 }
 
 .btnProp {
@@ -926,6 +927,22 @@ header {
   padding: 40px 0 15px 0;
 }
 
+.profile__container {
+  margin-bottom: 0;
+}
+.profile__container > div:not(:last-child) {
+  margin-bottom: 15px;
+}
+.profile__select {
+  margin: 20px 0;
+}
+.profile__select select {
+  padding: 10px;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  width: 100%;
+}
+
 .profile__about {
   margin-bottom: 15px;
   height: max-content;
@@ -954,6 +971,10 @@ header {
   border-radius: 50%;
   max-height: 40px;
   margin-right: 15px;
+  margin-bottom: 10px;
+}
+.profile__about__content .profile__about__description__role {
+  color: #999;
 }
 
 .profile__cv__header {
@@ -993,8 +1014,16 @@ header {
   padding-bottom: 8px;
   margin-bottom: 8px;
 }
-.profile_selections__header span {
+.profile_selections__header .recommendation__edit {
   color: #2E1AAD;
+}
+.profile_selections__header .profile_selections__header__begin {
+  display: flex;
+  flex-direction: row;
+}
+.profile_selections__header .profile_selections__header__begin .profile_selections__header__HH {
+  color: #2E1AAD;
+  margin-left: 10px;
 }
 
 .settings__box {
@@ -1468,49 +1497,63 @@ input:checked + .slider__switch:before {
   margin-left: -90px;
 }
 
-.paymentHH__container {
-  margin-bottom: 0;
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 18px;
+  grid-area: 1/2/1/2;
+  justify-self: end;
 }
-.paymentHH__container .paymentHH__subscription {
-  border: 1px solid #DDD;
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.paymentHH__container .paymentHH__subscription .paymentHH__subscription__header {
-  padding-bottom: 15px;
-  border-bottom: 1px solid #DDD;
+
+.slider__switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-.paymentHH__container .paymentHH__subscription .paymentHH__subscription__header h5 {
-  color: #2E1AAD;
-  padding-bottom: 10px;
+
+.slider__switch:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
-.paymentHH__container .paymentHH__subscription .paymentHH__subscription__header .paymentHH__subscription__header__plan,
-.paymentHH__container .paymentHH__subscription .paymentHH__subscription__header .paymentHH__subscription__header__plan__price {
-  display: flex;
-  justify-content: space-between;
+
+input:checked + .slider__switch {
+  background-color: #2E1AAD;
 }
-.paymentHH__container .paymentHH__subscription .paymentHH__subscription__header .paymentHH__subscription__header__plan__price span {
-  color: #999;
+
+input:focus + .slider__switch {
+  box-shadow: 0 0 1px #2E1AAD;
 }
-.paymentHH__container .paymentHH__subscription .paymentHH__points {
-  margin-top: 20px;
+
+input:checked + .slider__switch:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
 }
-.paymentHH__container .paymentHH__subscription .paymentHH__points .paymentHH__point {
-  display: flex;
-  align-items: center;
+
+.slider__switch.round {
+  border-radius: 34px;
 }
-.paymentHH__container .paymentHH__subscription .paymentHH__points .paymentHH__point .paymentHH__point__text {
-  display: flex;
-  align-self: center;
-}
-.paymentHH__container .paymentHH__subscription .paymentHH__points .paymentHH__point .paymentHH__point__text::before {
-  content: url(../../assets/images/paymentHH/jam_check.svg);
-  padding-right: 10px;
-}
-.paymentHH__container .paymentHH__details {
-  margin: 20px 0 30px;
-}
-.paymentHH__container .paymentHH__details .paymentHH__details__inputs .paymentHH__details__input:first-child {
-  padding-top: 15px;
-}
-.paymentHH__container .paymentHH__details .paymentHH__details__inputs .paymentHH__details__input:not(:last-child) {
-  padding-bottom: 15px;
+
+.slider__switch.round:before {
+  border-radius: 50%;
 }
