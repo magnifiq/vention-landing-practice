@@ -16,6 +16,9 @@ function buildStyles() {
     .pipe(dest("dist/styles/css"));
 }
 
+function copyJs() {
+  return src("src/js/**/*.js").pipe(dest("dist/js"));
+}
 function optimizeImages() {
   return src("src/assets/**/*")
     .pipe(imagemin())
@@ -37,7 +40,8 @@ function watchTask() {
   watch(["src/pugs/**/*.pug"], pugCompile);
   watch(["src/styles/**/*.scss", "*.html"], buildStyles);
   watch(["src/assets/**/*"], optimizeImages);
+  watch(["src/js/**/*.js"], copyJs);
   //watch(["dist/pages/*.html", "css/*.css"]).on("change", createBrowserSyncInstance);
 }
-exports.default = series(pugCompile, buildStyles, optimizeImages, watchTask);
-//exports.default = series(pugCompile, buildStyles, optimizeImages, createBrowserSyncInstance, watchTask);
+exports.default = series(pugCompile, buildStyles, optimizeImages,copyJs, watchTask);
+//exports.default = series(pugCompile, buildStyles, optimizeImages, copyJs, createBrowserSyncInstance, watchTask);
