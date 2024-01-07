@@ -1,0 +1,62 @@
+@import "../variables";
+@import "../base";
+@import "./include/switch.scss";
+
+.profileHH__specialties{
+    @extend .colorWhitePaddingsRadius;
+    border: $base-border;
+    .profileHH__specialties__options{
+        .profileHH__specialties__option{
+            padding: 15px 0;
+            &:not(:last-child){
+                border-bottom: $base-border;
+                
+            }
+        }
+    }
+}
+
+.profileHH__subscription{
+    .profileHH__subscription__container{
+        padding: 30px 65px 20px;
+        .profileHH__subscription__container__h2{
+            text-align: center;
+            padding-bottom: 20px;
+        }
+    } 
+}
+
+.profileHH__invoices{
+    .profileHH__invoices__options{
+        .profileHH__invoices__option{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            &:not(:last-child){
+                border-bottom: $base-border;
+            }
+            .profileHH__invoices__option__details{
+                color: $description-text;
+            }
+        }
+    }
+}
+
+.profileHH__notifications{
+    .profileHH__notifications__switchers{
+            .profileHH__notifications__switcher{
+                padding: 15px 0;
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 2fr 1fr;
+                align-items: center;
+                .profileHH__notifications__switcher__text{
+                    grid-area: 1/1/1/1;
+                }
+            }
+            .profileHH__switch__first{
+                border-bottom: $base-border;
+            }
+    }
+    margin-bottom: 20px;
+}

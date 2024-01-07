@@ -214,6 +214,7 @@ header {
 
   button {
     width: 100%;
+    min-width: fit-content;
   }
 }
 .btnProp {
@@ -992,6 +993,10 @@ header {
     border-radius: 50%;
     max-height: 40px;
     margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  .profile__about__description__role{
+    color:$description-text;
   }
 }
 
@@ -1030,11 +1035,20 @@ header {
   display: flex;
   justify-content: space-between;
   border-bottom: $base-border;
-  span {
+  .recommendation__edit {
     color: $btn-text-light;
   }
   padding-bottom: 8px;
   margin-bottom: 8px;
+  .profile_selections__header__begin{
+    display: flex;
+    flex-direction: row;
+    .profile_selections__header__HH{
+      color: $btn-text-light;
+      margin-left: 10px;
+    }
+  }
+  
 }
 .settings__box {
   h4 {
