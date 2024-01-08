@@ -5,6 +5,7 @@
   padding: 0 0;
 }
 
+
 body {
   margin: 0 18px;
   background-color: $headBack;
@@ -27,7 +28,11 @@ body {
   border-radius: $divs-border-radius;
   padding: 15px;
 }
-
+@media only screen and (min-width: 1075px) {
+  body {
+    margin: 0 132px;
+  }
+}
 
 .question__container {
   display: flex;

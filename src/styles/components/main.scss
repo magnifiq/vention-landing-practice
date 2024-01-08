@@ -260,10 +260,22 @@
 
 @media only screen and (min-width: 1075px) {
     .firstPart{
+        margin: 0 -132px;
+        padding: 30px 130px;
+        
         &__card{
             display: flex;
             flex-direction: row-reverse;
+            img{
+                height: auto;
+                min-width: 585px;
+            }
+            &__data{
+                align-items: center;
+                text-align: left;
+            }
         }
+        
     }
 }
 
