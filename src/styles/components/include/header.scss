@@ -1,0 +1,79 @@
+@import "../../variables";
+@import "../../base";
+
+header {
+  display: grid;
+  padding: 18px 0;
+  grid-template-columns: 2fr 1fr;
+  background-color: $headBack !important;
+  box-sizing: border-box;
+}
+.logged__img {
+  padding: 3px 5px 0 0;
+}
+.logo {
+  grid-area: 1/1/2/2;
+  height: auto;
+  max-width: 120px;
+}
+.user {
+  grid-area: 1/2/2/2;
+  padding-right: 40px;
+  justify-self: flex-end;
+  height: auto;
+  max-width: 25px;
+}
+.topnav {
+  grid-area: 1/2/2/2;
+  justify-self: flex-end;
+  overflow: hidden;
+  position: relative;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+.topnav #myLinks {
+  display: none;
+  color: $h3-text;
+}
+
+.topnav #myLinks a {
+  color: $h3-text;
+}
+
+.topnav a {
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  position: relative;
+}
+
+.topnav a:not(:first-child)::before {
+  content: "";
+  background-color: $description-text-w;
+  height: 1px;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.topnav a:first-child {
+  margin-top: 20px;
+}
+.topnav a.icon {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.topnav a:hover {
+  color: black;
+}
+
+@media only screen and (min-width: 1075px) {
+  .logo {
+    padding-left: 130px;
+  }
+}
