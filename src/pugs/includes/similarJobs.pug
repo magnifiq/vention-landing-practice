@@ -1,0 +1,9 @@
+include ../mixins/jobCard.pug
+
+h4.similar__jobs__h4 Similar Jobs
+.job__cards
+    -const first_jobCard={job: "Construction Manager", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London", description: "Would you like to work from home part time with no experience and an immediate start? Research Tribe is looking for people across the UK to work from home by taking part in research. You could become a mystery shopper, product tester or simply share your...", similarJobs:true}
+    +jobCard(first_jobCard)
+
+    -const second_jobCard={job: "Financial Services Representative", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London", description: "Would you like to work from home part time with no experience and an immediate start? Research Tribe is looking for people across the UK to work from home by taking part in research. You could become a mystery shopper, product tester or simply share your...", similarJobs:true}
+    +jobCard(second_jobCard)

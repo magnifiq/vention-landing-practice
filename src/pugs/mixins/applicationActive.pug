@@ -1,0 +1,14 @@
+mixin applicationActive(data)
+    .application__active__header
+        .application__active__header__input
+            input(type="checkbox", name=data.position)
+            label(for=data.position) #{data.position}
+        .application__active__header__status
+            span #{data.status}
+            .application__active__header__status__num 
+                | #{data.status_num}
+
+    .application__active__salary #{data.salary} 
+    .application__active__company 
+        img(src=data.img, alt="company")
+        span #{data.company}

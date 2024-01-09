@@ -1,0 +1,7 @@
+mixin backResults(val)
+    if val==="Back to applications list"
+        .firstPart__card__description.back__section(onclick="changePage('employerInvitations')")
+            h4 &lt;- #{val}
+    else
+        .firstPart__card__description.back__section
+            h4 &lt;- #{val}

@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+head
+    include ./includes/baseInfo.pug
+    title complete profile HH
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/searchButton.pug
+    include ./mixins/inputHome.pug
+    include ./mixins/completeProfHHOptions.pug
+    main 
+        .completeHH__container 
+            .completeHH__details
+                h5 Update  your profile
+                .completeHH__inputs
+                    .completeHH__inputs
+                        +inputHome('Your name', '', 'text', true)
+                    .completeHH__inputs
+                        +inputHome('Company Name', '', 'text', true)
+                    .completeHH__inputs
+                        +inputHome('Email', '', 'text', true)
+                    .completeHH__inputs
+                        +inputHome('Phone number', '', 'text', true)
+            .completeHH__options 
+                .completeHH__option
+                    -const data1={h5: "Specialities", choice1: "Senior Front End Developer (JavaScript)", choice2: "Senior Front End Developer (JavaScript)"}
+                    +optioner(data1)
+                .completeHH__option
+                    -const data2={h5: "Industries", choice1: "Software development", choice2: "Marketing"}
+                    +optioner(data2)
+            .complete__upload 
+                span Upload your photo
+            +srchBtn("Save and Next", 0, 'HH')
+    include ./includes/footer.pug

@@ -1,0 +1,11 @@
+mixin sectionFilter(data)
+    if data.flag_normal
+        label.normal__filter(for=data.label) #{data.label}
+    else if data.flag_strong 
+        label.strong__filter(for=data.label) #{data.label}
+    select.selectFilter(id=data.label, name="filters")
+        option(disabled, hidden, selected) #{data.default}
+        option(value=data.first_val) #{data.first_val}
+        option(value=data.second_val) #{data.second_val}
+        option(value=data.third_val) #{data.third_val}
+
