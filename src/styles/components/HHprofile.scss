@@ -4,7 +4,7 @@
 
 .profile-hh__specialties{
     @extend .colorWhitePaddingsRadius;
-    border: ;
+    border: $base-border;
     &__options{
         .profile-hh__specialties__option{
             padding: 15px 0;
