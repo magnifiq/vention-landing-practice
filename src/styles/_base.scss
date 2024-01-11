@@ -636,7 +636,7 @@ header {
 .jobs__section__details,
 .jobs__section__company {
   display: none;
-
+  
   h4 {
     font-weight: $basic-font-weight;
     padding-bottom: 10px;
@@ -853,7 +853,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
- 
+  padding: 0 0 20px;
   h4 {
     padding-bottom: 20px;
   }
