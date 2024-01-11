@@ -1,5 +1,5 @@
-@import "../../variables";
-@import "../../base";
+@import '../../variables';
+@import '../../base';
 
 header {
   display: grid;
@@ -50,7 +50,7 @@ header {
 }
 
 .topnav a:not(:first-child)::before {
-  content: "";
+  content: '';
   background-color: $description-text-w;
   height: 1px;
   width: 100%;
@@ -72,5 +72,20 @@ header {
   color: black;
 }
 
+@media only screen and (max-width: 1075px) {
+  .header_mobile {
+    display: block;
+  }
+  .header_desktop {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 1075px) {
+  .header_mobile {
+    display: none;
+  }
+  .header_desktop {
+    display: block;
+  }
 }

@@ -1,4 +1,5 @@
-header 
+
+header.header_mobile 
   .logo
     img(src="../../dist/assets/images/main/itapplogo_color.svg", alt="logo")
   .user
@@ -14,4 +15,14 @@ header
     a.icon(href="javascript:void(0);", onclick="myFunction()")
       i.fa.fa-bars
 .header__line
- 
+
+
+header.header_desktop 
+  .logo
+    img(src="../../dist/assets/images/main/itapplogo_color.svg", alt="logo")
+  .header__tabs 
+    button(class="header__tab header__tab_active ", onclick="changePage('home')") Home
+    button(class="header__tab", onclick="changePage('')") News
+    button(class="header__tab", onclick="changePage(event,'about','.header__tab', 'header__tab_active', ''), checkCurrBtn(event)") About 
+
+.header__line
