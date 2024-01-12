@@ -72,20 +72,38 @@ header {
   color: black;
 }
 
+.header_desktop{
+  display: flex;
+  flex-direction: row;
+  .header__tabs{
+    padding-left: 60px;
+    .header__tab{
+      padding: 10px 15px;
+      background-color: $headBack;
+      border: none;
+      color: $description-text;
+      font-weight: $btn-font-weigh;
+    }
+    .header__tab_active{
+      color: $btn-color;
+      border-bottom: $border-light;
+    }
+  }
+}
 @media only screen and (max-width: 1075px) {
   .header_mobile {
-    display: block;
+    visibility: visible;
   }
   .header_desktop {
-    display: none;
+    visibility: hidden;
   }
 }
 
 @media only screen and (min-width: 1075px) {
   .header_mobile {
-    display: none;
+    visibility: hidden;
   }
   .header_desktop {
-    display: block;
+    visibility: visible;
   }
 }
