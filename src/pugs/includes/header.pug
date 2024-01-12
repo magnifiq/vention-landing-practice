@@ -1,4 +1,5 @@
-
+include ../mixins/lightButton.pug
+include ../mixins/searchButton.pug
 header.header_mobile 
   .logo
     img(src="../../dist/assets/images/main/itapplogo_color.svg", alt="logo")
@@ -24,5 +25,10 @@ header.header_desktop
     button(class="header__tab header__tab_active", onclick="changePage('home')") Home
     button(class="header__tab", id="headerTab_1", onclick="handleHeaderChange('#news', 'headerTab_1')") News
     button(class="header__tab", id="headerTab_2", onclick="handleHeaderChange('#about', 'headerTab_2')") About
-
+  .header__options 
+    button(class="header__option", onclick="changePage('home')") For Employers
+    button(class="header__option", onclick="changePage('HHprofile')") For Headhunters
+  .header__buttons 
+    +lightBtn("Login")
+    +srchBtn("Sign Up")
 .header__line

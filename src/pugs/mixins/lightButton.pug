@@ -2,6 +2,9 @@ mixin lightBtn(val, flagSearchResults)
     if flagSearchResults
         .btnSearchResults.thirdPart__btn
             button.btnProp.thirdPart__btn_light(onclick="changePage('filters')") #{val}
+    else if val=='Login'
+        .thirdPart__btn
+            button.btnProp.thirdPart__btn_light(onclick="changePage('home')") #{val}
     else 
         .thirdPart__btn
             button.btnProp.thirdPart__btn_light #{val}
