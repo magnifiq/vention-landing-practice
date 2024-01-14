@@ -306,8 +306,35 @@
   }
 
   .secondPart {
-    &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &__card_mobile {
       display: none;
+    }
+    &__card_desktop {
+      width: 100%;
+      &__header {
+        min-width: 100%;
+        align-self: center;
+        text-align: left;
+      }
+      &__content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-direction: row;
+        &__options {
+          display: flex;
+          flex-direction: row;
+          &__all {
+            &__option {
+              background-color: $headBack;
+            }
+          }
+        }
+      }
     }
   }
 }
