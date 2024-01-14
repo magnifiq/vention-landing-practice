@@ -99,8 +99,10 @@
 }
 
 .slider {
-  width: 500px;
   margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .slick-dots {
@@ -309,6 +311,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &_info {
+      padding: 0 15px 15px 0;
+    }
     &__card_mobile {
       display: none;
     }
@@ -332,14 +337,30 @@
           &__all {
             &__option {
               background-color: $headBack;
+              max-width: 270px;
             }
           }
         }
         &__img {
+          padding: 0 0 0 50px;
           img {
             min-width: 400px;
             height: auto;
           }
+        }
+      }
+    }
+  }
+  .thirdPart {
+    &__btn {
+      margin-left: 100px;
+    }
+    .secondPart__card_desktop {
+      &__content {
+        flex-direction: row-reverse;
+
+        .changed_img {
+          padding: 0 50px 0 0;
         }
       }
     }
