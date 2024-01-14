@@ -34,12 +34,14 @@ html(lang="en")
         .line
         - const thirdData=allData[1]
         +cardMain(thirdData)
-        +srchBtn("For Employers")
-      //.thirdPart.firstPart.fourthPart
+        .button_special__one
+          +srchBtn("For Employers")
+      .thirdPart.firstPart.fourthPart
         .line
-        - const fourthData={img:"../../dist/assets/images/fourthPart/Illustration (2).svg", img_name:"card_img", h3_text:"For Headhunters", h4_text:"Develop stronger client relationships", description:"No confusion who submitted candidates first", slider_num: 4, "fifthPart_flag": false}
+        - const fourthData=allData[2]
         +cardMain(fourthData)
-        +srchBtn("For HeadHunters")
+        .button_special__two
+          +srchBtn("For HeadHunters")
         .line.fourthPart__line 
       //.thirdPart.firstPart.fifthPart
         - const fifthData={img:"../../dist/assets/images/fifthPart/Picture.jpg", img_2: "../../dist/assets/images/fifthPart/Group 1338.svg", img_name_2: "card_img", img_name:"avatar_img", h3_text:"Our clients speak", h4_text:"Efficient Collaborating", description:"We have been working with clients around the world", description_2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.", slider_num: 3, avatar_name: "Jane Cooper", avatar_position: "CEO at ABC Corporation", fifthPart_flag: true}

@@ -54,5 +54,26 @@
       "Get detailed information on how your applications are performing"
     ],
     "fifthPart_flag": false
+  },
+  {
+    "img": "../../dist/assets/images/fourthPart/Illustration (2).svg",
+    "img_name": "card_img",
+    "h3_text": "For Headhunters",
+    "h4_text": "Develop stronger client relationships",
+    "description": "No confusion who submitted candidates first",
+    "slider_num": 4,
+    "h4_text_desktop": [
+      "Build profile",
+      "Develop stronger client relationships",
+      "Get invited to assist on a vacancy",
+      "Weekly progress summary"
+    ],
+    "h4_text_desktop_description": [
+      "Advertise skills/ expertise to employers and candidates",
+      "No confusion who submitted candidates first",
+      "Submit your candidates directly to employers",
+      "Get weekly updates on your candidates progress"
+    ],
+    "fifthPart_flag": false
   }
 ]
