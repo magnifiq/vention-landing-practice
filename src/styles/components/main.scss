@@ -309,22 +309,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
     &__card_mobile {
       display: none;
     }
     &__card_desktop {
-      width: 100%;
+      align-items: center;
       &__header {
-        min-width: 100%;
-        align-self: center;
         text-align: left;
+        padding-bottom: 40px;
       }
       &__content {
         display: flex;
         align-items: center;
+        justify-content: center;
         width: 100%;
+        margin: auto;
         flex-direction: row;
+        text-align: left;
         &__options {
           display: flex;
           flex-direction: row;
@@ -332,6 +333,12 @@
             &__option {
               background-color: $headBack;
             }
+          }
+        }
+        &__img {
+          img {
+            min-width: 400px;
+            height: auto;
           }
         }
       }
