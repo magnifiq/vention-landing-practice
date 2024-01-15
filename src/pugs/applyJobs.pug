@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+head
+    include ./includes/baseInfo.pug
+    title Apply for a job st1
+body
+    include ./includes/headerLogged.pug
+    include ./mixins/application.pug
+    include ./mixins/searchButton.pug
+    main 
+        .apply__content
+            include ./includes/applyHeader.pug
+            +applyStep("CV Upload", "first")
+            .header__line
+            .apply__insert__file.border_top_bottom
+                .apply__img
+                    img(src="../../dist/assets/images/applyJobs/auto.svg", alt="auto cv")
+                .insert__file__header 
+                    h3 auto-generated cv.pdf
+                    .edit_text 
+                        a(href="../../dist/pages/profileEdit.html") Edit data 
+                    h4 
+                        | Choose  Another File
+                        | (.pdf, .doc or .docx files)
+
+            .apply__allow 
+                input(type="checkbox")
+                span Allow Employer to contact you for other positions available
+            +srchBtn("Continue")
+    include ./includes/footer.pug

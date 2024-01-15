@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+head
+    include ./includes/baseInfo.pug
+    script(src="../../dist/js/changeTab.js")
+    script(src="../../dist/js/chooseRole.js")
+    script(src="../../dist/js/checkCurrBtn.js")
+    title Sign Up
+body
+    include ./includes/header.pug
+    include ./mixins/inputHome.pug
+    include ./mixins/searchButton.pug
+    main
+        .home__container 
+           
+            .home__tabs__first 
+                button(class="tab_button__second tab_active__second", onclick="changeTab(event,'candidate','.tab_button__second', 'tab_active__second', 'homes'), checkCurrBtn(event)") Candidate
+                button(class="tab_button__second", onclick="changeTab(event,'employers','.tab_button__second', 'tab_active__second', 'homes'), checkCurrBtn(event)") Employers
+                button(class="tab_button__second", onclick="changeTab(event,'headhunters','.tab_button__second', 'tab_active__second', 'homes'), checkCurrBtn(event)") Headhunters 
+            .home__tabs__second 
+                button(class="tab_button", onclick="changeTab(event,'login', '.tab_button', 'tab_active', 'enter_modes')") Login 
+                button(class="tab_button tab_active", onclick="changeTab(event,'signup', '.tab_button', 'tab_active', 'enter_modes')") Signup
+            
+            .homes
+                .enter_modes#signup
+                    .google_btn 
+                        img(src="../../dist/assets/images/signup/google.jpg", alt="google")
+                        h4 Sign up using Google
+
+                    .text__home.text__home__option or
+
+                    .home_inputs
+                        +inputHome("Email", "", "text")
+                        +inputHome("Password", "", "password")
+                        +inputHome("Confirm Password", "", "password")
+
+                    .home_check_rights 
+                        input(type="checkbox") 
+                        span By creating an account you agree to the terms and conditions 
+                        |applicable to our service and acknowledge that your personal data will 
+                        |be used in accordance with our privacy policy and you will receive emails 
+                        |and communications about jobs, industry news, new products and related topics.
+                   
+           
+                    +srchBtn("Sign Up")
+
+
+                .enter_modes#login
+                    .home_inputs
+                        +inputHome("Email", "", "text")
+                        +inputHome("Password", "", "password")
+                    +srchBtn("Log in")
+    include ./includes/footer.pug
