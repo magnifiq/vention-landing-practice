@@ -1,0 +1,127 @@
+@import '../../variables';
+@import '../../base';
+
+@mixin tab__text {
+  padding: 10px 15px;
+  background-color: $headBack;
+  border: none;
+  color: $description-text;
+  font-weight: $btn-font-weigh;
+}
+header {
+  display: grid;
+  padding: 18px 0;
+  grid-template-columns: 2fr 1fr;
+  background-color: $headBack !important;
+  box-sizing: border-box;
+}
+.logged__img {
+  padding: 3px 5px 0 0;
+}
+.logo {
+  grid-area: 1/1/2/2;
+  height: auto;
+  max-width: 120px;
+}
+.user {
+  grid-area: 1/2/2/2;
+  padding-right: 40px;
+  justify-self: flex-end;
+  height: auto;
+  max-width: 25px;
+}
+.topnav {
+  grid-area: 1/2/2/2;
+  justify-self: flex-end;
+  overflow: hidden;
+  position: relative;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+.topnav #myLinks {
+  display: none;
+  color: $h3-text;
+}
+
+.topnav #myLinks a {
+  color: $h3-text;
+}
+
+.topnav a {
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  position: relative;
+}
+
+.topnav a:not(:first-child)::before {
+  content: '';
+  background-color: $description-text-w;
+  height: 1px;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.topnav a:first-child {
+  margin-top: 20px;
+}
+.topnav a.icon {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.topnav a:hover {
+  color: black;
+}
+
+.header_desktop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .header__tabs {
+    padding-left: 60px;
+    .header__tab {
+      @include tab__text;
+    }
+    .header__tab_active {
+      color: $btn-color;
+      border-bottom: $border-light;
+    }
+  }
+  .header__options {
+    padding-left: 200px;
+    .header__option{
+      @include tab__text;
+    }
+  }
+  .header__buttons{
+    display: flex;
+    flex-direction: row;
+    padding-left: 45px;
+    .thirdPart__btn{
+      padding-right: 15px;
+      .btnProp{
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1075px) {
+  .header_desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1075px) {
+  .header_mobile {
+    display: none;
+  }
+  .header_desktop {
+    display: flex;
+  }
+}
