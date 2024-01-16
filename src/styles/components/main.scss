@@ -544,6 +544,28 @@
       display: none;
     }
   }
+  .cookies {
+    display: flex;
+    padding: 20px 132px !important;
+    justify-content: center;
+    &__content__all {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__content {
+      
+      &__btn {
+        button{
+          max-width: 100px;
+          max-height: 40px;
+          text-align: center;
+        }
+      }
+      max-width: 1005px;
+    }
+  }
 }
 
 @media only screen and (max-width: 1075px) {

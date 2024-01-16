@@ -1,0 +1,62 @@
+@import '../../variables';
+@import '../../base';
+
+.footer_rights {
+  box-sizing: border-box;
+  margin: 0 -18px;
+  padding: 40px 15px;
+  background-color: $footer-bg;
+  color: $btn-text;
+  text-align: center;
+
+  .col:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .col__header {
+    font-size: $h4-font-size;
+    font-weight: $btn-font-weigh;
+    padding-bottom: 20px;
+  }
+
+  .col {
+    &__item {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    .col__item:not(:last-child) {
+      padding-bottom: 10px;
+    }
+  }
+
+  .extra {
+    font-size: $extra-font-size;
+    font-weight: $extra-font-weight;
+  }
+}
+
+@media only screen and (min-width: 1075px) {
+  .footer_rights {
+    margin: 0 -132px;
+    padding: 30px 132px;
+    text-align: left;
+    justify-content: center;
+    display: flex;
+    .content {
+      max-width: 1005px;
+      display: flex;
+      &__col__info {
+        order: 2;
+        padding-right: 50px;
+      }
+      &__col__jobs {
+        order: 3;
+      }
+      &__col__company {
+        order: 1;
+        padding-right: 500px;
+      }
+    }
+  }
+}

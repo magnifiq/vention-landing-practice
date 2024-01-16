@@ -1,15 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Manrope:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Manrope:wght@300&display=swap');
 
 * {
   margin: 0 0;
   padding: 0 0;
 }
 
-
 body {
   margin: 0 18px;
   background-color: $headBack;
-  font-family: "Manrope";
+  font-family: 'Manrope';
 }
 .border_top_bottom {
   border-top: $base-border;
@@ -44,6 +43,14 @@ body {
   padding: 20px 20px;
   text-align: left;
   margin-top: 40px;
+  display: flex;
+  &__content {
+      &__btn {
+        justify-content: flex-start;
+        display: flex;
+        width: 100%;
+      }
+    }
 }
 
 .cookies__btn {
@@ -52,35 +59,6 @@ body {
   border-radius: $cookies-btn;
   padding: 10px 45px;
   margin-top: 10px;
-}
-
-.footer_rights {
-  box-sizing: border-box;
-  margin: 0 -18px;
-  padding: 40px 15px;
-  background-color: $footer-bg;
-  color: $btn-text;
-  text-align: center;
-
-  .col:not(:last-child) {
-    margin-bottom: 30px;
-  }
-  .col__header {
-    font-size: $h4-font-size;
-    font-weight: $btn-font-weigh;
-    padding-bottom: 20px;
-  }
-
-  .col {
-    .col__item:not(:last-child) {
-      padding-bottom: 10px;
-    }
-  }
-
-  .extra {
-    font-size: $extra-font-size;
-    font-weight: $extra-font-weight;
-  }
 }
 
 //search results
@@ -132,21 +110,21 @@ body {
 .job__card__details {
   padding-bottom: 10px;
   .salary::before {
-    content: url("/assets/images/searchResults/clock.svg");
+    content: url('/assets/images/searchResults/clock.svg');
     display: inline-flex;
     margin-right: 5px;
     align-self: center;
     justify-self: center;
   }
   .time::before {
-    content: url("/assets/images/searchResults/clock\ \(1\).svg");
+    content: url('/assets/images/searchResults/clock\ \(1\).svg');
     display: inline-flex;
     margin-right: 5px;
     align-self: center;
     justify-self: center;
   }
   .location::before {
-    content: url("/assets/images/searchResults/map-pin.svg");
+    content: url('/assets/images/searchResults/map-pin.svg');
     display: inline-flex;
     margin-right: 5px;
     align-self: center;
@@ -657,7 +635,7 @@ body {
   @extend .colorMainAndMargins;
   margin-bottom: 0;
   @extend .border_top_bottom;
-  > div:not(:last-child){
+  > div:not(:last-child) {
     margin-bottom: 15px;
   }
   > div:not(:first-child) {
@@ -702,8 +680,8 @@ body {
     margin-right: 15px;
     margin-bottom: 10px;
   }
-  .profile__about__description__role{
-    color:$description-text;
+  .profile__about__description__role {
+    color: $description-text;
   }
 }
 
@@ -747,15 +725,14 @@ body {
   }
   padding-bottom: 8px;
   margin-bottom: 8px;
-  .profile_selections__header__begin{
+  .profile_selections__header__begin {
     display: flex;
     flex-direction: row;
-    .profile_selections__header__HH{
+    .profile_selections__header__HH {
       color: $btn-text-light;
       margin-left: 10px;
     }
   }
-  
 }
 .settings__box {
   h4 {
@@ -831,7 +808,6 @@ body {
   border-bottom: $base-border;
 }
 
-
 .switch {
   position: relative;
   display: inline-block;
@@ -861,7 +837,7 @@ body {
 
 .slider__switch:before {
   position: absolute;
-  content: "";
+  content: '';
   height: 16px;
   width: 16px;
   left: 2px;
@@ -892,30 +868,31 @@ input:checked + .slider__switch:before {
 .slider__switch.round:before {
   border-radius: 50%;
 }
-.notifications__switcher__first{
+.notifications__switcher__first {
   border-bottom: $base-border;
 }
-.notifications__switcher{
+.notifications__switcher {
   padding: 15px 0;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 2fr 1fr;
 
-  span{
+  span {
     grid-area: 1/1/1/1;
   }
 }
 .delete__awarning__profile {
   padding-top: 10px;
 }
-.delete__confirmation__profile{
+.delete__confirmation__profile {
   color: $warning-text;
   padding: 20px 0 15px;
 }
 
 ////modal windows
-.workplace__profile__modal, .office__profile__modal{
-  h4{
+.workplace__profile__modal,
+.office__profile__modal {
+  h4 {
     padding-bottom: 15px;
   }
   display: none;
@@ -924,54 +901,53 @@ input:checked + .slider__switch:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
-.workplace__profile__modal__option{
-  label{
+.workplace__profile__modal__option {
+  label {
     padding-left: 10px;
   }
 }
-.workplace__profile__modal__header{
+.workplace__profile__modal__header {
   display: flex;
   justify-content: space-between;
 }
-.overlay__for__modal{
+.overlay__for__modal {
   position: relative;
   display: none;
-  position: fixed; 
-  z-index: 1; 
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.office__profile__modal{
-  select{
+.office__profile__modal {
+  select {
     padding: 10px;
     border: $base-border;
     border-radius: $base-border-radius;
   }
-  .office__location__profile__container{
+  .office__location__profile__container {
     padding: 25px 0;
   }
 }
 
 ////////////////////////////////////////////////////////////////////Profile section.Applications
 
-.applications__container{
+.applications__container {
   @extend .colorWhitePaddingsRadius;
 }
-.applications__content{
-  margin-top:0;
+.applications__content {
+  margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 40px;
   @extend .colorMainAndMargins;
 }
-.tab_button_application{
+.tab_button_application {
   border: none;
   background-color: $headBack;
   padding: 15px;
@@ -983,52 +959,52 @@ input:checked + .slider__switch:before {
 .tab_active_application {
   border-bottom: 3px solid #2e1aad !important;
 }
-#closed__applications{
-  h4{
+#closed__applications {
+  h4 {
     padding-top: 15px;
   }
 }
 
-.application_tabs{
+.application_tabs {
   padding-bottom: 15px;
   border-bottom: $base-border;
   margin-bottom: 5px;
-} 
+}
 
-.application__active__card{
+.application__active__card {
   padding: 15px 0;
 }
-.application__active__card:not(:last-child){
+.application__active__card:not(:last-child) {
   border-bottom: $base-border;
 }
-.application__active__header{
+.application__active__header {
   display: flex;
   justify-content: space-between;
 }
-.application__active__header__input{
-  label{
+.application__active__header__input {
+  label {
     padding-left: 5px;
   }
 }
-.application__active__header__status{
+.application__active__header__status {
   display: flex;
-  span{
+  span {
     margin-right: 10px;
     white-space: nowrap;
   }
 }
-.application__active__header__status__num{
+.application__active__header__status__num {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: $cookies;
   text-align: center;
 }
-.application__active__salary{
+.application__active__salary {
   padding: 10px 0;
 }
-.application__active__company{
-  img{
+.application__active__company {
+  img {
     max-width: 25px;
     height: auto;
     padding-right: 5px;
@@ -1038,78 +1014,77 @@ input:checked + .slider__switch:before {
 }
 
 /////////////////////////////////////////////////////////myProfile.Recommended roles
-.recommended__roles__content{
+.recommended__roles__content {
   @extend .colorMainAndMargins;
   margin: 0 0 35px;
 }
-.recommended__roles__container{
-  
-  div{
+.recommended__roles__container {
+  div {
     background-color: $headBack;
   }
 }
 .recommended__roles__header {
-  border-bottom: $base-border;  
+  border-bottom: $base-border;
   padding-bottom: 15px;
 }
 
-.recommended__roles__cards{
-  >div{
-    margin:0 -15px;
+.recommended__roles__cards {
+  > div {
+    margin: 0 -15px;
   }
 }
 
-.recommended__roles__extra__info{
+.recommended__roles__extra__info {
   font-weight: $btn-font-weigh;
   color: $btn-text-light;
   font-size: $base-font-size;
   padding: 20px 0;
   border-bottom: $base-border;
 }
-.recommended__role__exception{
-  div{
+.recommended__role__exception {
+  div {
     border-bottom: none;
   }
-  >div{
-    margin:0;
+  > div {
+    margin: 0;
   }
-  div:last-child{
+  div:last-child {
     padding-bottom: 5px;
   }
 }
 ///////////////////////////////////////////////////////////////////myProfile.Employer Invitations
-.employer__invitations__content{
-  @extend .colorMainAndMargins; 
-  margin: 0 -18px; 
+.employer__invitations__content {
+  @extend .colorMainAndMargins;
+  margin: 0 -18px;
   padding-bottom: 30px;
 }
-.employer__invitations__container{
+.employer__invitations__container {
   @extend .colorWhitePaddingsRadius;
 }
-.employer__invitations__header{
+.employer__invitations__header {
   padding: 15px 0;
   border-bottom: $base-border;
 }
-.employer__invitation__btn{
-  button{
+.employer__invitation__btn {
+  button {
     background-color: red;
     padding: 10px 10vw;
   }
 }
-.employer__card__header{
+.employer__card__header {
   padding-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.employer__invitations__cards{
-  >div:not(:last-child){
+.employer__invitations__cards {
+  > div:not(:last-child) {
     border-bottom: $base-border;
   }
 }
 
 ///////////////////////////////////////////////////////////////myProfile.view Details
-.view__appplication__content{
+.view__appplication__content {
   @extend .colorMainAndMargins;
   margin-bottom: 0px;
 }
@@ -1117,119 +1092,119 @@ input:checked + .slider__switch:before {
   @extend .colorWhitePaddingsRadius;
 }
 
-.view__application__header{
+.view__application__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  h4{
+  h4 {
     padding-bottom: 5px;
   }
-  span{
+  span {
     color: $description-text;
   }
 }
 
-.view__details__steps{
+.view__details__steps {
   background-color: $main;
   padding: 15px;
   border-radius: $divs-border-radius;
   margin: 20px 0;
 }
 
-.view__details__step{
-  span{
+.view__details__step {
+  span {
     margin-left: 10px;
   }
 }
-.position__description__info{
+.position__description__info {
   margin-bottom: 20px;
 }
-.position__description__cv{
-  h4{
+.position__description__cv {
+  h4 {
     color: $description-text;
     font-weight: $basic-font-weight;
   }
 }
-.position__description__cv__info{
+.position__description__cv__info {
   display: flex;
   align-items: center;
   padding: 10px 0 25px;
-  span{
+  span {
     padding-left: 10px;
   }
 }
 
-.position__description__stage{
+.position__description__stage {
   padding: 15px 9px;
   background-color: $main;
   border-radius: $divs-border-radius;
   margin-bottom: 20px;
 }
-.position__description__stage__text{
+.position__description__stage__text {
   padding: 10px 0;
 }
-.position__description__cl{
+.position__description__cl {
   padding: 15px 9px;
   border-radius: $divs-border-radius;
   margin-bottom: 20px;
   border: $base-border;
 }
-.position__description__btn button{
+.position__description__btn button {
   background-color: red;
   width: 50% max-content;
   padding: 10px 13px;
 }
-.position__description__btn{
+.position__description__btn {
   display: flex;
   justify-content: flex-start;
 }
 
-.messages__container{
+.messages__container {
   border-radius: $divs-border-radius;
   padding: 15px;
   background-color: $main;
   margin: 17px 0;
 }
 
-.message__header{
-  img{
+.message__header {
+  img {
     max-width: 24px;
     height: auto;
     border-radius: 50%;
   }
   display: flex;
-  h4{
+  h4 {
     margin-left: 12px;
   }
   margin-bottom: 20px;
 }
 
-.message__details{
+.message__details {
   margin-bottom: 10px;
   color: $description-text;
 }
-.message__text__first{
+.message__text__first {
   margin-bottom: 10px;
 }
-.message__profile__content{
+.message__profile__content {
   margin-bottom: 20px;
 }
 
-.messages__input__profile{
+.messages__input__profile {
   display: flex;
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  input{
+  input {
     position: relative;
     box-sizing: border-box;
     width: 100%;
     padding: 15px;
     border-radius: $base-border-radius;
-    border:none;
+    border: none;
   }
-  button{
+  button {
     position: relative;
     color: $btn-color-light;
     background-color: $btn-color;
@@ -1240,4 +1215,3 @@ input:checked + .slider__switch:before {
     margin-left: -90px;
   }
 }
-
