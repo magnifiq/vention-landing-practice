@@ -1,0 +1,20 @@
+[
+  {
+    "img": "../../dist/assets/images/seventhPart/cov1.jpg",
+    "img_name": "card_img",
+    "h4_text": "Big Update - We launched!",
+    "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim..."
+  },
+  {
+    "img": "../../dist/assets/images/seventhPart/cov2.jpg",
+    "img_name": "card_img",
+    "h4_text": "Collaborations - together with CNN",
+    "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim..."
+  },
+  {
+    "img": "../../dist/assets/images/seventhPart/cov3.jpg",
+    "img_name": "card_img",
+    "h4_text": "New platform - iOS application",
+    "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim..."
+  }
+]

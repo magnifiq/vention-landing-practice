@@ -1,0 +1,26 @@
+[
+  {
+    "img": "../../dist/assets/images/sixthPart/Group 1370.svg",
+    "img_name": "card_img",
+    "h4_text": "40+",
+    "description": "Happy Clients"
+  },
+  {
+    "img": "../../dist/assets/images/sixthPart/Illustration (3).svg",
+    "img_name": "card_img",
+    "h4_text": "540+",
+    "description": "Projects Completed"
+  },
+  {
+    "img": "../../dist/assets/images/sixthPart/Group 1371.svg",
+    "img_name": "card_img",
+    "h4_text": "300",
+    "description": "Dedicated Members"
+  },
+  {
+    "img": "../../dist/assets/images/sixthPart/Group 1369.svg",
+    "img_name": "card_img",
+    "h4_text": "25+",
+    "description": "Awards Won"
+  }
+]
