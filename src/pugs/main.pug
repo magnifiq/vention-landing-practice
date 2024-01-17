@@ -9,6 +9,8 @@ html(lang="en")
   body
     - const path = require('path');
     - const allData = require(path.resolve('src/data', '../data/main.json'));
+    - const allDataAchievements = require(path.resolve('src/data', '../data/achievements.json'));
+    - const allDataNews = require(path.resolve('src/data', '../data/news.json'));
     include ./includes/header.pug
     include ./mixins/cardMain.pug
     include ./mixins/searchButton.pug
@@ -27,7 +29,7 @@ html(lang="en")
         include ./mixins/inputs.pug
         +inputs({example_flag: false})
       .secondPart.firstPart
-        -console.log("oh")
+        
         -const secondData = allData[0]
         +cardMain(secondData)
       .thirdPart.firstPart
@@ -47,34 +49,39 @@ html(lang="en")
         - const fifthData=allData[3]
         +cardMain(fifthData)
       .thirdPart.firstPart.sixthPart#about
-        h3 Some count that matters
-        .firstPart__card__description
-          span Our achievement in the journey depicted in numbers
-        
-        -const first_subAch={img:"../../dist/assets/images/sixthPart/Group 1370.svg", img_name: "card_img", h4_text: "40+", description: "Happy Clients"}
-        +achievement(first_subAch)
+        .sixthPart__header
+          h2 Some count that matters
+          .firstPart__card__description.sixthPart__header__description
+            span Our achievement in the journey depicted in numbers
+        .sixthPart__cards
+          -const first_subAch=allDataAchievements[0]
+          +achievement(first_subAch)
 
-        -const second_subAch={img:"../../dist/assets/images/sixthPart/Illustration (3).svg", img_name: "card_img", h4_text: "540+", description: "Projects Completed"}
-        +achievement(second_subAch)
+          -const second_subAch=allDataAchievements[1]
+          +achievement(second_subAch)
 
-        -const third_subAch={img:"../../dist/assets/images/sixthPart/Group 1371.svg", img_name: "card_img", h4_text: "300", description: "Dedicated Members"}
-        +achievement(third_subAch)
+          -const third_subAch=allDataAchievements[2]
+          +achievement(third_subAch)
 
-        -const fourth_subAch={img:"../../dist/assets/images/sixthPart/Group 1369.svg", img_name: "card_img", h4_text: "25+", description: "Awards Won"}
-        +achievement(fourth_subAch)
+          -const fourth_subAch=allDataAchievements[3]
+          +achievement(fourth_subAch)
 
       .thirdPart.firstPart.sixthPart.seventhPart#news
-        h3 News
-        -const first_news={img:"../../dist/assets/images/seventhPart/cov1.jpg", img_name: "card_img", h4_text: "Big Update - We launched!", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim..."}
-        +newsMain(first_news)
+        .seventhPart__header
+          h2 News
+          .seventhPart__header__seeAll_desktop 
+            span All news -> 
+        .seventhPart__news
+          -const first_news=allDataNews[0]
+          +newsMain(first_news)
 
-        -const second_news={img:"../../dist/assets/images/seventhPart/cov2.jpg", img_name: "card_img", h4_text: "Collaborations - together with CNN", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim..."}
-        +newsMain(second_news)
+          -const second_news=allDataNews[1]
+          +newsMain(second_news)
 
-        -const third_news={img:"../../dist/assets/images/seventhPart/cov3.jpg", img_name: "card_img", h4_text: "New platform - iOS application", description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim..."}
-        +newsMain(third_news)
-
-        +lightBtn("See all news")
+          -const third_news=allDataNews[2]
+          +newsMain(third_news)
+        .seventhPart__seeAll_mobile
+          +lightBtn("See all news")
       
       include ./includes/cookies.pug
 
