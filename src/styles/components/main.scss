@@ -131,7 +131,7 @@
     justify-content: center;
     align-content: center;
     button {
-      width: 100%;
+      //width: 100%;
       min-width: fit-content;
     }
   }
@@ -159,6 +159,10 @@
 
   h3 {
     padding-top: 20px;
+  }
+  &__card_mobile{
+    max-width: 100%;
+
   }
 }
 .fifthPart__info {
@@ -260,8 +264,10 @@
 
 @media only screen and (max-width: 550px) {
   .slider {
-    width: 200px;
+    width: 100%;
     overflow-wrap: normal;
+    max-width: 200px;
+    margin: auto;
   }
   .firstPart__inputs input select {
     padding: 10px;
