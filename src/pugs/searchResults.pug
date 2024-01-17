@@ -7,18 +7,53 @@ html(lang="en")
     include ./includes/header.pug
     include ./mixins/inputs.pug
     include ./mixins/jobCard.pug
+    include ./mixins/sectionFilter.pug
+    include ./mixins/checkboxFilter.pug
     main 
-      .firstPart
+      .firstPart.searchResults__firstPart
         -const data={job: "Construction Manager", location: "London", example_flag: true}
         +inputs(data)
     
-      .job__cards 
+      .job__cards.job__cards_mobile 
         -const first_data={job: "Construction Manager", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London", description: "Would you like to work from home part time with no experience and an immediate start? Research Tribe is looking for people across the UK to work from home by taking part in research. You could become a mystery shopper, product tester or simply share your..."}
         +jobCard(first_data)
 
         -const second_data={job: "Financial Services Representative", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London", description: "Would you like to work from home part time with no experience and an immediate start? Research Tribe is looking for people across the UK to work from home by taking part in research. You could become a mystery shopper, product tester or simply share your..."}
         +jobCard(second_data)
     
+      .searchResults__content 
+        .searchResults__content__filters 
+          .filters.searchResults__content__filters__filters 
+            .filters__container.searchResults__content__filters__filters__container  
+                .filter__first
+                    -const first_section={label:"Order", default:"By relevance", first_val: "The first", second_val:"The second", third_val: "The third", flag_strong:true}
+                    +sectionFilter(first_section)
+                .filter_salary_container 
+                    .filter_salary_header 
+                        h3.strong__filter Salary range
+                    .filter__first
+                        -const salary_section_from={label:"From:", default:" £ Any", first_val: "The first", second_val:"The second", third_val: "The third", flag_normal:true}
+                        +sectionFilter(salary_section_from)
+
+                    .filter__first
+                        -const salary_section_to={label:"To:", default:" £ Any", first_val: "The first", second_val:"The second", third_val: "The third", flag_normal:true}
+                        +sectionFilter(salary_section_to)
+
+                .checkboxes__filters
+                    -const data_type={label:"Job type", vals: ["Permanent (3 134)", "Contract (205)", "Temporary (3 566)", "Part Time (81)"]}
+                    +checkboxFilter(data_type)
+
+                    -const data_industry={label:"Industry", vals: ["Surveyor (3 134)", "Development Manager (205)", "Construction Laborer (566)", "Equipment Operator (81)"]}
+                    +checkboxFilter(data_industry)
+
+                    -const data_workplace={label:"Workplace", vals: ["Office (3 134)", "Partial Remote (205)", "Fully Remote (3 566)"]}
+                    +checkboxFilter(data_workplace) 
+        .job__cards.job__cards_desktop 
+          
+          +jobCard(first_data)
+          +jobCard(second_data)
+          +jobCard(second_data)
+
       .slider-container 
         .slider-all
             .prevBtn="<" 

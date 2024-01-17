@@ -10,8 +10,23 @@ mixin inputs(data)
         option(value="50") 50 km
         option(value="100") 100 km
       input(type="button", value="Search", class="btnProb search" onclick="changePage('searchResults')")
-  else 
-    .firstPart__inputs
+  else
+
+    .firstPart__inputs_mobile 
+      .firstPart__inputs
+          input.job(type="text", placeholder="Job title" value=data.job) 
+          input.location(type="text", placeholder="Where" value=data.location) 
+          select.distance(name="distance")
+            option(disabled, hidden) Distance
+            option(value="10", selected) 10 km
+            option(value="50") 50 km
+            option(value="100") 100 km
+
+      +lightBtn("Filters", true)
+      input.search.btnProp(type="button", value="Search", class="btnProb inputSearch")
+
+    .firstPart__inputs_desktop
+      .firstPart__inputs
         input.job(type="text", placeholder="Job title" value=data.job) 
         input.location(type="text", placeholder="Where" value=data.location) 
         select.distance(name="distance")
@@ -19,6 +34,4 @@ mixin inputs(data)
           option(value="10", selected) 10 km
           option(value="50") 50 km
           option(value="100") 100 km
-
-    +lightBtn("Filters", true)
-    input.search.btnProp(type="button", value="Search", class="btnProb inputSearch")
+        +lightBtn("Search", true)
