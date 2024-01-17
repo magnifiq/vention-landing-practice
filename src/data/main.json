@@ -1,0 +1,31 @@
+[
+  {
+    "img": "../../dist/assets/images/secondPart/Illustration.svg",
+    "img_name": "card_img",
+    "h3_text": "For Candidates",
+    "h4_text": "Feedback on all applications",
+    "description": "Search for and be recommended to a new job that you'll love.",
+    "slider_num": 8,
+    "h4_text_desktop": [
+      "Build profile page",
+      "Nothing will be lost",
+      "Apply directly to employer",
+      "Advanced search",
+      "User-friendly",
+      "Recommendations",
+      "Feedback on all applications",
+      "Visibility"
+    ],
+    "h4_text_desktop_description": [
+      "Manage all applications in one area",
+      "Save jobs for later viewing, share to colleagues or social media",
+      "All jobs posted are employer only",
+      "Search by multi location/type feature",
+      "Easy CV upload, build or edit",
+      "View recommended jobs based on selected preferences",
+      "You will always receive a response to your application",
+      "Be visible to employers for invitations to apply for a position"
+    ], 
+    "fifthPart_flag": false
+  }
+]

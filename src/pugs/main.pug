@@ -7,6 +7,8 @@ html(lang="en")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css", integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==", crossorigin="anonymous", referrerpolicy="no-referrer")
     title Main
   body
+    - const path = require('path');
+    - const allData = require(path.resolve('src/data', '../data/main.json'));
     include ./includes/header.pug
     include ./mixins/cardMain.pug
     include ./mixins/searchButton.pug
@@ -25,20 +27,21 @@ html(lang="en")
         include ./mixins/inputs.pug
         +inputs({example_flag: false})
       .secondPart.firstPart
-        - const secondData={img:"../../dist/assets/images/secondPart/Illustration.svg", img_name:"card_img", h3_text:"For Candidates", h4_text:"Feedback on all applications", description:"Search for and be recommended to a new job that you'll love.", slider_num: 8}
+        -console.log("oh")
+        -const secondData = allData[0]
         +cardMain(secondData)
-      .thirdPart.firstPart
+      //.thirdPart.firstPart
         .line
-        - const thirdData={img:"../../dist/assets/images/thirdPart/Illustration (1).svg", img_name:"card_img", h3_text:"For Employers", h4_text:"Everything you need", description:"Manage recruitment process all in one place ", slider_num: 7}
+        - const thirdData={img:"../../dist/assets/images/thirdPart/Illustration (1).svg", img_name:"card_img", h3_text:"For Employers", h4_text:"Everything you need", description:"Manage recruitment process all in one place ", slider_num: 7, "fifthPart_flag": false}
         +cardMain(thirdData)
         +srchBtn("For Employers")
-      .thirdPart.firstPart
+      //.thirdPart.firstPart.fourthPart
         .line
-        - const fourthData={img:"../../dist/assets/images/fourthPart/Illustration (2).svg", img_name:"card_img", h3_text:"For Headhunters", h4_text:"Develop stronger client relationships", description:"No confusion who submitted candidates first", slider_num: 4}
+        - const fourthData={img:"../../dist/assets/images/fourthPart/Illustration (2).svg", img_name:"card_img", h3_text:"For Headhunters", h4_text:"Develop stronger client relationships", description:"No confusion who submitted candidates first", slider_num: 4, "fifthPart_flag": false}
         +cardMain(fourthData)
         +srchBtn("For HeadHunters")
         .line.fourthPart__line 
-      .thirdPart.firstPart.fifthPart
+      //.thirdPart.firstPart.fifthPart
         - const fifthData={img:"../../dist/assets/images/fifthPart/Picture.jpg", img_2: "../../dist/assets/images/fifthPart/Group 1338.svg", img_name_2: "card_img", img_name:"avatar_img", h3_text:"Our clients speak", h4_text:"Efficient Collaborating", description:"We have been working with clients around the world", description_2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.", slider_num: 3, avatar_name: "Jane Cooper", avatar_position: "CEO at ABC Corporation", fifthPart_flag: true}
         +cardMain(fifthData)
       .thirdPart.firstPart.sixthPart#about
@@ -107,11 +110,4 @@ html(lang="en")
               }
               }
           ]
-      });
-
-    
-
-        
-
-
-        
+      });       

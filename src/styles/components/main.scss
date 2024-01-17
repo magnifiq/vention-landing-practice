@@ -294,7 +294,7 @@
       border-radius: $divs-border-radius;
       max-width: 100vw;
       justify-content: center;
-      .search{
+      .search {
         margin-left: 10px;
         padding: 15px 30px !important;
       }
@@ -304,6 +304,53 @@
       }
     }
   }
+
+  .secondPart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__card_mobile {
+      display: none;
+    }
+    &__card_desktop {
+      align-items: center;
+      &__header {
+        text-align: left;
+        padding-bottom: 40px;
+      }
+      &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        flex-direction: row;
+        text-align: left;
+        &__options {
+          display: flex;
+          flex-direction: row;
+          &__all {
+            &__option {
+              background-color: $headBack;
+            }
+          }
+        }
+        &__img {
+          img {
+            min-width: 400px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
 }
 
+@media only screen and (max-width: 1075px) {
+  .secondPart {
+    &__card_desktop {
+      display: none;
+    }
+  }
+}
 //until 370px
