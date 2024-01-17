@@ -25,7 +25,34 @@
       "View recommended jobs based on selected preferences",
       "You will always receive a response to your application",
       "Be visible to employers for invitations to apply for a position"
-    ], 
+    ],
+    "fifthPart_flag": false
+  },
+  {
+    "img": "../../dist/assets/images/thirdPart/Illustration (1).svg",
+    "img_name": "card_img",
+    "h3_text": "For Employers",
+    "h4_text": "Everything you need",
+    "description": "Manage recruitment process all in one place ",
+    "slider_num": 7,
+    "h4_text_desktop": [
+      "Everything you need",
+      "Application flow",
+      "Tailored packages",
+      "Candidate database",
+      "Reduce annual recruitment costs",
+      "Personalised",
+      "Analytics "
+    ],
+    "h4_text_desktop_description": [
+      "Manage recruitment process all in one place",
+      "Direct applicants with full view CV and details",
+      "Customise your package to your needs",
+      "Collect your own candidate database and recommend other roles in your organisation.",
+      "Simplifed recruitment process reducing overheads",
+      "Build job and personalise process (stages, questions etc.)",
+      "Get detailed information on how your applications are performing"
+    ],
     "fifthPart_flag": false
   }
 ]

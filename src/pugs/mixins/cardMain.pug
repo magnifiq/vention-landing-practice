@@ -15,6 +15,9 @@ mixin cardMain(data)
                     .fifthPart_avatar_names #{ data.avatar_name}
                     .fifthPart_avatar_position #{ data.avatar_position}
 
+            .slider
+                    - for (let i = 0; i < data.slider_num; i++)
+                        div
     else
         .secondPart__card.firstPart__card.secondPart__card_mobile
             img(src=data.img, alt=data.img_name)
@@ -23,6 +26,9 @@ mixin cardMain(data)
                 h4 #{ data.h4_text}
                 .firstPart__card__description
                     span #{ data.description}
+            .slider
+                    - for (let i = 0; i < data.slider_num; i++)
+                        div
         
         .secondPart__card_desktop
             .secondPart__card_desktop__header 
@@ -30,9 +36,9 @@ mixin cardMain(data)
             .secondPart__card_desktop__content
                 .secondPart__card_desktop__content__options
                     -const reqData=data.h4_text_desktop
-                    -const h4_text_desktop_num=reqData.length;
+                    -const h4_text_desktop_num= reqData.length;
                     .secondPart__card_desktop__content__options__all.col_1
-                        -for (let i = 0; i < h4_text_desktop_num/2; i++)
+                        -for (let i = 0; i < Math.ceil(h4_text_desktop_num/2); i++)
                             -const currentH4Text = reqData[i];
                             -const currentDescription = data.h4_text_desktop_description ? data.h4_text_desktop_description[i] : '';
                             div.secondPart__card_desktop__content__options__all__option.secondPart_info 
@@ -40,18 +46,14 @@ mixin cardMain(data)
                                 .firstPart__card__description
                                     span #{currentDescription}
                     .secondPart__card_desktop__content__options__all.col_2
-                        -for (let i = h4_text_desktop_num/2; i < h4_text_desktop_num; i++)
+                        -for (let i = Math.ceil(h4_text_desktop_num/2); i < h4_text_desktop_num; i++)
                             -const currentH4Text = reqData[i];
                             -const currentDescription = data.h4_text_desktop_description ? data.h4_text_desktop_description[i] : '';
                             div.secondPart__card_desktop__content__options__all__option.secondPart_info 
                                 h4 #{currentH4Text}
                                 .firstPart__card__description
                                     span #{currentDescription}
-                .secondPart__card_desktop__content__img 
+                .secondPart__card_desktop__content__img.changed_img 
                     img(src=data.img, alt=data.img_name)
 
-    .slider
-            - for (let i = 0; i < data.slider_num; i++)
-                div
-
-
+    
