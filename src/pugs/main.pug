@@ -43,8 +43,8 @@ html(lang="en")
         .button_special__two
           +srchBtn("For HeadHunters")
         .line.fourthPart__line 
-      //.thirdPart.firstPart.fifthPart
-        - const fifthData={img:"../../dist/assets/images/fifthPart/Picture.jpg", img_2: "../../dist/assets/images/fifthPart/Group 1338.svg", img_name_2: "card_img", img_name:"avatar_img", h3_text:"Our clients speak", h4_text:"Efficient Collaborating", description:"We have been working with clients around the world", description_2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.", slider_num: 3, avatar_name: "Jane Cooper", avatar_position: "CEO at ABC Corporation", fifthPart_flag: true}
+      .thirdPart.firstPart.fifthPart
+        - const fifthData=allData[3]
         +cardMain(fifthData)
       .thirdPart.firstPart.sixthPart#about
         h3 Some count that matters
