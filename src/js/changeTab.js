@@ -1,5 +1,6 @@
 function changeTab(event, val, selectedClasses, activeClass, classesToHide) {
-  
+  let tabs = document.querySelectorAll(selectedClasses);
+
   tabs.forEach((el) => {
     el.classList.remove(activeClass);
   });
