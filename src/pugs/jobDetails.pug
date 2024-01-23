@@ -8,7 +8,7 @@ body
     include ./includes/header.pug
     include ./mixins/backToResults.pug
     main 
-        
+        +backResults("Back to search results")
         include ./mixins/jobCardDetailsHeader.pug
         include ./mixins/searchButton.pug
         -const first_data={job: "Construction Manager", short:"Posted February 01, 2021 by ", company:"Tesla", salary: "£30,000 - £70,000 per annum", time: "Full-time", location:"London"}
