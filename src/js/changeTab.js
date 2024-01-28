@@ -8,7 +8,7 @@ function changeTab(event, val, selectedClasses, activeClass, classesToHide) {
   clickedButton.classList.add(activeClass);
 
   if (classesToHide !== "homes") {
-    
+    let sections = document.getElementsByClassName(classesToHide);
     let sections_num = sections.length;
     for (let i = 0; i < sections_num; i++) {
       sections[i].style.display = "none";
