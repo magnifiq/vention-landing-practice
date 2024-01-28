@@ -5,7 +5,7 @@ function changeTab(event, val, selectedClasses, activeClass, classesToHide) {
     el.classList.remove(activeClass);
   });
   let clickedButton = event.currentTarget;
-  clickedButton.classList.add(activeClass);
+  
 
   if (classesToHide !== "homes") {
     let sections = document.getElementsByClassName(classesToHide);
