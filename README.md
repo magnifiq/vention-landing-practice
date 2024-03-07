@@ -4,3 +4,6 @@
 - npm i
 ### Start application(gulp)
 - npm run dev
+
+## Technologies that were used
+Gulp, SCSS, Eslinter, Prettier, Pug, JS, HTML
